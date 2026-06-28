@@ -1,0 +1,121 @@
+{
+  "course": {
+    "title": "Physics-Inspired Computing for Engineers",
+    "tagline": "Консенсусные рои, сертификаты для TSP, синий шум, каскадный риск и термодинамика Ландауэра."
+  },
+  "ui": {
+    "task": "задача",
+    "result": "результат",
+    "trace": "трейс",
+    "events": "событий",
+    "success": "успех",
+    "verify": "проверка",
+    "proof": "доказательство",
+    "score": "оценка",
+    "blocked": "заблокировано",
+    "allowed": "разрешено"
+  },
+  "modules": {
+    "m1": {
+      "title": "Консенсус Murmuration",
+      "concept": "Робастный консенсус DeGroot и агрегация Tukey-biweight по оценкам агентов.",
+      "industry": "роевой интеллект, робастная статистика"
+    },
+    "m2": {
+      "title": "Сертификат TSP для Colony",
+      "concept": "Маршрут «ближайший сосед» + 2-opt с допустимой границей зазора оптимальности.",
+      "industry": "маршрутизация, комбинаторная оптимизация"
+    },
+    "m3": {
+      "title": "Синий шум Turing",
+      "concept": "Выборка по лучшему кандидату (Mitchell) для равномерных, но нерегулярных множеств точек.",
+      "industry": "Monte Carlo, процедурное размещение"
+    },
+    "m4": {
+      "title": "Каскадный риск Ablation",
+      "concept": "Абелева песочная модель SOC — степенное распределение размеров лавин и хвостовой риск.",
+      "industry": "системный риск, SOC"
+    },
+    "m5": {
+      "title": "Термодинамический аудит Landauer",
+      "concept": "Энергетический порог стирания бита kT·ln2 на DAG операций.",
+      "industry": "обратимые вычисления, термодинамика"
+    }
+  },
+  "site": {
+    "modules_heading": "5 модулей",
+    "labs_heading": "Практические лабы",
+    "quickstart_heading": "Быстрый старт",
+    "quickstart_intro": "Клонируйте репозиторий, установите зависимости и запускайте лабы локально или в Colab.",
+    "quickstart_copy": "Скопировать команды",
+    "quickstart_copied": "Скопировано!",
+    "nav_quickstart": "Старт",
+    "nav_certificate": "Сертификат",
+    "nav_modules": "Модули",
+    "nav_labs": "Лабы",
+    "stat_modules": "модулей",
+    "stat_labs": "практических лаб",
+    "stat_langs": "языка",
+    "hero_badge": "Открытый курс · Python 3.11+",
+    "open_colab": "Открыть в Colab",
+    "view_source": "Исходник",
+    "run_local": "Локальный запуск",
+    "has_lab": "лаба",
+    "coming_soon": "только теория",
+    "advanced": "продвинутый",
+    "module": "Модуль",
+    "exercises_heading": "Упражнения и сертификат",
+    "exercises_body": "Пройдите проверки командой <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Сертификат",
+    "certificate_heading": "Сертификат курса",
+    "certificate_intro": "Пройдите все лабы и упражнения, чтобы открыть сертификат.",
+    "certificate_name_label": "Ваше имя в сертификате",
+    "certificate_name_placeholder": "Иван Петров",
+    "certificate_progress": "Прогресс",
+    "certificate_labs": "Лабы пройдены",
+    "certificate_exercises": "Упражнения сданы",
+    "certificate_generate": "Получить сертификат",
+    "certificate_locked": "Отметьте все лабы и упражнения, чтобы открыть",
+    "certificate_mark_lab": "Отметить пройденной",
+    "certificate_mark_done": "Готово ✓",
+    "footer": "Часть экосистемы AIMarket — оракулы Murmuration, Colony, Turing, Ablation и Landauer как живая песочница."
+  },
+  "exercises": {
+    "heading": "Ваша очередь",
+    "all_ok": "Все упражнения пройдены.",
+    "lab01_hint": "Убедитесь, что biweight устойчив к выбросам. Проверка: python labs/run_exercises.py --module m1",
+    "lab02_hint": "Подтвердите, что сертификат зазора ограничивает качество маршрута. Проверка: python labs/run_exercises.py --module m2",
+    "lab03_hint": "Измерьте минимальный шаг синего шума. Проверка: python labs/run_exercises.py --module m3",
+    "lab04_hint": "Оцените показатель τ каскада. Проверка: python labs/run_exercises.py --module m4",
+    "lab05_hint": "Проверьте порог необратимого стирания битов. Проверка: python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_murmuration_consensus": {
+      "hint": "Робастный консенсус по зашумлённым оценкам агентов."
+    },
+    "lab02_colony_tsp": {
+      "hint": "Маршрут TSP с сертификатом зазора оптимальности."
+    },
+    "lab03_turing_bluenoise": {
+      "hint": "Множество точек с синим шумом по лучшему кандидату."
+    },
+    "lab04_ablation_cascade": {
+      "hint": "Каскадный риск песочной модели и хвостовой VaR."
+    },
+    "lab05_landauer_audit": {
+      "hint": "Термодинамический аудит стоимости вычислений."
+    },
+    "lab01": {
+      "estimates": "Оценки агентов"
+    },
+    "lab02": {
+      "cities": "Города"
+    },
+    "lab04": {
+      "edges": "Рёбра подверженности"
+    },
+    "lab05": {
+      "ops": "Операции схемы"
+    }
+  }
+}

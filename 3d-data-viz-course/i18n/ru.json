@@ -1,0 +1,128 @@
+{
+  "course": {
+    "title": "3D Data Visualization with Alien Monitor",
+    "tagline": "Опрашивай здоровье, топологию и репутацию LUMEN через API alien-monitor — и переноси сцены оракулов в R3F."
+  },
+  "ui": {
+    "task": "задача",
+    "result": "результат",
+    "trace": "трейс",
+    "events": "событий",
+    "success": "успех",
+    "verify": "проверка",
+    "proof": "доказательство",
+    "score": "оценка",
+    "blocked": "заблокировано",
+    "allowed": "разрешено"
+  },
+  "modules": {
+    "m1": {
+      "title": "Здоровье монитора и режимы",
+      "concept": "Опрос /api/health и понимание режимов TEST, REAL и UNIVERSE.",
+      "industry": "наблюдаемость, SRE"
+    },
+    "m2": {
+      "title": "Модель графа топологии",
+      "concept": "Разбор узлов и связей из /api/topology в типизированные графовые структуры.",
+      "industry": "визуализация графов, React Flow"
+    },
+    "m3": {
+      "title": "Репутация федерации",
+      "concept": "Обогащение графа доверия данными /api/reputation/peers из Hub.",
+      "industry": "EigenTrust, федерация"
+    },
+    "m4": {
+      "title": "Оценки PageRank от LUMEN",
+      "concept": "Вызов /api/reputation/lumen и привязка оценок к узлам графа.",
+      "industry": "оракулы репутации"
+    },
+    "m5": {
+      "title": "Сопоставление сцен оракулов с R3F",
+      "concept": "Сопоставление слагов оракулов с камерой, акцентом и метаданными примитивов для сцен Three.js.",
+      "industry": "React Three Fiber, WebGL"
+    }
+  },
+  "site": {
+    "modules_heading": "5 модулей",
+    "labs_heading": "Практические лабы",
+    "quickstart_heading": "Быстрый старт",
+    "quickstart_intro": "Клонируйте репозиторий, установите зависимости и запускайте лабы локально или в Colab.",
+    "quickstart_copy": "Скопировать команды",
+    "quickstart_copied": "Скопировано!",
+    "nav_quickstart": "Старт",
+    "nav_certificate": "Сертификат",
+    "nav_modules": "Модули",
+    "nav_labs": "Лабы",
+    "stat_modules": "модулей",
+    "stat_labs": "практических лаб",
+    "stat_langs": "языка",
+    "hero_badge": "Открытый курс · Python 3.11+",
+    "open_colab": "Открыть в Colab",
+    "view_source": "Исходник",
+    "run_local": "Локальный запуск",
+    "has_lab": "лаба",
+    "coming_soon": "только теория",
+    "advanced": "продвинутый",
+    "module": "Модуль",
+    "exercises_heading": "Упражнения и сертификат",
+    "exercises_body": "Проходите проверки командой <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Сертификат",
+    "certificate_heading": "Сертификат курса",
+    "certificate_intro": "Пройдите все лабы и упражнения, чтобы открыть сертификат.",
+    "certificate_name_label": "Ваше имя в сертификате",
+    "certificate_name_placeholder": "Иван Петров",
+    "certificate_progress": "Прогресс",
+    "certificate_labs": "Лабы пройдены",
+    "certificate_exercises": "Упражнения сданы",
+    "certificate_generate": "Получить сертификат",
+    "certificate_locked": "Отметьте все лабы и упражнения, чтобы открыть",
+    "certificate_mark_lab": "Отметить пройденной",
+    "certificate_mark_done": "Готово ✓",
+    "footer": "Часть экосистемы AIMarket — сцены оракулов alien-monitor как живая 3D-песочница."
+  },
+  "exercises": {
+    "heading": "Ваша очередь",
+    "all_ok": "Все упражнения пройдены.",
+    "lab01_hint": "Убедитесь, что health возвращает ok. Проверка: python labs/run_exercises.py --module m1",
+    "lab02_hint": "Разберите узлы топологии и список смежности. Проверка: python labs/run_exercises.py --module m2",
+    "lab03_hint": "Выведите пиров федерации с оценками доверия. Проверка: python labs/run_exercises.py --module m3",
+    "lab04_hint": "Привяжите оценки LUMEN к id узлов. Проверка: python labs/run_exercises.py --module m4",
+    "lab05_hint": "Сопоставьте слаги оракулов со спецификациями сцен R3F. Проверка: python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_health_probe": {
+      "hint": "Опрос /api/health на живом или мок-мониторе."
+    },
+    "lab02_topology_graph": {
+      "hint": "Построение типизированного графа из /api/topology."
+    },
+    "lab03_reputation_peers": {
+      "hint": "Получение оценок доверия пиров федерации."
+    },
+    "lab04_lumen_scores": {
+      "hint": "Вызов PageRank от LUMEN через /api/reputation/lumen."
+    },
+    "lab05_r3f_scenes": {
+      "hint": "Сопоставление узлов-оракулов с метаданными камеры и акцента R3F."
+    },
+    "lab01": {
+      "live": "Живой alien-monitor доступен",
+      "mock_note": "Используется встроенный мок-сервер (alien-monitor не запущен)."
+    },
+    "lab02": {
+      "nodes": "Узлы",
+      "links": "Связи",
+      "adjacency": "Список смежности"
+    },
+    "lab03": {
+      "count": "Пиры федерации"
+    },
+    "lab04": {
+      "error": "Ошибка LUMEN",
+      "iterations": "Итерации PageRank"
+    },
+    "lab05": {
+      "scenes": "Сцены оракулов R3F"
+    }
+  }
+}

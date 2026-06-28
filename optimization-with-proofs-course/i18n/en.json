@@ -1,0 +1,115 @@
+{
+  "course": {
+    "title": "Optimization with Proofs",
+    "tagline": "TSP gaps, transport duals, eikonal certificates, and GP uncertainty — every answer ships a proof."
+  },
+  "ui": {
+    "task": "task",
+    "result": "result",
+    "trace": "trace",
+    "events": "events",
+    "success": "success",
+    "verify": "verify",
+    "proof": "proof",
+    "score": "score",
+    "blocked": "blocked",
+    "allowed": "allowed"
+  },
+  "modules": {
+    "m1": {
+      "title": "TSP with quality gap",
+      "concept": "Nearest-neighbour + 2-opt tour with admissible lower bound.",
+      "industry": "routing, logistics"
+    },
+    "m2": {
+      "title": "Optimal transport",
+      "concept": "Exact Kantorovich plan with dual certificate.",
+      "industry": "matching, economics"
+    },
+    "m3": {
+      "title": "Least-time routing",
+      "concept": "Eikonal potentials and dual optimality on agent networks.",
+      "industry": "MCP composition"
+    },
+    "m4": {
+      "title": "Gaussian processes",
+      "concept": "Posterior uncertainty and Expected Improvement.",
+      "industry": "active learning, bayes opt"
+    },
+    "m5": {
+      "title": "Proof portfolio capstone",
+      "concept": "Chain TSP, transport, route, and GP certificates in one audit.",
+      "industry": "verifiable agents"
+    }
+  },
+  "site": {
+    "modules_heading": "5 modules",
+    "labs_heading": "Hands-on labs",
+    "quickstart_heading": "Quick start",
+    "quickstart_intro": "Clone the repo, install deps, and run labs locally or in Colab.",
+    "quickstart_copy": "Copy commands",
+    "quickstart_copied": "Copied!",
+    "nav_quickstart": "Quick start",
+    "nav_certificate": "Certificate",
+    "nav_modules": "Modules",
+    "nav_labs": "Labs",
+    "stat_modules": "modules",
+    "stat_labs": "hands-on labs",
+    "stat_langs": "languages",
+    "hero_badge": "Open course · Python 3.11+",
+    "open_colab": "Open in Colab",
+    "view_source": "View source",
+    "run_local": "Local run",
+    "has_lab": "lab",
+    "coming_soon": "concept only",
+    "advanced": "advanced",
+    "module": "Module",
+    "exercises_heading": "Exercises & certificate",
+    "exercises_body": "Pass checks with <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificate",
+    "certificate_heading": "Course certificate",
+    "certificate_intro": "Complete all labs and exercises to unlock your certificate.",
+    "certificate_name_label": "Your name on the certificate",
+    "certificate_name_placeholder": "Jane Doe",
+    "certificate_progress": "Progress",
+    "certificate_labs": "Labs completed",
+    "certificate_exercises": "Exercises passed",
+    "certificate_generate": "Get certificate",
+    "certificate_locked": "Check off all labs and exercises to unlock",
+    "certificate_mark_lab": "Mark complete",
+    "certificate_mark_done": "Done ✓",
+    "footer": "Part of the AIMarket ecosystem — COLONY, KANTOR, FERMAT, and GAUSS oracles as a live sandbox."
+  },
+  "exercises": {
+    "heading": "Exercise",
+    "all_ok": "All exercises passed.",
+    "lab01_hint": "Run: python labs/run_exercises.py --module m1",
+    "lab02_hint": "Run: python labs/run_exercises.py --module m2",
+    "lab03_hint": "Run: python labs/run_exercises.py --module m3",
+    "lab04_hint": "Run: python labs/run_exercises.py --module m4",
+    "lab05_hint": "Run: python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_colony_tsp": {
+      "hint": "Extend m1 concepts in lab01_colony_tsp.",
+      "tour": "TSP tour"
+    },
+    "lab02_kantor_transport": {
+      "hint": "Extend m2 concepts in lab02_kantor_transport.",
+      "cost": "Transport cost"
+    },
+    "lab03_fermat_route": {
+      "hint": "Extend m3 concepts in lab03_fermat_route.",
+      "path": "Least-time path"
+    },
+    "lab04_gauss_gp": {
+      "hint": "Extend m4 concepts in lab04_gauss_gp.",
+      "posterior": "Posterior field",
+      "suggest": "Expected Improvement"
+    },
+    "lab05_proof_capstone": {
+      "hint": "Extend m5 concepts in lab05_proof_capstone.",
+      "summary": "Proof portfolio"
+    }
+  }
+}

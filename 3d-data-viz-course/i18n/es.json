@@ -1,0 +1,128 @@
+{
+  "course": {
+    "title": "3D Data Visualization with Alien Monitor",
+    "tagline": "Sondea la salud, la topología y la reputación LUMEN de la API de alien-monitor — y mapea las escenas de los oráculos a R3F."
+  },
+  "ui": {
+    "task": "tarea",
+    "result": "resultado",
+    "trace": "traza",
+    "events": "eventos",
+    "success": "éxito",
+    "verify": "verificar",
+    "proof": "prueba",
+    "score": "puntuación",
+    "blocked": "bloqueado",
+    "allowed": "permitido"
+  },
+  "modules": {
+    "m1": {
+      "title": "Salud del monitor y modos",
+      "concept": "Sondea /api/health y entiende los modos TEST, REAL y UNIVERSE.",
+      "industry": "observabilidad, SRE"
+    },
+    "m2": {
+      "title": "Modelo de grafo de topología",
+      "concept": "Analiza nodos y enlaces de /api/topology en estructuras de grafo tipadas.",
+      "industry": "visualización de grafos, React Flow"
+    },
+    "m3": {
+      "title": "Reputación de la federación",
+      "concept": "Enriquece el grafo de confianza con /api/reputation/peers del Hub.",
+      "industry": "EigenTrust, federación"
+    },
+    "m4": {
+      "title": "Puntuaciones PageRank de LUMEN",
+      "concept": "Llama a /api/reputation/lumen y vincula las puntuaciones a los nodos del grafo.",
+      "industry": "oráculos de reputación"
+    },
+    "m5": {
+      "title": "Mapeo de escenas de oráculos a R3F",
+      "concept": "Mapea los slugs de los oráculos a metadatos de cámara, acento y primitivas para escenas de Three.js.",
+      "industry": "React Three Fiber, WebGL"
+    }
+  },
+  "site": {
+    "modules_heading": "5 módulos",
+    "labs_heading": "Laboratorios prácticos",
+    "quickstart_heading": "Inicio rápido",
+    "quickstart_intro": "Clona el repo, instala dependencias y ejecuta labs localmente o en Colab.",
+    "quickstart_copy": "Copiar comandos",
+    "quickstart_copied": "¡Copiado!",
+    "nav_quickstart": "Inicio",
+    "nav_certificate": "Certificado",
+    "nav_modules": "Módulos",
+    "nav_labs": "Labs",
+    "stat_modules": "módulos",
+    "stat_labs": "labs prácticos",
+    "stat_langs": "idiomas",
+    "hero_badge": "Curso abierto · Python 3.11+",
+    "open_colab": "Abrir en Colab",
+    "view_source": "Ver código",
+    "run_local": "Ejecución local",
+    "has_lab": "lab",
+    "coming_soon": "solo concepto",
+    "advanced": "avanzado",
+    "module": "Módulo",
+    "exercises_heading": "Ejercicios y certificado",
+    "exercises_body": "Pasa las comprobaciones con <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificado",
+    "certificate_heading": "Certificado del curso",
+    "certificate_intro": "Completa todos los labs y ejercicios para desbloquear tu certificado.",
+    "certificate_name_label": "Tu nombre en el certificado",
+    "certificate_name_placeholder": "María López",
+    "certificate_progress": "Progreso",
+    "certificate_labs": "Labs completados",
+    "certificate_exercises": "Ejercicios aprobados",
+    "certificate_generate": "Obtener certificado",
+    "certificate_locked": "Marca todos los labs y ejercicios para desbloquear",
+    "certificate_mark_lab": "Marcar completado",
+    "certificate_mark_done": "Hecho ✓",
+    "footer": "Parte del ecosistema AIMarket — escenas de oráculos de alien-monitor como un sandbox 3D en vivo."
+  },
+  "exercises": {
+    "heading": "Tu turno",
+    "all_ok": "Todos los ejercicios aprobados.",
+    "lab01_hint": "Confirma que health devuelve ok. Comprueba: python labs/run_exercises.py --module m1",
+    "lab02_hint": "Analiza los nodos de topología y la lista de adyacencia. Comprueba: python labs/run_exercises.py --module m2",
+    "lab03_hint": "Lista los pares de la federación con sus puntuaciones de confianza. Comprueba: python labs/run_exercises.py --module m3",
+    "lab04_hint": "Vincula las puntuaciones de LUMEN a los id de los nodos. Comprueba: python labs/run_exercises.py --module m4",
+    "lab05_hint": "Mapea los slugs de los oráculos a las especificaciones de escena R3F. Comprueba: python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_health_probe": {
+      "hint": "Sondea /api/health en un monitor en vivo o simulado."
+    },
+    "lab02_topology_graph": {
+      "hint": "Construye un grafo tipado a partir de /api/topology."
+    },
+    "lab03_reputation_peers": {
+      "hint": "Obtén las puntuaciones de confianza de los pares de la federación."
+    },
+    "lab04_lumen_scores": {
+      "hint": "Llama al PageRank de LUMEN vía /api/reputation/lumen."
+    },
+    "lab05_r3f_scenes": {
+      "hint": "Mapea los nodos de oráculos a los metadatos de cámara y acento de R3F."
+    },
+    "lab01": {
+      "live": "alien-monitor en vivo accesible",
+      "mock_note": "Usando el servidor simulado en proceso (alien-monitor no está en ejecución)."
+    },
+    "lab02": {
+      "nodes": "Nodos",
+      "links": "Enlaces",
+      "adjacency": "Lista de adyacencia"
+    },
+    "lab03": {
+      "count": "Pares de la federación"
+    },
+    "lab04": {
+      "error": "Error de LUMEN",
+      "iterations": "Iteraciones de PageRank"
+    },
+    "lab05": {
+      "scenes": "Escenas R3F de oráculos"
+    }
+  }
+}

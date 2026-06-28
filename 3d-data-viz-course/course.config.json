@@ -1,0 +1,60 @@
+{
+  "id": "3d-data-viz",
+  "github_repo": "alexar76/aimarket-courses",
+  "github_pages": "https://alexar76.github.io/aimarket-courses/3d-data-viz-course/",
+  "clone_dir": "aimarket-courses",
+  "package_name": "3d-data-viz-course",
+  "title": "3D Data Visualization with Alien Monitor",
+  "description": "Hands-on course on the alien-monitor ecosystem visualizer — REST probes, graph models, and React Three Fiber scene mapping.",
+  "pip_extras_default": "[dev]",
+  "module_count": 5,
+  "modules": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5"
+  ],
+  "labs": [
+    {
+      "stem": "lab01_health_probe",
+      "module": "m1",
+      "track": "basic"
+    },
+    {
+      "stem": "lab02_topology_graph",
+      "module": "m2",
+      "track": "basic"
+    },
+    {
+      "stem": "lab03_reputation_peers",
+      "module": "m3",
+      "track": "basic"
+    },
+    {
+      "stem": "lab04_lumen_scores",
+      "module": "m4",
+      "track": "basic"
+    },
+    {
+      "stem": "lab05_r3f_scenes",
+      "module": "m5",
+      "track": "advanced"
+    }
+  ],
+  "quickstart_commands": [
+    "git clone https://github.com/alexar76/aimarket-courses.git",
+    "cd aimarket-courses/3d-data-viz-course",
+    "pip install -e \".[dev]\"",
+    "python labs/lab01_health_probe.py",
+    "python labs/run_exercises.py"
+  ],
+  "smoke_labs": [
+    "lab01_health_probe",
+    "lab02_topology_graph",
+    "lab03_reputation_peers",
+    "lab04_lumen_scores",
+    "lab05_r3f_scenes"
+  ],
+  "repo_subpath": "3d-data-viz-course"
+}
