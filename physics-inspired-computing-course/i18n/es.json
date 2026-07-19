@@ -1,0 +1,121 @@
+{
+  "course": {
+    "title": "Physics-Inspired Computing for Engineers",
+    "tagline": "Enjambres de consenso, certificados TSP, muestreo de ruido azul, riesgo de cascada y termodinámica de Landauer."
+  },
+  "ui": {
+    "task": "tarea",
+    "result": "resultado",
+    "trace": "traza",
+    "events": "eventos",
+    "success": "éxito",
+    "verify": "verificar",
+    "proof": "prueba",
+    "score": "puntuación",
+    "blocked": "bloqueado",
+    "allowed": "permitido"
+  },
+  "modules": {
+    "m1": {
+      "title": "Consenso Murmuration",
+      "concept": "Consenso robusto DeGroot y agregación Tukey-biweight sobre estimaciones de agentes.",
+      "industry": "inteligencia de enjambre, estadística robusta"
+    },
+    "m2": {
+      "title": "Certificado TSP de Colony",
+      "concept": "Ruta vecino más cercano + 2-opt con una cota admisible de brecha de optimalidad.",
+      "industry": "enrutamiento, optimización combinatoria"
+    },
+    "m3": {
+      "title": "Ruido azul de Turing",
+      "concept": "Muestreo por mejor candidato (Mitchell) para conjuntos de puntos uniformes pero irregulares.",
+      "industry": "Monte Carlo, colocación procedural"
+    },
+    "m4": {
+      "title": "Riesgo de cascada Ablation",
+      "concept": "Modelo de arena abeliano SOC — tamaños de avalancha con ley de potencias y riesgo de cola.",
+      "industry": "riesgo sistémico, SOC"
+    },
+    "m5": {
+      "title": "Auditoría termodinámica Landauer",
+      "concept": "Umbral de energía de borrado de bit kT·ln2 sobre un DAG de operaciones.",
+      "industry": "computación reversible, termodinámica"
+    }
+  },
+  "site": {
+    "modules_heading": "5 módulos",
+    "labs_heading": "Laboratorios prácticos",
+    "quickstart_heading": "Inicio rápido",
+    "quickstart_intro": "Clona el repo, instala dependencias y ejecuta labs localmente o en Colab.",
+    "quickstart_copy": "Copiar comandos",
+    "quickstart_copied": "¡Copiado!",
+    "nav_quickstart": "Inicio",
+    "nav_certificate": "Certificado",
+    "nav_modules": "Módulos",
+    "nav_labs": "Labs",
+    "stat_modules": "módulos",
+    "stat_labs": "labs prácticos",
+    "stat_langs": "idiomas",
+    "hero_badge": "Curso abierto · Python 3.11+",
+    "open_colab": "Abrir en Colab",
+    "view_source": "Ver código",
+    "run_local": "Ejecución local",
+    "has_lab": "lab",
+    "coming_soon": "solo concepto",
+    "advanced": "avanzado",
+    "module": "Módulo",
+    "exercises_heading": "Ejercicios y certificado",
+    "exercises_body": "Pasa las comprobaciones con <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificado",
+    "certificate_heading": "Certificado del curso",
+    "certificate_intro": "Completa todos los labs y ejercicios para desbloquear tu certificado.",
+    "certificate_name_label": "Tu nombre en el certificado",
+    "certificate_name_placeholder": "María López",
+    "certificate_progress": "Progreso",
+    "certificate_labs": "Labs completados",
+    "certificate_exercises": "Ejercicios aprobados",
+    "certificate_generate": "Obtener certificado",
+    "certificate_locked": "Marca todos los labs y ejercicios para desbloquear",
+    "certificate_mark_lab": "Marcar completado",
+    "certificate_mark_done": "Hecho ✓",
+    "footer": "Parte del ecosistema AIMarket — los oráculos Murmuration, Colony, Turing, Ablation y Landauer como sandbox en vivo."
+  },
+  "exercises": {
+    "heading": "Tu turno",
+    "all_ok": "Todos los ejercicios aprobados.",
+    "lab01_hint": "Verifica que biweight resiste valores atípicos. Comprueba: python labs/run_exercises.py --module m1",
+    "lab02_hint": "Confirma que el certificado de brecha acota la calidad de la ruta. Comprueba: python labs/run_exercises.py --module m2",
+    "lab03_hint": "Mide el espaciado mínimo del ruido azul. Comprueba: python labs/run_exercises.py --module m3",
+    "lab04_hint": "Estima el exponente τ de la cascada. Comprueba: python labs/run_exercises.py --module m4",
+    "lab05_hint": "Audita el umbral de borrado irreversible de bits. Comprueba: python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_murmuration_consensus": {
+      "hint": "Consenso robusto sobre estimaciones ruidosas de agentes."
+    },
+    "lab02_colony_tsp": {
+      "hint": "Ruta TSP con certificado de brecha de optimalidad."
+    },
+    "lab03_turing_bluenoise": {
+      "hint": "Conjunto de puntos de ruido azul por mejor candidato."
+    },
+    "lab04_ablation_cascade": {
+      "hint": "Riesgo de cascada del modelo de arena y VaR de cola."
+    },
+    "lab05_landauer_audit": {
+      "hint": "Auditoría termodinámica del coste de cómputo."
+    },
+    "lab01": {
+      "estimates": "Estimaciones de agentes"
+    },
+    "lab02": {
+      "cities": "Ciudades"
+    },
+    "lab04": {
+      "edges": "Aristas de exposición"
+    },
+    "lab05": {
+      "ops": "Operaciones del circuito"
+    }
+  }
+}

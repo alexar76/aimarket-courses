@@ -1,0 +1,131 @@
+{
+  "course": {
+    "title": "Mathematics of Trust",
+    "tagline": "PageRank, перколяция, спектральные разрезы, консенсус и каскадный риск — на живых оракулах AIMarket."
+  },
+  "ui": {
+    "task": "задача",
+    "result": "результат",
+    "trace": "трейс",
+    "events": "событий",
+    "success": "успех",
+    "verify": "проверка",
+    "proof": "доказательство",
+    "score": "оценка",
+    "blocked": "заблокировано",
+    "allowed": "разрешено"
+  },
+  "modules": {
+    "m1": {
+      "title": "EigenTrust на LUMEN",
+      "concept": "Стационарное распределение PageRank на графе «кто кому доверяет».",
+      "industry": "репутация, MCP"
+    },
+    "m2": {
+      "title": "Перколяция и ключевые узлы",
+      "concept": "Целенаправленное удаление узлов и критические пороги на графах доверия.",
+      "industry": "устойчивость сетей"
+    },
+    "m3": {
+      "title": "Спектральная связность",
+      "concept": "Значение Фидлера и спектральная бисекция — насколько граф близок к расколу?",
+      "industry": "выделение сообществ"
+    },
+    "m4": {
+      "title": "Устойчивый консенсус",
+      "concept": "Медиана, усечённое среднее и biweight-оценка положения по прогнозам агентов.",
+      "industry": "рой, агрегация оракулов"
+    },
+    "m5": {
+      "title": "Каскадный риск",
+      "concept": "Лавины абелевой кучи песка и степенной риск хвоста.",
+      "industry": "системный риск, DeFi"
+    },
+    "m6": {
+      "title": "Итоговый проект: математика доверия",
+      "concept": "Объединение сигналов перколяции, спектра и каскадов в один аудит.",
+      "industry": "безопасность агентов"
+    }
+  },
+  "site": {
+    "modules_heading": "6 модулей",
+    "labs_heading": "Практические лабы",
+    "quickstart_heading": "Быстрый старт",
+    "quickstart_intro": "Клонируйте репозиторий, установите зависимости и запускайте лабы локально или в Colab.",
+    "quickstart_copy": "Скопировать команды",
+    "quickstart_copied": "Скопировано!",
+    "nav_quickstart": "Старт",
+    "nav_certificate": "Сертификат",
+    "nav_modules": "Модули",
+    "nav_labs": "Лабы",
+    "stat_modules": "модулей",
+    "stat_labs": "практических лаб",
+    "stat_langs": "языка",
+    "hero_badge": "Открытый курс · Python 3.11+",
+    "open_colab": "Открыть в Colab",
+    "view_source": "Исходник",
+    "run_local": "Локальный запуск",
+    "has_lab": "лаба",
+    "coming_soon": "только теория",
+    "advanced": "продвинутый",
+    "module": "Модуль",
+    "exercises_heading": "Упражнения и сертификат",
+    "exercises_body": "Пройдите проверки командой <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Сертификат",
+    "certificate_heading": "Сертификат курса",
+    "certificate_intro": "Пройдите все лабы и упражнения, чтобы открыть свой сертификат.",
+    "certificate_name_label": "Ваше имя в сертификате",
+    "certificate_name_placeholder": "Иван Петров",
+    "certificate_progress": "Прогресс",
+    "certificate_labs": "Лабы пройдены",
+    "certificate_exercises": "Упражнения сданы",
+    "certificate_generate": "Получить сертификат",
+    "certificate_locked": "Отметьте все лабы и упражнения",
+    "certificate_mark_lab": "Отметить пройденной",
+    "certificate_mark_done": "Готово ✓",
+    "footer": "Часть экосистемы AIMarket — оракулы LUMEN, PERCOLA, FOURIER, MURMURATION и ABLATION как живая песочница."
+  },
+  "exercises": {
+    "heading": "Упражнение",
+    "all_ok": "Все упражнения пройдены.",
+    "lab01_hint": "Запуск: python labs/run_exercises.py --module m2",
+    "lab02_hint": "Запуск: python labs/run_exercises.py --module m1",
+    "lab03_hint": "Запуск: python labs/run_exercises.py --module m3",
+    "lab04_hint": "Запуск: python labs/run_exercises.py --module m4",
+    "lab05_hint": "Запуск: python labs/run_exercises.py --module m5",
+    "lab06_hint": "Запуск: python labs/run_exercises.py --module m6"
+  },
+  "labs": {
+    "lab01_keystone_nodes": {
+      "hint": "Разовьите идеи m2 в lab01_keystone_nodes.",
+      "graph_heading": "Граф-мост",
+      "keystones": "Ключевые узлы"
+    },
+    "lab02_trust_pagerank": {
+      "hint": "Разовьите идеи m1 в lab02_trust_pagerank.",
+      "graph_heading": "Граф доверия",
+      "top": "Наивысшее доверие"
+    },
+    "lab03_spectral_cut": {
+      "hint": "Разовьите идеи m3 в lab03_spectral_cut.",
+      "fiedler": "Алгебраическая связность",
+      "cut": "Спектральная бисекция"
+    },
+    "lab04_consensus_aggregate": {
+      "hint": "Разовьите идеи m4 в lab04_consensus_aggregate.",
+      "values": "Прогнозы агентов"
+    },
+    "lab05_sandpile_cascade": {
+      "hint": "Разовьите идеи m5 в lab05_sandpile_cascade.",
+      "stats": "Статистика каскадов"
+    },
+    "lab06_trust_audit": {
+      "hint": "Разовьите идеи m6 в lab06_trust_audit.",
+      "audit": "Аудит доверия",
+      "top_trusted": "Самый доверенный",
+      "fiedler": "Алгебраическая связность",
+      "percolation": "Порог перколяции",
+      "keystones": "Ключевые узлы"
+    }
+  }
+}

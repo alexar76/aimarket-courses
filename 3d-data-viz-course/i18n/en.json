@@ -1,0 +1,114 @@
+{
+  "course": {
+    "title": "3D Data Visualization with Alien Monitor",
+    "tagline": "Probe alien-monitor API health, topology, and LUMEN reputation — then map oracle scenes to R3F."
+  },
+  "ui": {
+    "task": "task",
+    "result": "result",
+    "trace": "trace",
+    "events": "events",
+    "success": "success",
+    "verify": "verify",
+    "proof": "proof",
+    "score": "score",
+    "blocked": "blocked",
+    "allowed": "allowed"
+  },
+  "modules": {
+    "m1": {
+      "title": "Monitor health & modes",
+      "concept": "Probe /api/health and understand TEST vs REAL vs UNIVERSE modes.",
+      "industry": "observability, SRE"
+    },
+    "m2": {
+      "title": "Topology graph model",
+      "concept": "Parse nodes + links from /api/topology into typed graph structures.",
+      "industry": "graph viz, React Flow"
+    },
+    "m3": {
+      "title": "Federation reputation",
+      "concept": "Enrich the trust graph with /api/reputation/peers from the Hub.",
+      "industry": "EigenTrust, federation"
+    },
+    "m4": {
+      "title": "LUMEN PageRank scores",
+      "concept": "Call /api/reputation/lumen and bind scores to graph nodes.",
+      "industry": "reputation oracles"
+    },
+    "m5": {
+      "title": "R3F oracle scene mapping",
+      "concept": "Map oracle slugs to camera, accent, and primitive metadata for Three.js scenes.",
+      "industry": "React Three Fiber, WebGL"
+    }
+  },
+  "site": {
+    "modules_heading": "5 modules",
+    "labs_heading": "Hands-on labs",
+    "quickstart_heading": "Quick start",
+    "quickstart_intro": "Clone the repo, install deps, and run labs locally or in Colab.",
+    "quickstart_copy": "Copy commands",
+    "quickstart_copied": "Copied!",
+    "nav_quickstart": "Quick start",
+    "nav_certificate": "Certificate",
+    "nav_modules": "Modules",
+    "nav_labs": "Labs",
+    "stat_modules": "modules",
+    "stat_labs": "hands-on labs",
+    "stat_langs": "languages",
+    "hero_badge": "Open course · Python 3.11+",
+    "open_colab": "Open in Colab",
+    "view_source": "View source",
+    "run_local": "Local run",
+    "has_lab": "lab",
+    "coming_soon": "concept only",
+    "advanced": "advanced",
+    "module": "Module",
+    "exercises_heading": "Exercises & certificate",
+    "exercises_body": "Pass checks with <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificate",
+    "certificate_heading": "Course certificate",
+    "certificate_intro": "Complete all labs and exercises to unlock your certificate.",
+    "certificate_name_label": "Your name on the certificate",
+    "certificate_name_placeholder": "Jane Doe",
+    "certificate_progress": "Progress",
+    "certificate_labs": "Labs completed",
+    "certificate_exercises": "Exercises passed",
+    "certificate_generate": "Get certificate",
+    "certificate_locked": "Check off all labs and exercises to unlock",
+    "certificate_mark_lab": "Mark complete",
+    "certificate_mark_done": "Done ✓",
+    "footer": "Part of the AIMarket ecosystem — alien-monitor oracle scenes as a live 3D sandbox."
+  },
+  "exercises": {
+    "heading": "Your turn",
+    "all_ok": "All exercises passed.",
+    "lab01_hint": "Confirm health returns ok. Check: python labs/run_exercises.py --module m1",
+    "lab02_hint": "Parse topology nodes and adjacency. Check: python labs/run_exercises.py --module m2",
+    "lab03_hint": "List federation peers with trust scores. Check: python labs/run_exercises.py --module m3",
+    "lab04_hint": "Bind LUMEN scores to node ids. Check: python labs/run_exercises.py --module m4",
+    "lab05_hint": "Map oracle slugs to R3F scene specs. Check: python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_health_probe": {"hint": "Probe /api/health on live or mock monitor."},
+    "lab02_topology_graph": {"hint": "Build typed graph from /api/topology."},
+    "lab03_reputation_peers": {"hint": "Fetch federation peer trust scores."},
+    "lab04_lumen_scores": {"hint": "Call LUMEN PageRank via /api/reputation/lumen."},
+    "lab05_r3f_scenes": {"hint": "Map oracle nodes to R3F camera/accent metadata."},
+    "lab01": {
+      "live": "Live alien-monitor reachable",
+      "mock_note": "Using in-process mock server (alien-monitor not running)."
+    },
+    "lab02": {
+      "nodes": "Nodes",
+      "links": "Links",
+      "adjacency": "Adjacency list"
+    },
+    "lab03": {"count": "Federation peers"},
+    "lab04": {
+      "error": "LUMEN error",
+      "iterations": "PageRank iterations"
+    },
+    "lab05": {"scenes": "Oracle R3F scenes"}
+  }
+}
