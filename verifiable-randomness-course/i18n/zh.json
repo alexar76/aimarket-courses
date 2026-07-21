@@ -1,0 +1,79 @@
+{
+  "course": {
+    "title": "Verifiable Randomness & Cryptographic Time",
+    "tagline": "构建并攻破有偏彩票——再从 80 字节离线验证证明。"
+  },
+  "ui": {
+    "task": "任务",
+    "result": "结果",
+    "trace": "跟踪",
+    "events": "事件",
+    "verify": "验证",
+    "proof": "证明",
+    "protocol": "协议",
+    "success": "成功"
+  },
+  "modules": {
+    "m1": {"title": "基于 Platon 的混沌 VRF", "concept": "来自可验证混沌预言机的不可偏置随机性。", "industry": "彩票、游戏"},
+    "m2": {"title": "基于 Chronos 的 VDF 时间", "concept": "Wesolowski VDF 证明已流逝的工作量——而非挂钟时间的信任。", "industry": "时间戳、延迟"},
+    "m3": {"title": "ECVRF 与 Sortes", "concept": "可离线验证的 RFC 9381 ECVRF 证明。", "industry": "VRF 标准"},
+    "m4": {"title": "基于 Aestus 的时间锁 RSW", "concept": "现在加密,经可证明延迟后解密。", "industry": "commit-reveal、密封投标"},
+    "m5": {"title": "commit–reveal 与偏置攻击", "concept": "构建一个有偏彩票,再用可验证抽奖攻破它。", "industry": "安全审计"},
+    "m6": {"title": "链上验证", "concept": "在 Base 测试网上用 Solidity 验证 VDF 与 VRF 证明。", "industry": "彩票消费方"}
+  },
+  "site": {
+    "modules_heading": "6 个模块",
+    "labs_heading": "动手实验",
+    "quickstart_heading": "快速开始",
+    "quickstart_intro": "克隆仓库、安装预言机依赖,并在本地或 Colab 中运行实验。",
+    "quickstart_copy": "复制命令",
+    "quickstart_copied": "已复制!",
+    "nav_quickstart": "快速开始",
+    "nav_certificate": "证书",
+    "nav_modules": "模块",
+    "nav_labs": "实验",
+    "stat_modules": "个模块",
+    "stat_labs": "个动手实验",
+    "stat_langs": "种语言",
+    "hero_badge": "开放课程 · Python 3.11+ · 实时预言机",
+    "open_colab": "在 Colab 中打开",
+    "view_source": "查看源码",
+    "run_local": "本地运行",
+    "has_lab": "实验",
+    "coming_soon": "仅概念",
+    "advanced": "进阶",
+    "module": "模块",
+    "exercises_heading": "练习与证书",
+    "exercises_body": "通过 <code class=\"inline\">python labs/run_exercises.py</code> 完成全部检查。",
+    "certificate_nav": "证书",
+    "certificate_heading": "课程证书",
+    "certificate_intro": "完成实验与练习,即可解锁你的证书。",
+    "certificate_name_label": "证书上的姓名",
+    "certificate_name_placeholder": "张三",
+    "certificate_progress": "进度",
+    "certificate_labs": "已完成实验",
+    "certificate_exercises": "已通过练习",
+    "certificate_generate": "获取证书",
+    "certificate_locked": "勾选全部实验与练习以解锁",
+    "certificate_mark_lab": "标记完成",
+    "certificate_mark_done": "完成 ✓",
+    "footer": "AIMarket 生态的一部分——Platon、Chronos、Sortes 与 Aestus 预言机作为实时沙盒。"
+  },
+  "exercises": {
+    "heading": "轮到你了",
+    "lab01_hint": "用你自己的 client_seed 验证一次 Platon 抽奖。检查:python labs/run_exercises.py --module m1",
+    "lab02_hint": "篡改一个 VDF 输出,看验证失败。检查:python labs/run_exercises.py --module m2",
+    "lab03_hint": "确认 ECVRF 证明恰好为 80 字节。检查:python labs/run_exercises.py --module m3",
+    "lab04_hint": "以 T=300 密封并打开一条消息。检查:python labs/run_exercises.py --module m4",
+    "lab05_hint": "对比有偏与公平的彩票票据。检查:python labs/run_exercises.py --module m5",
+    "lab06_hint": "构建一个链上 VDF 向量。检查:python labs/run_exercises.py --module m6"
+  },
+  "labs": {
+    "lab01": {"client_seed": "course-lab01-seed"},
+    "lab02": {"seed": "agent-delay-1", "tampered": "被篡改的 VDF 验证"},
+    "lab03": {"alpha": "lottery-alpha-2026"},
+    "lab04": {"secret": "sealed-bid: 42 ETH"},
+    "lab05": {"player_seed": "player-alice-7", "biased_ticket": "有偏票据", "fair_ticket": "公平 VRF 票据", "audit_note": "公平抽奖为每个种子绑定唯一的 beta——运营方无法 grinding。"},
+    "lab06": {"round": "base-round-42", "word": "彩票词", "deploy_note": "关于 Base 上的 ChronosVDF,参见 lottery/docs/deployments-base.md。"}
+  }
+}

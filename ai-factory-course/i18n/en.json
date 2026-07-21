@@ -1,0 +1,111 @@
+{
+  "course": {
+    "title": "AI Factory Pipeline & Orchestration",
+    "tagline": "Research→design→build→test→ship — probe factory APIs and orchestrator stages."
+  },
+  "ui": {
+    "task": "task",
+    "result": "result",
+    "trace": "trace",
+    "events": "events",
+    "success": "success",
+    "verify": "verify",
+    "proof": "proof",
+    "score": "score",
+    "blocked": "blocked",
+    "allowed": "allowed"
+  },
+  "modules": {
+    "m1": {
+      "title": "Pipeline overview",
+      "concept": "Research, design, build, test, and ship as orchestrated stages.",
+      "industry": "AI-Factory"
+    },
+    "m2": {
+      "title": "Pipeline status API",
+      "concept": "GET /api/public/pipeline-status heartbeat counters.",
+      "industry": "observability"
+    },
+    "m3": {
+      "title": "Shipped products catalog",
+      "concept": "List COMPLETED products and capabilities from the factory.",
+      "industry": "marketplace"
+    },
+    "m4": {
+      "title": "Orchestrator stage flow",
+      "concept": "State machine from IDEA_RECEIVED to COMPLETED.",
+      "industry": "orchestrator"
+    },
+    "m5": {
+      "title": "Capstone: factory probe",
+      "concept": "End-to-end probe with live factory or embedded mock.",
+      "industry": "integration"
+    }
+  },
+  "site": {
+    "modules_heading": "5 modules",
+    "labs_heading": "Hands-on labs",
+    "quickstart_heading": "Quick start",
+    "quickstart_intro": "Clone the repo, install deps, and run labs locally or in Colab.",
+    "quickstart_copy": "Copy commands",
+    "quickstart_copied": "Copied!",
+    "nav_quickstart": "Quick start",
+    "nav_certificate": "Certificate",
+    "nav_modules": "Modules",
+    "nav_labs": "Labs",
+    "stat_modules": "modules",
+    "stat_labs": "hands-on labs",
+    "stat_langs": "languages",
+    "hero_badge": "Open course · Python 3.11+",
+    "open_colab": "Open in Colab",
+    "view_source": "View source",
+    "run_local": "Local run",
+    "has_lab": "lab",
+    "coming_soon": "concept only",
+    "advanced": "advanced",
+    "module": "Module",
+    "exercises_heading": "Exercises & certificate",
+    "exercises_body": "Pass checks with <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificate",
+    "certificate_heading": "Course certificate",
+    "certificate_intro": "Complete all labs and exercises to unlock your certificate.",
+    "certificate_name_label": "Your name on the certificate",
+    "certificate_name_placeholder": "Jane Doe",
+    "certificate_progress": "Progress",
+    "certificate_labs": "Labs completed",
+    "certificate_exercises": "Exercises passed",
+    "certificate_generate": "Get certificate",
+    "certificate_locked": "Check off all labs and exercises to unlock",
+    "certificate_mark_lab": "Mark complete",
+    "certificate_mark_done": "Done ✓",
+    "footer": "Part of the AIMarket ecosystem — AI-Factory orchestrator and public pipeline APIs."
+  },
+  "exercises": {
+    "heading": "Your turn",
+    "all_ok": "All exercises passed.",
+    "lab01_hint": "List all five pipeline phases. Check: python labs/run_exercises.py --module m1",
+    "lab02_hint": "Fetch pipeline-status from mock or live factory. Check: python labs/run_exercises.py --module m2",
+    "lab03_hint": "List shipped products from /ai-market/products. Check: python labs/run_exercises.py --module m3",
+    "lab04_hint": "Walk orchestrator states to COMPLETED. Check: python labs/run_exercises.py --module m4",
+    "lab05_hint": "Run probe_factory end-to-end. Check: python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_pipeline_overview": {"hint": "Map research→ship phases to orchestrator agents."},
+    "lab02_pipeline_status": {"hint": "Probe GET /api/public/pipeline-status."},
+    "lab03_products_catalog": {"hint": "List shipped products from the factory API."},
+    "lab04_orchestrator_stages": {"hint": "Trace IDEA_RECEIVED → COMPLETED transitions."},
+    "lab05_factory_capstone": {"hint": "Capstone: status + products in one probe."},
+    "lab01": {"phases_heading": "Five pipeline phases"},
+    "lab02": {
+      "in_pipeline": "In pipeline",
+      "shipped": "Shipped",
+      "source": "Data source"
+    },
+    "lab03": {"count": "Shipped products"},
+    "lab04": {"path_heading": "Orchestrator path"},
+    "lab05": {
+      "products": "Catalog",
+      "phases": "Phases"
+    }
+  }
+}

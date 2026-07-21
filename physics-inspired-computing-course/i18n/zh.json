@@ -1,0 +1,103 @@
+{
+  "course": {
+    "title": "Physics-Inspired Computing for Engineers",
+    "tagline": "共识蜂群、TSP 证书、蓝噪声采样、级联风险与 Landauer 热力学。"
+  },
+  "ui": {
+    "task": "任务",
+    "result": "结果",
+    "trace": "跟踪",
+    "events": "事件",
+    "success": "成功",
+    "verify": "验证",
+    "proof": "证明",
+    "score": "分数",
+    "blocked": "已拦截",
+    "allowed": "已允许"
+  },
+  "modules": {
+    "m1": {
+      "title": "Murmuration 共识",
+      "concept": "对智能体估计进行稳健的 DeGroot 共识与 Tukey biweight 聚合。",
+      "industry": "群体智能、稳健统计"
+    },
+    "m2": {
+      "title": "Colony TSP 证书",
+      "concept": "带可容许最优性间隙界的「最近邻」+ 2-opt 路径。",
+      "industry": "路由、组合优化"
+    },
+    "m3": {
+      "title": "Turing 蓝噪声",
+      "concept": "用 Mitchell 最佳候选采样生成均匀但不规则的点集。",
+      "industry": "蒙特卡洛、程序化布置"
+    },
+    "m4": {
+      "title": "Ablation 级联风险",
+      "concept": "阿贝尔沙堆 SOC——幂律雪崩规模与尾部风险。",
+      "industry": "系统性风险、SOC"
+    },
+    "m5": {
+      "title": "Landauer 热力学审计",
+      "concept": "运算 DAG 上的比特擦除能量下限 kT·ln2。",
+      "industry": "可逆计算、热力学"
+    }
+  },
+  "site": {
+    "modules_heading": "5 个模块",
+    "labs_heading": "动手实验",
+    "quickstart_heading": "快速开始",
+    "quickstart_intro": "克隆仓库、安装依赖,并在本地或 Colab 中运行实验。",
+    "quickstart_copy": "复制命令",
+    "quickstart_copied": "已复制!",
+    "nav_quickstart": "快速开始",
+    "nav_certificate": "证书",
+    "nav_modules": "模块",
+    "nav_labs": "实验",
+    "stat_modules": "个模块",
+    "stat_labs": "个动手实验",
+    "stat_langs": "种语言",
+    "hero_badge": "开放课程 · Python 3.11+",
+    "open_colab": "在 Colab 中打开",
+    "view_source": "查看源码",
+    "run_local": "本地运行",
+    "has_lab": "实验",
+    "coming_soon": "仅概念",
+    "advanced": "进阶",
+    "module": "模块",
+    "exercises_heading": "练习与证书",
+    "exercises_body": "通过 <code class=\"inline\">python labs/run_exercises.py</code> 完成检查。",
+    "certificate_nav": "证书",
+    "certificate_heading": "课程证书",
+    "certificate_intro": "完成全部实验与练习,即可解锁你的证书。",
+    "certificate_name_label": "证书上的姓名",
+    "certificate_name_placeholder": "张三",
+    "certificate_progress": "进度",
+    "certificate_labs": "已完成实验",
+    "certificate_exercises": "已通过练习",
+    "certificate_generate": "获取证书",
+    "certificate_locked": "勾选全部实验与练习以解锁",
+    "certificate_mark_lab": "标记完成",
+    "certificate_mark_done": "完成 ✓",
+    "footer": "AIMarket 生态的一部分——Murmuration、Colony、Turing、Ablation 与 Landauer 预言机作为实时沙盒。"
+  },
+  "exercises": {
+    "heading": "轮到你了",
+    "all_ok": "全部练习已通过。",
+    "lab01_hint": "验证 biweight 能抵抗离群值。检查:python labs/run_exercises.py --module m1",
+    "lab02_hint": "确认间隙证书对路径质量的界。检查:python labs/run_exercises.py --module m2",
+    "lab03_hint": "测量蓝噪声的最小间距。检查:python labs/run_exercises.py --module m3",
+    "lab04_hint": "估计级联 tau 指数。检查:python labs/run_exercises.py --module m4",
+    "lab05_hint": "审计不可逆比特擦除下限。检查:python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_murmuration_consensus": {"hint": "在带噪声的智能体估计上进行稳健共识。"},
+    "lab02_colony_tsp": {"hint": "带最优性间隙证书的 TSP 路径。"},
+    "lab03_turing_bluenoise": {"hint": "通过最佳候选生成蓝噪声点集。"},
+    "lab04_ablation_cascade": {"hint": "沙堆级联风险与尾部 VaR。"},
+    "lab05_landauer_audit": {"hint": "热力学计算成本审计。"},
+    "lab01": {"estimates": "智能体估计"},
+    "lab02": {"cities": "城市"},
+    "lab04": {"edges": "暴露边"},
+    "lab05": {"ops": "电路运算"}
+  }
+}

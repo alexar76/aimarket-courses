@@ -1,0 +1,79 @@
+{
+  "course": {
+    "title": "Verifiable Randomness & Cryptographic Time",
+    "tagline": "Construisez et cassez des loteries biaisées — puis vérifiez les preuves hors ligne à partir de 80 octets."
+  },
+  "ui": {
+    "task": "tâche",
+    "result": "résultat",
+    "trace": "trace",
+    "events": "événements",
+    "verify": "vérification",
+    "proof": "preuve",
+    "protocol": "protocole",
+    "success": "succès"
+  },
+  "modules": {
+    "m1": {"title": "Chaos VRF avec Platon", "concept": "Aléa non biaisable depuis un oracle de chaos vérifiable.", "industry": "loterie, gaming"},
+    "m2": {"title": "Temps VDF avec Chronos", "concept": "Le VDF Wesolowski prouve le travail écoulé — pas la confiance dans l'horloge système.", "industry": "horodatages, délais"},
+    "m3": {"title": "ECVRF et Sortes", "concept": "Preuves ECVRF selon RFC 9381 que vous pouvez vérifier hors ligne.", "industry": "standards VRF"},
+    "m4": {"title": "Time-lock RSW avec Aestus", "concept": "Chiffrez maintenant, déchiffrez après un délai démontrable.", "industry": "commit-reveal, enchères scellées"},
+    "m5": {"title": "Commit–reveal et attaques de biais", "concept": "Construisez une loterie biaisée, puis cassez-la avec des tirages vérifiables.", "industry": "audits de sécurité"},
+    "m6": {"title": "Vérification on-chain", "concept": "Vérifiez les preuves VDF et VRF en Solidity sur le testnet Base.", "industry": "consommateur de loterie"}
+  },
+  "site": {
+    "modules_heading": "6 modules",
+    "labs_heading": "Labos pratiques",
+    "quickstart_heading": "Démarrage rapide",
+    "quickstart_intro": "Clonez le dépôt, installez les dépendances des oracles et lancez les labos en local ou dans Colab.",
+    "quickstart_copy": "Copier les commandes",
+    "quickstart_copied": "Copié !",
+    "nav_quickstart": "Démarrage",
+    "nav_certificate": "Certificat",
+    "nav_modules": "Modules",
+    "nav_labs": "Labos",
+    "stat_modules": "modules",
+    "stat_labs": "labos pratiques",
+    "stat_langs": "langues",
+    "hero_badge": "Cours ouvert · Python 3.11+ · oracles en direct",
+    "open_colab": "Ouvrir dans Colab",
+    "view_source": "Voir le code",
+    "run_local": "Exécution locale",
+    "has_lab": "labo",
+    "coming_soon": "concept seul",
+    "advanced": "avancé",
+    "module": "Module",
+    "exercises_heading": "Exercices et certificat",
+    "exercises_body": "Validez toutes les vérifications avec <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificat",
+    "certificate_heading": "Certificat du cours",
+    "certificate_intro": "Terminez les labos et exercices pour débloquer votre certificat.",
+    "certificate_name_label": "Votre nom sur le certificat",
+    "certificate_name_placeholder": "Jean Dupont",
+    "certificate_progress": "Progression",
+    "certificate_labs": "Labos terminés",
+    "certificate_exercises": "Exercices réussis",
+    "certificate_generate": "Obtenir le certificat",
+    "certificate_locked": "Cochez tous les labos et exercices pour débloquer",
+    "certificate_mark_lab": "Marquer terminé",
+    "certificate_mark_done": "Terminé ✓",
+    "footer": "Fait partie de l'écosystème AIMarket — les oracles Platon, Chronos, Sortes et Aestus comme bac à sable en direct."
+  },
+  "exercises": {
+    "heading": "À vous de jouer",
+    "lab01_hint": "Vérifiez un tirage Platon avec votre propre client_seed. Vérifiez : python labs/run_exercises.py --module m1",
+    "lab02_hint": "Falsifiez une sortie VDF et observez l'échec de la vérification. Vérifiez : python labs/run_exercises.py --module m2",
+    "lab03_hint": "Confirmez que la preuve ECVRF fait exactement 80 octets. Vérifiez : python labs/run_exercises.py --module m3",
+    "lab04_hint": "Scellez et ouvrez un message avec T=300. Vérifiez : python labs/run_exercises.py --module m4",
+    "lab05_hint": "Comparez les tickets de loterie biaisée et équitable. Vérifiez : python labs/run_exercises.py --module m5",
+    "lab06_hint": "Construisez un vecteur VDF on-chain. Vérifiez : python labs/run_exercises.py --module m6"
+  },
+  "labs": {
+    "lab01": {"client_seed": "course-lab01-seed"},
+    "lab02": {"seed": "agent-delay-1", "tampered": "vérification de VDF falsifié"},
+    "lab03": {"alpha": "lottery-alpha-2026"},
+    "lab04": {"secret": "enchère scellée : 42 ETH"},
+    "lab05": {"player_seed": "player-alice-7", "biased_ticket": "ticket biaisé", "fair_ticket": "ticket VRF équitable", "audit_note": "Le tirage équitable lie une seule beta par seed — l'opérateur ne peut pas itérer."},
+    "lab06": {"round": "base-round-42", "word": "mot de loterie", "deploy_note": "Voir lottery/docs/deployments-base.md pour ChronosVDF sur Base."}
+  }
+}

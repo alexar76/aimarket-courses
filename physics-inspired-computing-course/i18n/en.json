@@ -1,0 +1,103 @@
+{
+  "course": {
+    "title": "Physics-Inspired Computing for Engineers",
+    "tagline": "Consensus swarms, TSP certificates, blue-noise sampling, cascade risk, and Landauer thermodynamics."
+  },
+  "ui": {
+    "task": "task",
+    "result": "result",
+    "trace": "trace",
+    "events": "events",
+    "success": "success",
+    "verify": "verify",
+    "proof": "proof",
+    "score": "score",
+    "blocked": "blocked",
+    "allowed": "allowed"
+  },
+  "modules": {
+    "m1": {
+      "title": "Murmuration consensus",
+      "concept": "Robust DeGroot consensus and Tukey-biweight aggregation over agent estimates.",
+      "industry": "swarm intelligence, robust stats"
+    },
+    "m2": {
+      "title": "Colony TSP certificate",
+      "concept": "Nearest-neighbour + 2-opt tour with an admissible optimality-gap bound.",
+      "industry": "routing, combinatorial optimization"
+    },
+    "m3": {
+      "title": "Turing blue-noise",
+      "concept": "Mitchell best-candidate sampling for even-but-irregular point sets.",
+      "industry": "Monte Carlo, procedural placement"
+    },
+    "m4": {
+      "title": "Ablation cascade risk",
+      "concept": "Abelian sandpile SOC — power-law avalanche sizes and tail risk.",
+      "industry": "systemic risk, SOC"
+    },
+    "m5": {
+      "title": "Landauer thermodynamic audit",
+      "concept": "Bit-erasure energy floor kT·ln2 over an operation DAG.",
+      "industry": "reversible computing, thermodynamics"
+    }
+  },
+  "site": {
+    "modules_heading": "5 modules",
+    "labs_heading": "Hands-on labs",
+    "quickstart_heading": "Quick start",
+    "quickstart_intro": "Clone the repo, install deps, and run labs locally or in Colab.",
+    "quickstart_copy": "Copy commands",
+    "quickstart_copied": "Copied!",
+    "nav_quickstart": "Quick start",
+    "nav_certificate": "Certificate",
+    "nav_modules": "Modules",
+    "nav_labs": "Labs",
+    "stat_modules": "modules",
+    "stat_labs": "hands-on labs",
+    "stat_langs": "languages",
+    "hero_badge": "Open course · Python 3.11+",
+    "open_colab": "Open in Colab",
+    "view_source": "View source",
+    "run_local": "Local run",
+    "has_lab": "lab",
+    "coming_soon": "concept only",
+    "advanced": "advanced",
+    "module": "Module",
+    "exercises_heading": "Exercises & certificate",
+    "exercises_body": "Pass checks with <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificate",
+    "certificate_heading": "Course certificate",
+    "certificate_intro": "Complete all labs and exercises to unlock your certificate.",
+    "certificate_name_label": "Your name on the certificate",
+    "certificate_name_placeholder": "Jane Doe",
+    "certificate_progress": "Progress",
+    "certificate_labs": "Labs completed",
+    "certificate_exercises": "Exercises passed",
+    "certificate_generate": "Get certificate",
+    "certificate_locked": "Check off all labs and exercises to unlock",
+    "certificate_mark_lab": "Mark complete",
+    "certificate_mark_done": "Done ✓",
+    "footer": "Part of the AIMarket ecosystem — Murmuration, Colony, Turing, Ablation, and Landauer oracles as a live sandbox."
+  },
+  "exercises": {
+    "heading": "Your turn",
+    "all_ok": "All exercises passed.",
+    "lab01_hint": "Verify biweight resists outliers. Check: python labs/run_exercises.py --module m1",
+    "lab02_hint": "Confirm gap certificate bounds tour quality. Check: python labs/run_exercises.py --module m2",
+    "lab03_hint": "Measure blue-noise minimum spacing. Check: python labs/run_exercises.py --module m3",
+    "lab04_hint": "Estimate cascade tau exponent. Check: python labs/run_exercises.py --module m4",
+    "lab05_hint": "Audit irreversible bit erasure floor. Check: python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_murmuration_consensus": {"hint": "Robust consensus over noisy agent estimates."},
+    "lab02_colony_tsp": {"hint": "TSP tour with optimality-gap certificate."},
+    "lab03_turing_bluenoise": {"hint": "Blue-noise point set via best-candidate."},
+    "lab04_ablation_cascade": {"hint": "Sandpile cascade risk and tail VaR."},
+    "lab05_landauer_audit": {"hint": "Thermodynamic compute-cost audit."},
+    "lab01": {"estimates": "Agent estimates"},
+    "lab02": {"cities": "Cities"},
+    "lab04": {"edges": "Exposure edges"},
+    "lab05": {"ops": "Circuit operations"}
+  }
+}

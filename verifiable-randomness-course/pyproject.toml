@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "verifiable-randomness-course"
+version = "0.1.0"
+description = "Hands-on course on verifiable randomness, VDFs, ECVRF, and time-lock puzzles using live AIMarket oracles."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "AI-Factory" }]
+dependencies = []
+
+[project.urls]
+Homepage = "https://alexar76.github.io/aimarket-courses/verifiable-randomness-course/"
+Documentation = "https://alexar76.github.io/aimarket-courses/verifiable-randomness-course/"
+Repository = "https://github.com/alexar76/aimarket-courses"
+Issues = "https://github.com/alexar76/aimarket-courses/issues"
+
+[project.optional-dependencies]
+oracles = [
+    "numpy>=1.24",
+]
+dev = ["pytest>=8", "pytest-asyncio>=0.24"]
+all = ["verifiable-randomness-course[oracles,dev]"]
+
+[tool.setuptools.packages.find]
+include = ["courselib*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

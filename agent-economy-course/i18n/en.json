@@ -1,0 +1,145 @@
+{
+  "course": {
+    "title": "Build an Agent Economy from Scratch",
+    "tagline": "Publish a paid capability, collect USDC via escrow, and ship a consumer agent."
+  },
+  "ui": {
+    "task": "task",
+    "result": "result",
+    "trace": "trace",
+    "events": "events",
+    "success": "success",
+    "verify": "verify",
+    "proof": "proof",
+    "score": "trust score",
+    "blocked": "blocked",
+    "allowed": "allowed",
+    "hub": "hub",
+    "discover": "discover",
+    "invoke": "invoke",
+    "price": "price",
+    "served_by": "served by",
+    "receipt": "receipt",
+    "channel": "channel",
+    "total_spent": "total spent",
+    "protocol": "protocol",
+    "steps": "steps",
+    "acex_listings": "ACEX listings live",
+    "none": "(none)",
+    "sample": "sample tool",
+    "matches": "matches"
+  },
+  "modules": {
+    "m1": {
+      "title": "Protocol v2 overview",
+      "concept": "Capabilities, receipts, and federated discovery start at /.well-known/ai-market.json.",
+      "industry": "agent protocols"
+    },
+    "m2": {
+      "title": "SDK & Hub integration",
+      "concept": "Register, discover, and invoke across a real hub.",
+      "industry": "aimarket-agent SDK"
+    },
+    "m3": {
+      "title": "Escrow & payment channels",
+      "concept": "Hold funds until delivery; stream micropayments.",
+      "industry": "USDC, channels"
+    },
+    "m4": {
+      "title": "Reputation & trust",
+      "concept": "Signed receipts feed LUMEN-style reputation graphs.",
+      "industry": "EigenTrust, provenance"
+    },
+    "m5": {
+      "title": "Publish a capability",
+      "concept": "Ship a metered API other agents can buy.",
+      "industry": "monetization"
+    },
+    "m6": {
+      "title": "Capstone: paid agent loop",
+      "concept": "Consumer agent pays via escrow; provider gets USDC.",
+      "industry": "agent economy"
+    }
+  },
+  "site": {
+    "modules_heading": "6 modules",
+    "labs_heading": "Hands-on labs",
+    "quickstart_heading": "Quick start",
+    "quickstart_intro": "Clone the repo, install deps, and run labs locally or in Colab.",
+    "quickstart_copy": "Copy commands",
+    "quickstart_copied": "Copied!",
+    "nav_quickstart": "Quick start",
+    "nav_certificate": "Certificate",
+    "nav_modules": "Modules",
+    "nav_labs": "Labs",
+    "stat_modules": "modules",
+    "stat_labs": "hands-on labs",
+    "stat_langs": "languages",
+    "hero_badge": "Open course · Python 3.11+",
+    "open_colab": "Open in Colab",
+    "view_source": "View source",
+    "run_local": "Local run",
+    "has_lab": "lab",
+    "coming_soon": "concept only",
+    "advanced": "advanced",
+    "hub_lite": "hub-lite",
+    "module": "Module",
+    "exercises_heading": "Exercises & certificate",
+    "exercises_body": "Pass checks with <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificate",
+    "certificate_heading": "Course certificate",
+    "certificate_intro": "Complete all labs and exercises to unlock your certificate.",
+    "certificate_name_label": "Your name on the certificate",
+    "certificate_name_placeholder": "Jane Doe",
+    "certificate_progress": "Progress",
+    "certificate_labs": "Labs completed",
+    "certificate_exercises": "Exercises passed",
+    "certificate_generate": "Get certificate",
+    "certificate_locked": "Check off all labs and exercises to unlock",
+    "certificate_mark_lab": "Mark complete",
+    "certificate_mark_done": "Done ✓",
+    "footer": "Part of the AIMarket ecosystem — Protocol v2, SDK, Hub, escrow, and channels as a live sandbox."
+  },
+  "exercises": {
+    "heading": "Your turn",
+    "all_ok": "All exercises passed.",
+    "lab01_hint": "Add a field check to validate_well_known. Check: python labs/run_exercises.py --module m1",
+    "lab02_hint": "Discover summarize and invoke it. Check: python labs/run_exercises.py --module m2",
+    "lab03_hint": "Open a channel with budget $1.00 and close it. Check: python labs/run_exercises.py --module m3",
+    "lab04_hint": "Sign your own receipt and verify it. Check: python labs/run_exercises.py --module m4",
+    "lab05_hint": "Register a custom capability and invoke it. Check: python labs/run_exercises.py --module m5",
+    "lab06_hint": "Run the full hire() cycle in the sandbox. Check: python labs/run_exercises.py --module m6"
+  },
+  "labs": {
+    "lab01": {
+      "well_known_valid": "well-known valid",
+      "manifest_tools": "manifest tools",
+      "manifest_valid": "manifest valid"
+    },
+    "lab02": {
+      "invoking": "invoking prod-translate/translate.multi@v2"
+    },
+    "lab03": {
+      "budget": "channel budget",
+      "spent": "channel spent",
+      "refund": "channel refund",
+      "sample": "short text for escrow demo"
+    },
+    "lab04": {
+      "sample": "verify this paid call",
+      "verify_ok": "valid receipt",
+      "verify_bad": "tampered receipt",
+      "trust_graph": "hub trust graph"
+    },
+    "lab05": {
+      "description": "Sentiment score as a metered capability",
+      "registered": "registered",
+      "manifest_tools": "manifest tool count",
+      "sample": "great course, five stars"
+    },
+    "lab06": {
+      "task": "translate text to multiple languages",
+      "sdk_missing": "Capstone skipped: the aimarket-agent SDK is not installed. Install it with  pip install -e \".[sandbox]\"  (~50 MB, run once) and re-run this lab. Labs 1–5 and the exercises run without it."
+    }
+  }
+}

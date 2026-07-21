@@ -1,0 +1,114 @@
+{
+  "course": {
+    "title": "3D Data Visualization with Alien Monitor",
+    "tagline": "Sondez la santé, la topologie et la réputation LUMEN de l'API alien-monitor — puis mappez les scènes d'oracles vers R3F."
+  },
+  "ui": {
+    "task": "tâche",
+    "result": "résultat",
+    "trace": "trace",
+    "events": "événements",
+    "success": "succès",
+    "verify": "vérifier",
+    "proof": "preuve",
+    "score": "score",
+    "blocked": "bloqué",
+    "allowed": "autorisé"
+  },
+  "modules": {
+    "m1": {
+      "title": "Santé et modes du monitor",
+      "concept": "Sondez /api/health et comprenez les modes TEST, REAL et UNIVERSE.",
+      "industry": "observabilité, SRE"
+    },
+    "m2": {
+      "title": "Modèle de graphe de topologie",
+      "concept": "Analysez les nœuds et liens de /api/topology en structures de graphe typées.",
+      "industry": "visualisation de graphes, React Flow"
+    },
+    "m3": {
+      "title": "Réputation de la fédération",
+      "concept": "Enrichissez le graphe de confiance avec /api/reputation/peers du Hub.",
+      "industry": "EigenTrust, fédération"
+    },
+    "m4": {
+      "title": "Scores PageRank LUMEN",
+      "concept": "Appelez /api/reputation/lumen et liez les scores aux nœuds du graphe.",
+      "industry": "oracles de réputation"
+    },
+    "m5": {
+      "title": "Mappage des scènes d'oracles vers R3F",
+      "concept": "Mappez les slugs d'oracles vers les métadonnées de caméra, d'accent et de primitives pour les scènes Three.js.",
+      "industry": "React Three Fiber, WebGL"
+    }
+  },
+  "site": {
+    "modules_heading": "5 modules",
+    "labs_heading": "Labs pratiques",
+    "quickstart_heading": "Démarrage rapide",
+    "quickstart_intro": "Clonez le repo, installez les dépendances et lancez les labs en local ou dans Colab.",
+    "quickstart_copy": "Copier les commandes",
+    "quickstart_copied": "Copié !",
+    "nav_quickstart": "Démarrage rapide",
+    "nav_certificate": "Certificat",
+    "nav_modules": "Modules",
+    "nav_labs": "Labs",
+    "stat_modules": "modules",
+    "stat_labs": "labs pratiques",
+    "stat_langs": "langues",
+    "hero_badge": "Cours ouvert · Python 3.11+",
+    "open_colab": "Ouvrir dans Colab",
+    "view_source": "Voir le code",
+    "run_local": "Exécution locale",
+    "has_lab": "lab",
+    "coming_soon": "concept seulement",
+    "advanced": "avancé",
+    "module": "Module",
+    "exercises_heading": "Exercices et certificat",
+    "exercises_body": "Validez les vérifications avec <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificat",
+    "certificate_heading": "Certificat du cours",
+    "certificate_intro": "Terminez tous les labs et exercices pour débloquer votre certificat.",
+    "certificate_name_label": "Votre nom sur le certificat",
+    "certificate_name_placeholder": "Jean Dupont",
+    "certificate_progress": "Progression",
+    "certificate_labs": "Labs terminés",
+    "certificate_exercises": "Exercices réussis",
+    "certificate_generate": "Obtenir le certificat",
+    "certificate_locked": "Cochez tous les labs et exercices pour débloquer",
+    "certificate_mark_lab": "Marquer comme terminé",
+    "certificate_mark_done": "Terminé ✓",
+    "footer": "Fait partie de l'écosystème AIMarket — les scènes d'oracles d'alien-monitor comme sandbox 3D en direct."
+  },
+  "exercises": {
+    "heading": "À vous de jouer",
+    "all_ok": "Tous les exercices réussis.",
+    "lab01_hint": "Confirmez que health renvoie ok. Vérifiez : python labs/run_exercises.py --module m1",
+    "lab02_hint": "Analysez les nœuds de topologie et l'adjacence. Vérifiez : python labs/run_exercises.py --module m2",
+    "lab03_hint": "Listez les pairs de la fédération avec leurs scores de confiance. Vérifiez : python labs/run_exercises.py --module m3",
+    "lab04_hint": "Liez les scores LUMEN aux id des nœuds. Vérifiez : python labs/run_exercises.py --module m4",
+    "lab05_hint": "Mappez les slugs d'oracles vers les spécifications de scène R3F. Vérifiez : python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_health_probe": {"hint": "Sondez /api/health sur un monitor en direct ou simulé."},
+    "lab02_topology_graph": {"hint": "Construisez un graphe typé à partir de /api/topology."},
+    "lab03_reputation_peers": {"hint": "Récupérez les scores de confiance des pairs de la fédération."},
+    "lab04_lumen_scores": {"hint": "Appelez le PageRank LUMEN via /api/reputation/lumen."},
+    "lab05_r3f_scenes": {"hint": "Mappez les nœuds d'oracles vers les métadonnées de caméra/accent R3F."},
+    "lab01": {
+      "live": "alien-monitor en direct accessible",
+      "mock_note": "Utilisation du serveur simulé en processus (alien-monitor non démarré)."
+    },
+    "lab02": {
+      "nodes": "Nœuds",
+      "links": "Liens",
+      "adjacency": "Liste d'adjacence"
+    },
+    "lab03": {"count": "Pairs de la fédération"},
+    "lab04": {
+      "error": "Erreur LUMEN",
+      "iterations": "Itérations PageRank"
+    },
+    "lab05": {"scenes": "Scènes R3F d'oracles"}
+  }
+}

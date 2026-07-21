@@ -1,0 +1,103 @@
+{
+  "course": {
+    "title": "Physics-Inspired Computing for Engineers",
+    "tagline": "Essaims de consensus, certificats TSP, échantillonnage en bruit bleu, risque de cascade et thermodynamique de Landauer."
+  },
+  "ui": {
+    "task": "tâche",
+    "result": "résultat",
+    "trace": "trace",
+    "events": "événements",
+    "success": "succès",
+    "verify": "vérifier",
+    "proof": "preuve",
+    "score": "score",
+    "blocked": "bloqué",
+    "allowed": "autorisé"
+  },
+  "modules": {
+    "m1": {
+      "title": "Consensus Murmuration",
+      "concept": "Consensus DeGroot robuste et agrégation Tukey-biweight sur les estimations des agents.",
+      "industry": "intelligence en essaim, statistiques robustes"
+    },
+    "m2": {
+      "title": "Certificat TSP de Colony",
+      "concept": "Tournée plus proche voisin + 2-opt avec une borne admissible d'écart d'optimalité.",
+      "industry": "routage, optimisation combinatoire"
+    },
+    "m3": {
+      "title": "Bruit bleu de Turing",
+      "concept": "Échantillonnage par meilleur candidat (Mitchell) pour des ensembles de points uniformes mais irréguliers.",
+      "industry": "Monte Carlo, placement procédural"
+    },
+    "m4": {
+      "title": "Risque de cascade Ablation",
+      "concept": "Modèle de tas de sable abélien SOC — tailles d'avalanche en loi de puissance et risque de queue.",
+      "industry": "risque systémique, SOC"
+    },
+    "m5": {
+      "title": "Audit thermodynamique Landauer",
+      "concept": "Plancher énergétique d'effacement de bit kT·ln2 sur un DAG d'opérations.",
+      "industry": "informatique réversible, thermodynamique"
+    }
+  },
+  "site": {
+    "modules_heading": "5 modules",
+    "labs_heading": "Labos pratiques",
+    "quickstart_heading": "Démarrage rapide",
+    "quickstart_intro": "Clonez le dépôt, installez les dépendances et lancez les labos en local ou dans Colab.",
+    "quickstart_copy": "Copier les commandes",
+    "quickstart_copied": "Copié !",
+    "nav_quickstart": "Démarrage",
+    "nav_certificate": "Certificat",
+    "nav_modules": "Modules",
+    "nav_labs": "Labos",
+    "stat_modules": "modules",
+    "stat_labs": "labos pratiques",
+    "stat_langs": "langues",
+    "hero_badge": "Cours ouvert · Python 3.11+",
+    "open_colab": "Ouvrir dans Colab",
+    "view_source": "Voir le code",
+    "run_local": "Exécution locale",
+    "has_lab": "labo",
+    "coming_soon": "concept seul",
+    "advanced": "avancé",
+    "module": "Module",
+    "exercises_heading": "Exercices et certificat",
+    "exercises_body": "Validez les vérifications avec <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificat",
+    "certificate_heading": "Certificat du cours",
+    "certificate_intro": "Terminez tous les labos et exercices pour débloquer votre certificat.",
+    "certificate_name_label": "Votre nom sur le certificat",
+    "certificate_name_placeholder": "Jean Dupont",
+    "certificate_progress": "Progression",
+    "certificate_labs": "Labos terminés",
+    "certificate_exercises": "Exercices réussis",
+    "certificate_generate": "Obtenir le certificat",
+    "certificate_locked": "Cochez tous les labos et exercices pour débloquer",
+    "certificate_mark_lab": "Marquer terminé",
+    "certificate_mark_done": "Terminé ✓",
+    "footer": "Fait partie de l'écosystème AIMarket — les oracles Murmuration, Colony, Turing, Ablation et Landauer comme bac à sable en direct."
+  },
+  "exercises": {
+    "heading": "À vous de jouer",
+    "all_ok": "Tous les exercices réussis.",
+    "lab01_hint": "Vérifiez que biweight résiste aux valeurs aberrantes. Vérifiez : python labs/run_exercises.py --module m1",
+    "lab02_hint": "Confirmez que le certificat d'écart borne la qualité de la tournée. Vérifiez : python labs/run_exercises.py --module m2",
+    "lab03_hint": "Mesurez l'espacement minimal du bruit bleu. Vérifiez : python labs/run_exercises.py --module m3",
+    "lab04_hint": "Estimez l'exposant τ de la cascade. Vérifiez : python labs/run_exercises.py --module m4",
+    "lab05_hint": "Auditez le plancher d'effacement irréversible de bits. Vérifiez : python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_murmuration_consensus": {"hint": "Consensus robuste sur des estimations d'agents bruitées."},
+    "lab02_colony_tsp": {"hint": "Tournée TSP avec certificat d'écart d'optimalité."},
+    "lab03_turing_bluenoise": {"hint": "Ensemble de points en bruit bleu par meilleur candidat."},
+    "lab04_ablation_cascade": {"hint": "Risque de cascade du tas de sable et VaR de queue."},
+    "lab05_landauer_audit": {"hint": "Audit thermodynamique du coût de calcul."},
+    "lab01": {"estimates": "Estimations des agents"},
+    "lab02": {"cities": "Villes"},
+    "lab04": {"edges": "Arêtes d'exposition"},
+    "lab05": {"ops": "Opérations du circuit"}
+  }
+}

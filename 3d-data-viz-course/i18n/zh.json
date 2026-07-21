@@ -1,0 +1,114 @@
+{
+  "course": {
+    "title": "使用 Alien Monitor 进行 3D 数据可视化",
+    "tagline": "探测 alien-monitor 的 API 健康状态、拓扑和 LUMEN 声誉 —— 然后将预言机场景映射到 R3F。"
+  },
+  "ui": {
+    "task": "任务",
+    "result": "结果",
+    "trace": "跟踪",
+    "events": "事件",
+    "success": "成功",
+    "verify": "验证",
+    "proof": "证明",
+    "score": "分数",
+    "blocked": "已阻止",
+    "allowed": "已允许"
+  },
+  "modules": {
+    "m1": {
+      "title": "监控健康状态与模式",
+      "concept": "探测 /api/health，理解 TEST、REAL 与 UNIVERSE 模式。",
+      "industry": "可观测性、SRE"
+    },
+    "m2": {
+      "title": "拓扑图模型",
+      "concept": "将 /api/topology 的节点和连接解析为带类型的图结构。",
+      "industry": "图可视化、React Flow"
+    },
+    "m3": {
+      "title": "联邦声誉",
+      "concept": "用来自 Hub 的 /api/reputation/peers 丰富信任图。",
+      "industry": "EigenTrust、联邦"
+    },
+    "m4": {
+      "title": "LUMEN PageRank 分数",
+      "concept": "调用 /api/reputation/lumen 并将分数绑定到图节点。",
+      "industry": "声誉预言机"
+    },
+    "m5": {
+      "title": "R3F 预言机场景映射",
+      "concept": "将预言机 slug 映射到 Three.js 场景的相机、强调色和图元元数据。",
+      "industry": "React Three Fiber、WebGL"
+    }
+  },
+  "site": {
+    "modules_heading": "5 个模块",
+    "labs_heading": "实操实验",
+    "quickstart_heading": "快速开始",
+    "quickstart_intro": "克隆仓库、安装依赖，在本地或 Colab 中运行实验。",
+    "quickstart_copy": "复制命令",
+    "quickstart_copied": "已复制！",
+    "nav_quickstart": "快速开始",
+    "nav_certificate": "证书",
+    "nav_modules": "模块",
+    "nav_labs": "实验",
+    "stat_modules": "模块",
+    "stat_labs": "实操实验",
+    "stat_langs": "语言",
+    "hero_badge": "开放课程 · Python 3.11+",
+    "open_colab": "在 Colab 中打开",
+    "view_source": "查看源码",
+    "run_local": "本地运行",
+    "has_lab": "实验",
+    "coming_soon": "仅概念",
+    "advanced": "进阶",
+    "module": "模块",
+    "exercises_heading": "练习与证书",
+    "exercises_body": "通过检查：<code class=\"inline\">python labs/run_exercises.py</code>。",
+    "certificate_nav": "证书",
+    "certificate_heading": "课程证书",
+    "certificate_intro": "完成所有实验和练习以解锁你的证书。",
+    "certificate_name_label": "证书上的姓名",
+    "certificate_name_placeholder": "张三",
+    "certificate_progress": "进度",
+    "certificate_labs": "已完成实验",
+    "certificate_exercises": "已通过练习",
+    "certificate_generate": "获取证书",
+    "certificate_locked": "勾选所有实验和练习以解锁",
+    "certificate_mark_lab": "标记为完成",
+    "certificate_mark_done": "完成 ✓",
+    "footer": "AIMarket 生态系统的一部分 —— alien-monitor 预言机场景作为实时 3D 沙盒。"
+  },
+  "exercises": {
+    "heading": "轮到你了",
+    "all_ok": "所有练习已通过。",
+    "lab01_hint": "确认 health 返回 ok。检查：python labs/run_exercises.py --module m1",
+    "lab02_hint": "解析拓扑节点和邻接关系。检查：python labs/run_exercises.py --module m2",
+    "lab03_hint": "列出带信任分数的联邦对等节点。检查：python labs/run_exercises.py --module m3",
+    "lab04_hint": "将 LUMEN 分数绑定到节点 id。检查：python labs/run_exercises.py --module m4",
+    "lab05_hint": "将预言机 slug 映射到 R3F 场景规格。检查：python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_health_probe": {"hint": "在实时或模拟 monitor 上探测 /api/health。"},
+    "lab02_topology_graph": {"hint": "从 /api/topology 构建带类型的图。"},
+    "lab03_reputation_peers": {"hint": "获取联邦对等节点的信任分数。"},
+    "lab04_lumen_scores": {"hint": "通过 /api/reputation/lumen 调用 LUMEN PageRank。"},
+    "lab05_r3f_scenes": {"hint": "将预言机节点映射到 R3F 相机/强调色元数据。"},
+    "lab01": {
+      "live": "实时 alien-monitor 可达",
+      "mock_note": "使用进程内模拟服务器（alien-monitor 未运行）。"
+    },
+    "lab02": {
+      "nodes": "节点",
+      "links": "连接",
+      "adjacency": "邻接表"
+    },
+    "lab03": {"count": "联邦对等节点"},
+    "lab04": {
+      "error": "LUMEN 错误",
+      "iterations": "PageRank 迭代次数"
+    },
+    "lab05": {"scenes": "预言机 R3F 场景"}
+  }
+}

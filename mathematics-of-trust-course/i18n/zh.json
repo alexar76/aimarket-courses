@@ -1,0 +1,131 @@
+{
+  "course": {
+    "title": "信任的数学",
+    "tagline": "PageRank、渗流、谱切分、共识和级联风险 —— 结合实时 AIMarket 预言机。"
+  },
+  "ui": {
+    "task": "任务",
+    "result": "结果",
+    "trace": "跟踪",
+    "events": "事件",
+    "success": "成功",
+    "verify": "验证",
+    "proof": "证明",
+    "score": "分数",
+    "blocked": "已阻止",
+    "allowed": "已允许"
+  },
+  "modules": {
+    "m1": {
+      "title": "使用 LUMEN 的 EigenTrust",
+      "concept": "在“谁信任谁”图上的 PageRank 平稳分布。",
+      "industry": "声誉、MCP"
+    },
+    "m2": {
+      "title": "渗流与关键节点",
+      "concept": "在信任图上的定向节点移除与临界阈值。",
+      "industry": "网络韧性"
+    },
+    "m3": {
+      "title": "谱连通性",
+      "concept": "Fiedler 值与谱二分 —— 图离分裂有多近？",
+      "industry": "社区发现"
+    },
+    "m4": {
+      "title": "鲁棒共识",
+      "concept": "对智能体估计值的中位数、截尾均值和 biweight 位置估计。",
+      "industry": "集群、预言机聚合"
+    },
+    "m5": {
+      "title": "级联风险",
+      "concept": "阿贝尔沙堆雪崩与幂律尾部风险。",
+      "industry": "系统性风险、DeFi"
+    },
+    "m6": {
+      "title": "信任数学 Capstone",
+      "concept": "将渗流、谱和级联信号合并为一次审计。",
+      "industry": "智能体安全"
+    }
+  },
+  "site": {
+    "modules_heading": "6 个模块",
+    "labs_heading": "实操实验",
+    "quickstart_heading": "快速开始",
+    "quickstart_intro": "克隆仓库、安装依赖，在本地或 Colab 中运行实验。",
+    "quickstart_copy": "复制命令",
+    "quickstart_copied": "已复制！",
+    "nav_quickstart": "快速开始",
+    "nav_certificate": "证书",
+    "nav_modules": "模块",
+    "nav_labs": "实验",
+    "stat_modules": "模块",
+    "stat_labs": "实操实验",
+    "stat_langs": "语言",
+    "hero_badge": "开放课程 · Python 3.11+",
+    "open_colab": "在 Colab 中打开",
+    "view_source": "查看源码",
+    "run_local": "本地运行",
+    "has_lab": "实验",
+    "coming_soon": "仅概念",
+    "advanced": "进阶",
+    "module": "模块",
+    "exercises_heading": "练习与证书",
+    "exercises_body": "通过检查：<code class=\"inline\">python labs/run_exercises.py</code>。",
+    "certificate_nav": "证书",
+    "certificate_heading": "课程证书",
+    "certificate_intro": "完成所有实验和练习以解锁你的证书。",
+    "certificate_name_label": "证书上的姓名",
+    "certificate_name_placeholder": "张三",
+    "certificate_progress": "进度",
+    "certificate_labs": "已完成实验",
+    "certificate_exercises": "已通过练习",
+    "certificate_generate": "获取证书",
+    "certificate_locked": "勾选所有实验和练习以解锁",
+    "certificate_mark_lab": "标记为完成",
+    "certificate_mark_done": "完成 ✓",
+    "footer": "AIMarket 生态系统的一部分 —— LUMEN、PERCOLA、FOURIER、MURMURATION 和 ABLATION 预言机作为实时沙盒。"
+  },
+  "exercises": {
+    "heading": "练习",
+    "all_ok": "所有练习已通过。",
+    "lab01_hint": "运行：python labs/run_exercises.py --module m2",
+    "lab02_hint": "运行：python labs/run_exercises.py --module m1",
+    "lab03_hint": "运行：python labs/run_exercises.py --module m3",
+    "lab04_hint": "运行：python labs/run_exercises.py --module m4",
+    "lab05_hint": "运行：python labs/run_exercises.py --module m5",
+    "lab06_hint": "运行：python labs/run_exercises.py --module m6"
+  },
+  "labs": {
+    "lab01_keystone_nodes": {
+      "hint": "在 lab01_keystone_nodes 中扩展 m2 的概念。",
+      "graph_heading": "桥接图",
+      "keystones": "关键节点"
+    },
+    "lab02_trust_pagerank": {
+      "hint": "在 lab02_trust_pagerank 中扩展 m1 的概念。",
+      "graph_heading": "信任图",
+      "top": "信任度最高"
+    },
+    "lab03_spectral_cut": {
+      "hint": "在 lab03_spectral_cut 中扩展 m3 的概念。",
+      "fiedler": "代数连通度",
+      "cut": "谱二分"
+    },
+    "lab04_consensus_aggregate": {
+      "hint": "在 lab04_consensus_aggregate 中扩展 m4 的概念。",
+      "values": "智能体估计值"
+    },
+    "lab05_sandpile_cascade": {
+      "hint": "在 lab05_sandpile_cascade 中扩展 m5 的概念。",
+      "stats": "级联统计"
+    },
+    "lab06_trust_audit": {
+      "hint": "在 lab06_trust_audit 中扩展 m6 的概念。",
+      "audit": "信任审计",
+      "top_trusted": "最受信任",
+      "fiedler": "代数连通度",
+      "percolation": "渗流阈值",
+      "keystones": "关键节点"
+    }
+  }
+}

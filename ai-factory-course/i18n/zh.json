@@ -1,0 +1,111 @@
+{
+  "course": {
+    "title": "AI Factory 流水线与编排",
+    "tagline": "研究→设计→构建→测试→交付 —— 探测工厂 API 和编排器阶段。"
+  },
+  "ui": {
+    "task": "任务",
+    "result": "结果",
+    "trace": "跟踪",
+    "events": "事件",
+    "success": "成功",
+    "verify": "验证",
+    "proof": "证明",
+    "score": "分数",
+    "blocked": "已阻止",
+    "allowed": "已允许"
+  },
+  "modules": {
+    "m1": {
+      "title": "流水线概览",
+      "concept": "将研究、设计、构建、测试和交付作为编排的阶段。",
+      "industry": "AI-Factory"
+    },
+    "m2": {
+      "title": "流水线状态 API",
+      "concept": "GET /api/public/pipeline-status 心跳计数器。",
+      "industry": "可观测性"
+    },
+    "m3": {
+      "title": "已交付产品目录",
+      "concept": "列出工厂中已 COMPLETED 的产品和能力。",
+      "industry": "交易市场"
+    },
+    "m4": {
+      "title": "编排器阶段流",
+      "concept": "从 IDEA_RECEIVED 到 COMPLETED 的状态机。",
+      "industry": "编排器"
+    },
+    "m5": {
+      "title": "Capstone：工厂探测",
+      "concept": "使用实时工厂或嵌入式模拟的端到端探测。",
+      "industry": "集成"
+    }
+  },
+  "site": {
+    "modules_heading": "5 个模块",
+    "labs_heading": "实操实验",
+    "quickstart_heading": "快速开始",
+    "quickstart_intro": "克隆仓库、安装依赖，在本地或 Colab 中运行实验。",
+    "quickstart_copy": "复制命令",
+    "quickstart_copied": "已复制！",
+    "nav_quickstart": "快速开始",
+    "nav_certificate": "证书",
+    "nav_modules": "模块",
+    "nav_labs": "实验",
+    "stat_modules": "模块",
+    "stat_labs": "实操实验",
+    "stat_langs": "语言",
+    "hero_badge": "开放课程 · Python 3.11+",
+    "open_colab": "在 Colab 中打开",
+    "view_source": "查看源码",
+    "run_local": "本地运行",
+    "has_lab": "实验",
+    "coming_soon": "仅概念",
+    "advanced": "进阶",
+    "module": "模块",
+    "exercises_heading": "练习与证书",
+    "exercises_body": "通过检查：<code class=\"inline\">python labs/run_exercises.py</code>。",
+    "certificate_nav": "证书",
+    "certificate_heading": "课程证书",
+    "certificate_intro": "完成所有实验和练习以解锁你的证书。",
+    "certificate_name_label": "证书上的姓名",
+    "certificate_name_placeholder": "张三",
+    "certificate_progress": "进度",
+    "certificate_labs": "已完成实验",
+    "certificate_exercises": "已通过练习",
+    "certificate_generate": "获取证书",
+    "certificate_locked": "勾选所有实验和练习以解锁",
+    "certificate_mark_lab": "标记为完成",
+    "certificate_mark_done": "完成 ✓",
+    "footer": "AIMarket 生态系统的一部分 —— AI-Factory 编排器和公开流水线 API。"
+  },
+  "exercises": {
+    "heading": "轮到你了",
+    "all_ok": "所有练习已通过。",
+    "lab01_hint": "列出全部五个流水线阶段。检查：python labs/run_exercises.py --module m1",
+    "lab02_hint": "从模拟或实时工厂获取 pipeline-status。检查：python labs/run_exercises.py --module m2",
+    "lab03_hint": "从 /ai-market/products 列出已交付产品。检查：python labs/run_exercises.py --module m3",
+    "lab04_hint": "将编排器状态推进到 COMPLETED。检查：python labs/run_exercises.py --module m4",
+    "lab05_hint": "端到端运行 probe_factory。检查：python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_pipeline_overview": {"hint": "将研究→交付阶段映射到编排器智能体。"},
+    "lab02_pipeline_status": {"hint": "探测 GET /api/public/pipeline-status。"},
+    "lab03_products_catalog": {"hint": "从工厂 API 列出已交付产品。"},
+    "lab04_orchestrator_stages": {"hint": "跟踪 IDEA_RECEIVED → COMPLETED 的状态转换。"},
+    "lab05_factory_capstone": {"hint": "Capstone：在一次探测中获取状态 + 产品。"},
+    "lab01": {"phases_heading": "五个流水线阶段"},
+    "lab02": {
+      "in_pipeline": "流水线中",
+      "shipped": "已交付",
+      "source": "数据源"
+    },
+    "lab03": {"count": "已交付产品"},
+    "lab04": {"path_heading": "编排器路径"},
+    "lab05": {
+      "products": "目录",
+      "phases": "阶段"
+    }
+  }
+}

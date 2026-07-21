@@ -1,0 +1,115 @@
+{
+  "course": {
+    "title": "Optimization with Proofs",
+    "tagline": "Écarts du TSP, duaux de transport, certificats eikonaux et incertitude des GP — chaque réponse livre une preuve."
+  },
+  "ui": {
+    "task": "tâche",
+    "result": "résultat",
+    "trace": "trace",
+    "events": "événements",
+    "success": "succès",
+    "verify": "vérifier",
+    "proof": "preuve",
+    "score": "score",
+    "blocked": "bloqué",
+    "allowed": "autorisé"
+  },
+  "modules": {
+    "m1": {
+      "title": "TSP avec écart de qualité",
+      "concept": "Tournée « plus proche voisin » + 2-opt avec borne inférieure admissible.",
+      "industry": "routage, logistique"
+    },
+    "m2": {
+      "title": "Transport optimal",
+      "concept": "Plan de Kantorovich exact avec certificat dual.",
+      "industry": "appariement, économie"
+    },
+    "m3": {
+      "title": "Routage en temps minimal",
+      "concept": "Potentiels eikonaux et optimalité duale sur des réseaux d'agents.",
+      "industry": "composition MCP"
+    },
+    "m4": {
+      "title": "Processus gaussiens",
+      "concept": "Incertitude a posteriori et Expected Improvement.",
+      "industry": "apprentissage actif, optimisation bayésienne"
+    },
+    "m5": {
+      "title": "Projet final : portefeuille de preuves",
+      "concept": "Enchaîner les certificats TSP, transport, route et GP dans un seul audit.",
+      "industry": "agents vérifiables"
+    }
+  },
+  "site": {
+    "modules_heading": "5 modules",
+    "labs_heading": "Labos pratiques",
+    "quickstart_heading": "Démarrage rapide",
+    "quickstart_intro": "Clonez le dépôt, installez les dépendances et lancez les labos en local ou dans Colab.",
+    "quickstart_copy": "Copier les commandes",
+    "quickstart_copied": "Copié !",
+    "nav_quickstart": "Démarrage rapide",
+    "nav_certificate": "Certificat",
+    "nav_modules": "Modules",
+    "nav_labs": "Labos",
+    "stat_modules": "modules",
+    "stat_labs": "labos pratiques",
+    "stat_langs": "langues",
+    "hero_badge": "Cours ouvert · Python 3.11+",
+    "open_colab": "Ouvrir dans Colab",
+    "view_source": "Voir le code",
+    "run_local": "Exécution locale",
+    "has_lab": "labo",
+    "coming_soon": "concept seul",
+    "advanced": "avancé",
+    "module": "Module",
+    "exercises_heading": "Exercices et certificat",
+    "exercises_body": "Validez les vérifications avec <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificat",
+    "certificate_heading": "Certificat du cours",
+    "certificate_intro": "Terminez tous les labos et exercices pour débloquer votre certificat.",
+    "certificate_name_label": "Votre nom sur le certificat",
+    "certificate_name_placeholder": "Jean Dupont",
+    "certificate_progress": "Progression",
+    "certificate_labs": "Labos terminés",
+    "certificate_exercises": "Exercices réussis",
+    "certificate_generate": "Obtenir le certificat",
+    "certificate_locked": "Cochez tous les labos et exercices pour débloquer",
+    "certificate_mark_lab": "Marquer terminé",
+    "certificate_mark_done": "Terminé ✓",
+    "footer": "Fait partie de l'écosystème AIMarket — les oracles COLONY, KANTOR, FERMAT et GAUSS comme bac à sable en direct."
+  },
+  "exercises": {
+    "heading": "Exercice",
+    "all_ok": "Tous les exercices réussis.",
+    "lab01_hint": "Exécutez : python labs/run_exercises.py --module m1",
+    "lab02_hint": "Exécutez : python labs/run_exercises.py --module m2",
+    "lab03_hint": "Exécutez : python labs/run_exercises.py --module m3",
+    "lab04_hint": "Exécutez : python labs/run_exercises.py --module m4",
+    "lab05_hint": "Exécutez : python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_colony_tsp": {
+      "hint": "Approfondissez les concepts de m1 dans lab01_colony_tsp.",
+      "tour": "Tournée TSP"
+    },
+    "lab02_kantor_transport": {
+      "hint": "Approfondissez les concepts de m2 dans lab02_kantor_transport.",
+      "cost": "Coût de transport"
+    },
+    "lab03_fermat_route": {
+      "hint": "Approfondissez les concepts de m3 dans lab03_fermat_route.",
+      "path": "Chemin en temps minimal"
+    },
+    "lab04_gauss_gp": {
+      "hint": "Approfondissez les concepts de m4 dans lab04_gauss_gp.",
+      "posterior": "Champ a posteriori",
+      "suggest": "Expected Improvement"
+    },
+    "lab05_proof_capstone": {
+      "hint": "Approfondissez les concepts de m5 dans lab05_proof_capstone.",
+      "summary": "Portefeuille de preuves"
+    }
+  }
+}
