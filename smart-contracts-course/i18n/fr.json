@@ -1,0 +1,122 @@
+{
+  "course": {
+    "title": "Smart Contracts for Agent Lotteries",
+    "tagline": "Tirages non biaisables, vérification VDF et séquestre (escrow) — patterns de lottery/ en Python avec des vecteurs Foundry."
+  },
+  "ui": {
+    "task": "tâche",
+    "result": "résultat",
+    "trace": "trace",
+    "events": "événements",
+    "success": "succès",
+    "verify": "vérification",
+    "proof": "preuve",
+    "score": "score",
+    "blocked": "bloqué",
+    "allowed": "autorisé"
+  },
+  "modules": {
+    "m1": {
+      "title": "Tirage de loterie non biaisable",
+      "concept": "Commit–reveal et ECVRF corrigent les attaques de grinding de l'opérateur.",
+      "industry": "loterie, gaming"
+    },
+    "m2": {
+      "title": "Vérification VDF on-chain",
+      "concept": "Les preuves Wesolowski de Chronos correspondent aux vecteurs de test Foundry.",
+      "industry": "aléa sans confiance"
+    },
+    "m3": {
+      "title": "Séquestre (escrow) et canaux de paiement",
+      "concept": "Retenir les fonds jusqu'à la livraison ; débit conditionné par reçu, comme AIMarketEscrow.",
+      "industry": "USDC, économie d'agents"
+    },
+    "m4": {
+      "title": "Cycle de vie du round du relayer",
+      "concept": "baseSeed, tirage Sortes, chemin VDF on-chain optionnel.",
+      "industry": "lottery/ relayer"
+    },
+    "m5": {
+      "title": "Projet final : round équitable",
+      "concept": "Simuler un round complet de loterie avec des artefacts vérifiables.",
+      "industry": "lottery/ consommateur"
+    }
+  },
+  "site": {
+    "modules_heading": "5 modules",
+    "labs_heading": "Labos pratiques",
+    "quickstart_heading": "Démarrage rapide",
+    "quickstart_intro": "Clonez le dépôt, installez les dépendances et lancez les labos en local ou dans Colab.",
+    "quickstart_copy": "Copier les commandes",
+    "quickstart_copied": "Copié !",
+    "nav_quickstart": "Démarrage",
+    "nav_certificate": "Certificat",
+    "nav_modules": "Modules",
+    "nav_labs": "Labos",
+    "stat_modules": "modules",
+    "stat_labs": "labos pratiques",
+    "stat_langs": "langues",
+    "hero_badge": "Cours ouvert · Python 3.11+",
+    "open_colab": "Ouvrir dans Colab",
+    "view_source": "Voir le code",
+    "run_local": "Exécution locale",
+    "has_lab": "labo",
+    "coming_soon": "concept seul",
+    "advanced": "avancé",
+    "module": "Module",
+    "exercises_heading": "Exercices et certificat",
+    "exercises_body": "Validez les vérifications avec <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificat",
+    "certificate_heading": "Certificat du cours",
+    "certificate_intro": "Terminez tous les labos et exercices pour débloquer votre certificat.",
+    "certificate_name_label": "Votre nom sur le certificat",
+    "certificate_name_placeholder": "Jean Dupont",
+    "certificate_progress": "Progression",
+    "certificate_labs": "Labos terminés",
+    "certificate_exercises": "Exercices réussis",
+    "certificate_generate": "Obtenir le certificat",
+    "certificate_locked": "Cochez tous les labos et exercices pour débloquer",
+    "certificate_mark_lab": "Marquer terminé",
+    "certificate_mark_done": "Terminé ✓",
+    "footer": "Fait partie de l'écosystème AIMarket — lottery/ sur Base avec les oracles Platon, Chronos et Sortes."
+  },
+  "exercises": {
+    "heading": "À vous de jouer",
+    "all_ok": "Tous les exercices réussis.",
+    "lab01_hint": "Montrez que le tirage équitable se vérifie tandis que la loterie biaisée fait du grinding. Vérifiez : python labs/run_exercises.py --module m1",
+    "lab02_hint": "Vérifiez le vecteur Foundry inclus. Vérifiez : python labs/run_exercises.py --module m2",
+    "lab03_hint": "Débitez deux fois avec le même reçu — le second doit échouer. Vérifiez : python labs/run_exercises.py --module m3",
+    "lab04_hint": "Tracez baseSeed → Sortes → balise VDF. Vérifiez : python labs/run_exercises.py --module m4",
+    "lab05_hint": "Lancez simulate_fair_round avec onchain_vdf=True. Vérifiez : python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_unbiasable_draw": {"hint": "Comparez le grinding biaisé au tirage ECVRF équitable."},
+    "lab02_vdf_verify": {"hint": "Vérifiez lottery/contracts/test/vectors/chronos_vector.json."},
+    "lab03_escrow_channel": {"hint": "Ouvrez, débitez et réglez un canal de séquestre (escrow)."},
+    "lab04_relayer_round": {"hint": "Parcourez les phases de graine et de tirage du round du relayer."},
+    "lab05_lottery_capstone": {"hint": "Round de projet final avec artefacts VRF + VDF."},
+    "lab01": {
+      "player_seed": "player-alpha-2026",
+      "biased_label": "Loterie biaisée (grinding de l'opérateur)",
+      "fair_label": "Loterie équitable (ECVRF)",
+      "docs_note": "Consommateur on-chain : voir lottery/docs/ et AIAgentLottery.sol."
+    },
+    "lab02": {
+      "foundry_note": "Lancez forge test dans lottery/contracts — ChronosVDF.t.sol utilise le même vecteur."
+    },
+    "lab03": {
+      "depositor": "alice-course",
+      "replay": "Rejeu de reçu"
+    },
+    "lab04": {
+      "client_seed": "relayer|42|course",
+      "seed": "Graine Chronos",
+      "ticket": "Ticket Sortes",
+      "vdf": "Vecteur VDF"
+    },
+    "lab05": {
+      "client_seed": "capstone-player",
+      "docs": "Documentation de la loterie"
+    }
+  }
+}

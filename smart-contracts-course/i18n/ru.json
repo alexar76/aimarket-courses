@@ -1,0 +1,132 @@
+{
+  "course": {
+    "title": "Smart Contracts for Agent Lotteries",
+    "tagline": "Несмещаемые розыгрыши, верификация VDF и эскроу — паттерны lottery/ на Python с Foundry-векторами."
+  },
+  "ui": {
+    "task": "задача",
+    "result": "результат",
+    "trace": "трейс",
+    "events": "события",
+    "success": "успех",
+    "verify": "верификация",
+    "proof": "доказательство",
+    "score": "оценка",
+    "blocked": "заблокировано",
+    "allowed": "разрешено"
+  },
+  "modules": {
+    "m1": {
+      "title": "Несмещаемый розыгрыш лотереи",
+      "concept": "Commit–reveal и ECVRF закрывают grinding-атаки оператора.",
+      "industry": "лотереи, гейминг"
+    },
+    "m2": {
+      "title": "Верификация VDF on-chain",
+      "concept": "Доказательства Wesolowski из Chronos совпадают с тест-векторами Foundry.",
+      "industry": "доверенная случайность"
+    },
+    "m3": {
+      "title": "Эскроу и платёжные каналы",
+      "concept": "Удержание средств до поставки; списание по квитанции, как в AIMarketEscrow.",
+      "industry": "USDC, экономика агентов"
+    },
+    "m4": {
+      "title": "Жизненный цикл раунда релейера",
+      "concept": "baseSeed, розыгрыш Sortes, опциональный путь VDF on-chain.",
+      "industry": "lottery/ релейер"
+    },
+    "m5": {
+      "title": "Капстоун: честный раунд",
+      "concept": "Симуляция полного раунда лотереи с проверяемыми артефактами.",
+      "industry": "lottery/ потребитель"
+    }
+  },
+  "site": {
+    "modules_heading": "5 модулей",
+    "labs_heading": "Практические лабы",
+    "quickstart_heading": "Быстрый старт",
+    "quickstart_intro": "Клонируйте репозиторий, установите зависимости и запускайте лабы локально или в Colab.",
+    "quickstart_copy": "Скопировать команды",
+    "quickstart_copied": "Скопировано!",
+    "nav_quickstart": "Старт",
+    "nav_certificate": "Сертификат",
+    "nav_modules": "Модули",
+    "nav_labs": "Лабы",
+    "stat_modules": "модулей",
+    "stat_labs": "практических лаб",
+    "stat_langs": "языков",
+    "hero_badge": "Открытый курс · Python 3.11+",
+    "open_colab": "Открыть в Colab",
+    "view_source": "Исходник",
+    "run_local": "Локальный запуск",
+    "has_lab": "лаба",
+    "coming_soon": "только теория",
+    "advanced": "продвинутый",
+    "module": "Модуль",
+    "exercises_heading": "Упражнения и сертификат",
+    "exercises_body": "Проходите проверки командой <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Сертификат",
+    "certificate_heading": "Сертификат курса",
+    "certificate_intro": "Пройдите все лабы и упражнения, чтобы открыть свой сертификат.",
+    "certificate_name_label": "Ваше имя в сертификате",
+    "certificate_name_placeholder": "Иван Петров",
+    "certificate_progress": "Прогресс",
+    "certificate_labs": "Лабы пройдены",
+    "certificate_exercises": "Упражнения сданы",
+    "certificate_generate": "Получить сертификат",
+    "certificate_locked": "Отметьте все лабы и упражнения, чтобы открыть",
+    "certificate_mark_lab": "Отметить пройденной",
+    "certificate_mark_done": "Готово ✓",
+    "footer": "Часть экосистемы AIMarket — lottery/ на Base с оракулами Platon, Chronos и Sortes."
+  },
+  "exercises": {
+    "heading": "Ваша очередь",
+    "all_ok": "Все упражнения пройдены.",
+    "lab01_hint": "Покажите, что честный розыгрыш проверяется, а смещённая лотерея поддаётся grinding. Проверка: python labs/run_exercises.py --module m1",
+    "lab02_hint": "Проверьте вложенный Foundry-вектор. Проверка: python labs/run_exercises.py --module m2",
+    "lab03_hint": "Спишите дважды по одной квитанции — второе списание должно упасть. Проверка: python labs/run_exercises.py --module m3",
+    "lab04_hint": "Проследите трейс baseSeed → Sortes → VDF-маяк. Проверка: python labs/run_exercises.py --module m4",
+    "lab05_hint": "Запустите simulate_fair_round с onchain_vdf=True. Проверка: python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_unbiasable_draw": {
+      "hint": "Сравните grinding смещённой лотереи с честным розыгрышем ECVRF."
+    },
+    "lab02_vdf_verify": {
+      "hint": "Проверьте lottery/contracts/test/vectors/chronos_vector.json."
+    },
+    "lab03_escrow_channel": {
+      "hint": "Откройте, спишите и закройте эскроу-канал."
+    },
+    "lab04_relayer_round": {
+      "hint": "Пройдите фазы сидирования и розыгрыша раунда релейера."
+    },
+    "lab05_lottery_capstone": {
+      "hint": "Капстоун-раунд с артефактами VRF + VDF."
+    },
+    "lab01": {
+      "player_seed": "player-alpha-2026",
+      "biased_label": "Смещённая лотерея (grinding оператора)",
+      "fair_label": "Честная лотерея (ECVRF)",
+      "docs_note": "On-chain потребитель: см. lottery/docs/ и AIAgentLottery.sol."
+    },
+    "lab02": {
+      "foundry_note": "Запустите forge test в lottery/contracts — ChronosVDF.t.sol использует тот же вектор."
+    },
+    "lab03": {
+      "depositor": "alice-course",
+      "replay": "Повтор квитанции"
+    },
+    "lab04": {
+      "client_seed": "relayer|42|course",
+      "seed": "Сид Chronos",
+      "ticket": "Билет Sortes",
+      "vdf": "Вектор VDF"
+    },
+    "lab05": {
+      "client_seed": "capstone-player",
+      "docs": "Документация лотереи"
+    }
+  }
+}

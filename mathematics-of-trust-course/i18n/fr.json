@@ -1,0 +1,131 @@
+{
+  "course": {
+    "title": "Mathématiques de la confiance",
+    "tagline": "PageRank, percolation, coupes spectrales, consensus et risque de cascade — avec des oracles AIMarket en direct."
+  },
+  "ui": {
+    "task": "tâche",
+    "result": "résultat",
+    "trace": "trace",
+    "events": "événements",
+    "success": "succès",
+    "verify": "vérification",
+    "proof": "preuve",
+    "score": "score",
+    "blocked": "bloqué",
+    "allowed": "autorisé"
+  },
+  "modules": {
+    "m1": {
+      "title": "EigenTrust avec LUMEN",
+      "concept": "Distribution stationnaire de PageRank sur un graphe qui-fait-confiance-à-qui.",
+      "industry": "réputation, MCP"
+    },
+    "m2": {
+      "title": "Percolation et nœuds clés",
+      "concept": "Suppression ciblée de nœuds et seuils critiques sur les graphes de confiance.",
+      "industry": "résilience des réseaux"
+    },
+    "m3": {
+      "title": "Connectivité spectrale",
+      "concept": "Valeur de Fiedler et bisection spectrale — à quel point le graphe est-il proche de se scinder ?",
+      "industry": "détection de communautés"
+    },
+    "m4": {
+      "title": "Consensus robuste",
+      "concept": "Médiane, moyenne tronquée et estimateur biweight de position sur les estimations des agents.",
+      "industry": "essaim, agrégation d'oracles"
+    },
+    "m5": {
+      "title": "Risque de cascade",
+      "concept": "Avalanches de tas de sable abélien et risque de queue en loi de puissance.",
+      "industry": "risque systémique, DeFi"
+    },
+    "m6": {
+      "title": "Projet de synthèse : mathématiques de la confiance",
+      "concept": "Combinez les signaux de percolation, spectraux et de cascade en un seul audit.",
+      "industry": "sécurité des agents"
+    }
+  },
+  "site": {
+    "modules_heading": "6 modules",
+    "labs_heading": "Labs pratiques",
+    "quickstart_heading": "Démarrage rapide",
+    "quickstart_intro": "Clonez le repo, installez les dépendances et lancez les labs en local ou dans Colab.",
+    "quickstart_copy": "Copier les commandes",
+    "quickstart_copied": "Copié !",
+    "nav_quickstart": "Démarrage rapide",
+    "nav_certificate": "Certificat",
+    "nav_modules": "Modules",
+    "nav_labs": "Labs",
+    "stat_modules": "modules",
+    "stat_labs": "labs pratiques",
+    "stat_langs": "langues",
+    "hero_badge": "Cours ouvert · Python 3.11+",
+    "open_colab": "Ouvrir dans Colab",
+    "view_source": "Voir le code",
+    "run_local": "Exécution locale",
+    "has_lab": "lab",
+    "coming_soon": "concept seulement",
+    "advanced": "avancé",
+    "module": "Module",
+    "exercises_heading": "Exercices et certificat",
+    "exercises_body": "Validez les vérifications avec <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificat",
+    "certificate_heading": "Certificat du cours",
+    "certificate_intro": "Terminez tous les labs et exercices pour débloquer votre certificat.",
+    "certificate_name_label": "Votre nom sur le certificat",
+    "certificate_name_placeholder": "Jean Dupont",
+    "certificate_progress": "Progression",
+    "certificate_labs": "Labs terminés",
+    "certificate_exercises": "Exercices réussis",
+    "certificate_generate": "Obtenir le certificat",
+    "certificate_locked": "Cochez tous les labs et exercices pour débloquer",
+    "certificate_mark_lab": "Marquer comme terminé",
+    "certificate_mark_done": "Terminé ✓",
+    "footer": "Fait partie de l'écosystème AIMarket — les oracles LUMEN, PERCOLA, FOURIER, MURMURATION et ABLATION comme sandbox en direct."
+  },
+  "exercises": {
+    "heading": "Exercice",
+    "all_ok": "Tous les exercices réussis.",
+    "lab01_hint": "Exécutez : python labs/run_exercises.py --module m2",
+    "lab02_hint": "Exécutez : python labs/run_exercises.py --module m1",
+    "lab03_hint": "Exécutez : python labs/run_exercises.py --module m3",
+    "lab04_hint": "Exécutez : python labs/run_exercises.py --module m4",
+    "lab05_hint": "Exécutez : python labs/run_exercises.py --module m5",
+    "lab06_hint": "Exécutez : python labs/run_exercises.py --module m6"
+  },
+  "labs": {
+    "lab01_keystone_nodes": {
+      "hint": "Étendez les concepts de m2 dans lab01_keystone_nodes.",
+      "graph_heading": "Graphe pont",
+      "keystones": "Nœuds clés"
+    },
+    "lab02_trust_pagerank": {
+      "hint": "Étendez les concepts de m1 dans lab02_trust_pagerank.",
+      "graph_heading": "Graphe de confiance",
+      "top": "Confiance la plus élevée"
+    },
+    "lab03_spectral_cut": {
+      "hint": "Étendez les concepts de m3 dans lab03_spectral_cut.",
+      "fiedler": "Connectivité algébrique",
+      "cut": "Bisection spectrale"
+    },
+    "lab04_consensus_aggregate": {
+      "hint": "Étendez les concepts de m4 dans lab04_consensus_aggregate.",
+      "values": "Estimations des agents"
+    },
+    "lab05_sandpile_cascade": {
+      "hint": "Étendez les concepts de m5 dans lab05_sandpile_cascade.",
+      "stats": "Statistiques de cascade"
+    },
+    "lab06_trust_audit": {
+      "hint": "Étendez les concepts de m6 dans lab06_trust_audit.",
+      "audit": "Audit de confiance",
+      "top_trusted": "Le plus digne de confiance",
+      "fiedler": "Connectivité algébrique",
+      "percolation": "Seuil de percolation",
+      "keystones": "Nœuds clés"
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "course": {
+    "title": "从零构建智能体经济",
+    "tagline": "发布付费能力，通过托管收取 USDC，并交付消费方智能体。"
+  },
+  "ui": {
+    "task": "任务",
+    "result": "结果",
+    "trace": "跟踪",
+    "events": "事件",
+    "success": "成功",
+    "verify": "验证",
+    "proof": "证明",
+    "score": "信任分数",
+    "blocked": "已阻止",
+    "allowed": "已允许",
+    "hub": "Hub",
+    "discover": "发现",
+    "invoke": "调用",
+    "price": "价格",
+    "served_by": "提供方",
+    "receipt": "收据",
+    "channel": "通道",
+    "total_spent": "总花费",
+    "protocol": "协议",
+    "steps": "步骤",
+    "acex_listings": "ACEX 上架列表",
+    "none": "（无）",
+    "sample": "示例工具",
+    "matches": "匹配"
+  },
+  "modules": {
+    "m1": {
+      "title": "Protocol v2 概览",
+      "concept": "能力、收据和联邦发现从 /.well-known/ai-market.json 开始。",
+      "industry": "智能体协议"
+    },
+    "m2": {
+      "title": "SDK 与 Hub 集成",
+      "concept": "在真实的 Hub 上注册、发现和调用。",
+      "industry": "aimarket-agent SDK"
+    },
+    "m3": {
+      "title": "托管与支付通道",
+      "concept": "在交付前托管资金；流式微支付。",
+      "industry": "USDC、通道"
+    },
+    "m4": {
+      "title": "声誉与信任",
+      "concept": "签名收据为 LUMEN 风格的声誉图提供数据。",
+      "industry": "EigenTrust、溯源"
+    },
+    "m5": {
+      "title": "发布能力",
+      "concept": "交付其他智能体可购买的计量 API。",
+      "industry": "变现"
+    },
+    "m6": {
+      "title": "Capstone：付费智能体循环",
+      "concept": "消费方智能体通过托管付款；提供方获得 USDC。",
+      "industry": "智能体经济"
+    }
+  },
+  "site": {
+    "modules_heading": "6 个模块",
+    "labs_heading": "实操实验",
+    "quickstart_heading": "快速开始",
+    "quickstart_intro": "克隆仓库、安装依赖，在本地或 Colab 中运行实验。",
+    "quickstart_copy": "复制命令",
+    "quickstart_copied": "已复制！",
+    "nav_quickstart": "快速开始",
+    "nav_certificate": "证书",
+    "nav_modules": "模块",
+    "nav_labs": "实验",
+    "stat_modules": "模块",
+    "stat_labs": "实操实验",
+    "stat_langs": "语言",
+    "hero_badge": "开放课程 · Python 3.11+",
+    "open_colab": "在 Colab 中打开",
+    "view_source": "查看源码",
+    "run_local": "本地运行",
+    "has_lab": "实验",
+    "coming_soon": "仅概念",
+    "advanced": "进阶",
+    "hub_lite": "hub-lite",
+    "module": "模块",
+    "exercises_heading": "练习与证书",
+    "exercises_body": "通过检查：<code class=\"inline\">python labs/run_exercises.py</code>。",
+    "certificate_nav": "证书",
+    "certificate_heading": "课程证书",
+    "certificate_intro": "完成所有实验和练习以解锁你的证书。",
+    "certificate_name_label": "证书上的姓名",
+    "certificate_name_placeholder": "张三",
+    "certificate_progress": "进度",
+    "certificate_labs": "已完成实验",
+    "certificate_exercises": "已通过练习",
+    "certificate_generate": "获取证书",
+    "certificate_locked": "勾选所有实验和练习以解锁",
+    "certificate_mark_lab": "标记为完成",
+    "certificate_mark_done": "完成 ✓",
+    "footer": "AIMarket 生态系统的一部分 —— Protocol v2、SDK、Hub、托管和通道作为实时沙盒。"
+  },
+  "exercises": {
+    "heading": "轮到你了",
+    "all_ok": "所有练习已通过。",
+    "lab01_hint": "为 validate_well_known 添加字段检查。检查：python labs/run_exercises.py --module m1",
+    "lab02_hint": "发现 summarize 并调用它。检查：python labs/run_exercises.py --module m2",
+    "lab03_hint": "打开一个预算为 $1.00 的通道并关闭它。检查：python labs/run_exercises.py --module m3",
+    "lab04_hint": "签名你自己的收据并验证它。检查：python labs/run_exercises.py --module m4",
+    "lab05_hint": "注册一个自定义能力并调用它。检查：python labs/run_exercises.py --module m5",
+    "lab06_hint": "在沙盒中运行完整的 hire() 循环。检查：python labs/run_exercises.py --module m6"
+  },
+  "labs": {
+    "lab01": {
+      "well_known_valid": "well-known 有效",
+      "manifest_tools": "manifest 工具",
+      "manifest_valid": "manifest 有效"
+    },
+    "lab02": {
+      "invoking": "正在调用 prod-translate/translate.multi@v2"
+    },
+    "lab03": {
+      "budget": "通道预算",
+      "spent": "通道已花费",
+      "refund": "通道退款",
+      "sample": "用于托管演示的短文本"
+    },
+    "lab04": {
+      "sample": "验证这次付费调用",
+      "verify_ok": "收据有效",
+      "verify_bad": "被篡改的收据",
+      "trust_graph": "Hub 信任图"
+    },
+    "lab05": {
+      "description": "作为计量能力的情感分数",
+      "registered": "已注册",
+      "manifest_tools": "manifest 工具数量",
+      "sample": "很棒的课程，五星好评"
+    },
+    "lab06": {
+      "task": "将文本翻译成多种语言",
+      "sdk_missing": "已跳过 Capstone：未安装 aimarket-agent SDK。请使用  pip install -e \".[sandbox]\"  安装它（约 50 MB，运行一次），然后重新运行本实验。实验 1–5 和练习无需它即可运行。"
+    }
+  }
+}

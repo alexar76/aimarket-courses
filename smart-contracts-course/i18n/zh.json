@@ -1,0 +1,122 @@
+{
+  "course": {
+    "title": "Smart Contracts for Agent Lotteries",
+    "tagline": "不可偏置的抽奖、VDF 验证与托管——用 Python 实现 lottery/ 模式,并配 Foundry 向量。"
+  },
+  "ui": {
+    "task": "任务",
+    "result": "结果",
+    "trace": "跟踪",
+    "events": "事件",
+    "success": "成功",
+    "verify": "验证",
+    "proof": "证明",
+    "score": "分数",
+    "blocked": "已拦截",
+    "allowed": "已允许"
+  },
+  "modules": {
+    "m1": {
+      "title": "不可偏置的彩票抽奖",
+      "concept": "commit–reveal 与 ECVRF 修复运营方的 grinding 攻击。",
+      "industry": "彩票、游戏"
+    },
+    "m2": {
+      "title": "链上 VDF 验证",
+      "concept": "来自 Chronos 的 Wesolowski 证明与 Foundry 测试向量一致。",
+      "industry": "无需信任的随机性"
+    },
+    "m3": {
+      "title": "托管与支付通道",
+      "concept": "在交付前锁定资金;凭收据放行扣款,如 AIMarketEscrow。",
+      "industry": "USDC、智能体经济"
+    },
+    "m4": {
+      "title": "中继器轮次生命周期",
+      "concept": "baseSeed、Sortes 抽奖、可选的链上 VDF 路径。",
+      "industry": "lottery/ 中继器"
+    },
+    "m5": {
+      "title": "综合项目:公平轮次",
+      "concept": "模拟一个完整的彩票轮次,产出可验证的工件。",
+      "industry": "lottery/ 消费方"
+    }
+  },
+  "site": {
+    "modules_heading": "5 个模块",
+    "labs_heading": "动手实验",
+    "quickstart_heading": "快速开始",
+    "quickstart_intro": "克隆仓库、安装依赖,并在本地或 Colab 中运行实验。",
+    "quickstart_copy": "复制命令",
+    "quickstart_copied": "已复制!",
+    "nav_quickstart": "快速开始",
+    "nav_certificate": "证书",
+    "nav_modules": "模块",
+    "nav_labs": "实验",
+    "stat_modules": "个模块",
+    "stat_labs": "个动手实验",
+    "stat_langs": "种语言",
+    "hero_badge": "开放课程 · Python 3.11+",
+    "open_colab": "在 Colab 中打开",
+    "view_source": "查看源码",
+    "run_local": "本地运行",
+    "has_lab": "实验",
+    "coming_soon": "仅概念",
+    "advanced": "进阶",
+    "module": "模块",
+    "exercises_heading": "练习与证书",
+    "exercises_body": "通过 <code class=\"inline\">python labs/run_exercises.py</code> 完成检查。",
+    "certificate_nav": "证书",
+    "certificate_heading": "课程证书",
+    "certificate_intro": "完成全部实验与练习,即可解锁你的证书。",
+    "certificate_name_label": "证书上的姓名",
+    "certificate_name_placeholder": "张三",
+    "certificate_progress": "进度",
+    "certificate_labs": "已完成实验",
+    "certificate_exercises": "已通过练习",
+    "certificate_generate": "获取证书",
+    "certificate_locked": "勾选全部实验与练习以解锁",
+    "certificate_mark_lab": "标记完成",
+    "certificate_mark_done": "完成 ✓",
+    "footer": "AIMarket 生态的一部分——lottery/ 部署于 Base,配 Platon、Chronos 与 Sortes 预言机。"
+  },
+  "exercises": {
+    "heading": "轮到你了",
+    "all_ok": "全部练习已通过。",
+    "lab01_hint": "展示公平抽奖可通过验证,而有偏彩票可被 grinding。检查:python labs/run_exercises.py --module m1",
+    "lab02_hint": "验证内置的 Foundry 向量。检查:python labs/run_exercises.py --module m2",
+    "lab03_hint": "用同一张收据扣款两次——第二次必须失败。检查:python labs/run_exercises.py --module m3",
+    "lab04_hint": "跟踪 baseSeed → Sortes → VDF 信标。检查:python labs/run_exercises.py --module m4",
+    "lab05_hint": "以 onchain_vdf=True 运行 simulate_fair_round。检查:python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_unbiasable_draw": {"hint": "对比有偏的 grinding 与公平的 ECVRF 抽奖。"},
+    "lab02_vdf_verify": {"hint": "验证 lottery/contracts/test/vectors/chronos_vector.json。"},
+    "lab03_escrow_channel": {"hint": "打开、扣款并结算一个托管通道。"},
+    "lab04_relayer_round": {"hint": "走一遍中继器轮次的种子与抽奖阶段。"},
+    "lab05_lottery_capstone": {"hint": "带 VRF + VDF 工件的综合项目轮次。"},
+    "lab01": {
+      "player_seed": "player-alpha-2026",
+      "biased_label": "有偏彩票(运营方 grinding)",
+      "fair_label": "公平彩票(ECVRF)",
+      "docs_note": "链上消费方:参见 lottery/docs/ 与 AIAgentLottery.sol。"
+    },
+    "lab02": {
+      "foundry_note": "在 lottery/contracts 中运行 forge test——ChronosVDF.t.sol 使用相同的向量。"
+    },
+    "lab03": {
+      "depositor": "alice-course",
+      "replay": "收据重放"
+    },
+    "lab04": {
+      "client_seed": "relayer|42|course",
+      "seed": "Chronos 种子",
+      "ticket": "Sortes 票据",
+      "vdf": "VDF 向量"
+    },
+    "lab05": {
+      "client_seed": "capstone-player",
+      "docs": "彩票文档"
+    }
+  }
+}

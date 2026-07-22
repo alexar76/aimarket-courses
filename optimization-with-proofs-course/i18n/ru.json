@@ -1,0 +1,115 @@
+{
+  "course": {
+    "title": "Optimization with Proofs",
+    "tagline": "Зазоры TSP, двойственные планы транспорта, эйкональные сертификаты и неопределённость GP — каждый ответ снабжён доказательством."
+  },
+  "ui": {
+    "task": "задача",
+    "result": "результат",
+    "trace": "трейс",
+    "events": "события",
+    "success": "успех",
+    "verify": "проверка",
+    "proof": "доказательство",
+    "score": "оценка",
+    "blocked": "заблокировано",
+    "allowed": "разрешено"
+  },
+  "modules": {
+    "m1": {
+      "title": "TSP с зазором качества",
+      "concept": "Маршрут «ближайший сосед» + 2-opt с допустимой нижней оценкой.",
+      "industry": "маршрутизация, логистика"
+    },
+    "m2": {
+      "title": "Оптимальный транспорт",
+      "concept": "Точный план Канторовича с двойственным сертификатом.",
+      "industry": "сопоставление, экономика"
+    },
+    "m3": {
+      "title": "Маршрутизация по минимальному времени",
+      "concept": "Эйкональные потенциалы и двойственная оптимальность в сетях агентов.",
+      "industry": "композиция MCP"
+    },
+    "m4": {
+      "title": "Гауссовские процессы",
+      "concept": "Апостериорная неопределённость и Expected Improvement.",
+      "industry": "активное обучение, байесовская оптимизация"
+    },
+    "m5": {
+      "title": "Капстоун: портфель доказательств",
+      "concept": "Связать сертификаты TSP, транспорта, маршрута и GP в одном аудите.",
+      "industry": "проверяемые агенты"
+    }
+  },
+  "site": {
+    "modules_heading": "5 модулей",
+    "labs_heading": "Практические лабораторные",
+    "quickstart_heading": "Быстрый старт",
+    "quickstart_intro": "Клонируйте репозиторий, установите зависимости и запускайте лабораторные локально или в Colab.",
+    "quickstart_copy": "Копировать команды",
+    "quickstart_copied": "Скопировано!",
+    "nav_quickstart": "Быстрый старт",
+    "nav_certificate": "Сертификат",
+    "nav_modules": "Модули",
+    "nav_labs": "Лабораторные",
+    "stat_modules": "модулей",
+    "stat_labs": "практических лабораторных",
+    "stat_langs": "языков",
+    "hero_badge": "Открытый курс · Python 3.11+",
+    "open_colab": "Открыть в Colab",
+    "view_source": "Исходный код",
+    "run_local": "Локальный запуск",
+    "has_lab": "лаб.",
+    "coming_soon": "только теория",
+    "advanced": "продвинутый",
+    "module": "Модуль",
+    "exercises_heading": "Упражнения и сертификат",
+    "exercises_body": "Пройдите проверки: <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Сертификат",
+    "certificate_heading": "Сертификат курса",
+    "certificate_intro": "Завершите все лабораторные и упражнения, чтобы открыть сертификат.",
+    "certificate_name_label": "Ваше имя в сертификате",
+    "certificate_name_placeholder": "Иван Петров",
+    "certificate_progress": "Прогресс",
+    "certificate_labs": "Лабораторные пройдены",
+    "certificate_exercises": "Упражнения сданы",
+    "certificate_generate": "Получить сертификат",
+    "certificate_locked": "Отметьте все лабораторные и упражнения",
+    "certificate_mark_lab": "Отметить пройденной",
+    "certificate_mark_done": "Готово ✓",
+    "footer": "Часть экосистемы AIMarket — оракулы COLONY, KANTOR, FERMAT и GAUSS как живая песочница."
+  },
+  "exercises": {
+    "heading": "Упражнение",
+    "all_ok": "Все упражнения пройдены.",
+    "lab01_hint": "Запуск: python labs/run_exercises.py --module m1",
+    "lab02_hint": "Запуск: python labs/run_exercises.py --module m2",
+    "lab03_hint": "Запуск: python labs/run_exercises.py --module m3",
+    "lab04_hint": "Запуск: python labs/run_exercises.py --module m4",
+    "lab05_hint": "Запуск: python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_colony_tsp": {
+      "hint": "Разверните идеи m1 в lab01_colony_tsp.",
+      "tour": "Маршрут TSP"
+    },
+    "lab02_kantor_transport": {
+      "hint": "Разверните идеи m2 в lab02_kantor_transport.",
+      "cost": "Стоимость транспорта"
+    },
+    "lab03_fermat_route": {
+      "hint": "Разверните идеи m3 в lab03_fermat_route.",
+      "path": "Путь минимального времени"
+    },
+    "lab04_gauss_gp": {
+      "hint": "Разверните идеи m4 в lab04_gauss_gp.",
+      "posterior": "Апостериорное поле",
+      "suggest": "Expected Improvement"
+    },
+    "lab05_proof_capstone": {
+      "hint": "Разверните идеи m5 в lab05_proof_capstone.",
+      "summary": "Портфель доказательств"
+    }
+  }
+}

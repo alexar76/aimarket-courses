@@ -1,0 +1,115 @@
+{
+  "course": {
+    "title": "Optimization with Proofs",
+    "tagline": "TSP 间隙、传输对偶、程函证书与 GP 不确定性——每个答案都附带一份证明。"
+  },
+  "ui": {
+    "task": "任务",
+    "result": "结果",
+    "trace": "跟踪",
+    "events": "事件",
+    "success": "成功",
+    "verify": "验证",
+    "proof": "证明",
+    "score": "分数",
+    "blocked": "已拦截",
+    "allowed": "已允许"
+  },
+  "modules": {
+    "m1": {
+      "title": "带质量间隙的 TSP",
+      "concept": "带可容许下界的「最近邻」+ 2-opt 路径。",
+      "industry": "路由、物流"
+    },
+    "m2": {
+      "title": "最优传输",
+      "concept": "带对偶证书的精确康托罗维奇方案。",
+      "industry": "匹配、经济学"
+    },
+    "m3": {
+      "title": "最短时间路由",
+      "concept": "智能体网络上的程函势与对偶最优性。",
+      "industry": "MCP 组合"
+    },
+    "m4": {
+      "title": "高斯过程",
+      "concept": "后验不确定性与 Expected Improvement。",
+      "industry": "主动学习、贝叶斯优化"
+    },
+    "m5": {
+      "title": "证明组合综合项目",
+      "concept": "在一次审计中串联 TSP、传输、路由与 GP 证书。",
+      "industry": "可验证智能体"
+    }
+  },
+  "site": {
+    "modules_heading": "5 个模块",
+    "labs_heading": "动手实验",
+    "quickstart_heading": "快速开始",
+    "quickstart_intro": "克隆仓库、安装依赖,并在本地或 Colab 中运行实验。",
+    "quickstart_copy": "复制命令",
+    "quickstart_copied": "已复制!",
+    "nav_quickstart": "快速开始",
+    "nav_certificate": "证书",
+    "nav_modules": "模块",
+    "nav_labs": "实验",
+    "stat_modules": "个模块",
+    "stat_labs": "个动手实验",
+    "stat_langs": "种语言",
+    "hero_badge": "开放课程 · Python 3.11+",
+    "open_colab": "在 Colab 中打开",
+    "view_source": "查看源码",
+    "run_local": "本地运行",
+    "has_lab": "实验",
+    "coming_soon": "仅概念",
+    "advanced": "进阶",
+    "module": "模块",
+    "exercises_heading": "练习与证书",
+    "exercises_body": "通过 <code class=\"inline\">python labs/run_exercises.py</code> 完成检查。",
+    "certificate_nav": "证书",
+    "certificate_heading": "课程证书",
+    "certificate_intro": "完成全部实验与练习,即可解锁你的证书。",
+    "certificate_name_label": "证书上的姓名",
+    "certificate_name_placeholder": "张三",
+    "certificate_progress": "进度",
+    "certificate_labs": "已完成实验",
+    "certificate_exercises": "已通过练习",
+    "certificate_generate": "获取证书",
+    "certificate_locked": "勾选全部实验与练习以解锁",
+    "certificate_mark_lab": "标记完成",
+    "certificate_mark_done": "完成 ✓",
+    "footer": "AIMarket 生态的一部分——COLONY、KANTOR、FERMAT 与 GAUSS 预言机作为实时沙盒。"
+  },
+  "exercises": {
+    "heading": "练习",
+    "all_ok": "全部练习已通过。",
+    "lab01_hint": "运行:python labs/run_exercises.py --module m1",
+    "lab02_hint": "运行:python labs/run_exercises.py --module m2",
+    "lab03_hint": "运行:python labs/run_exercises.py --module m3",
+    "lab04_hint": "运行:python labs/run_exercises.py --module m4",
+    "lab05_hint": "运行:python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_colony_tsp": {
+      "hint": "在 lab01_colony_tsp 中拓展 m1 的概念。",
+      "tour": "TSP 路径"
+    },
+    "lab02_kantor_transport": {
+      "hint": "在 lab02_kantor_transport 中拓展 m2 的概念。",
+      "cost": "传输成本"
+    },
+    "lab03_fermat_route": {
+      "hint": "在 lab03_fermat_route 中拓展 m3 的概念。",
+      "path": "最短时间路径"
+    },
+    "lab04_gauss_gp": {
+      "hint": "在 lab04_gauss_gp 中拓展 m4 的概念。",
+      "posterior": "后验场",
+      "suggest": "Expected Improvement"
+    },
+    "lab05_proof_capstone": {
+      "hint": "在 lab05_proof_capstone 中拓展 m5 的概念。",
+      "summary": "证明组合"
+    }
+  }
+}

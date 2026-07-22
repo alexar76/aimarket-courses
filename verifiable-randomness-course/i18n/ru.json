@@ -1,0 +1,79 @@
+{
+  "course": {
+    "title": "Верифицируемая случайность и криптографическое время",
+    "tagline": "Соберите и сломайте смещённую лотерею — затем проверьте доказательства офлайн всего из 80 байт."
+  },
+  "ui": {
+    "task": "задача",
+    "result": "результат",
+    "trace": "трейс",
+    "events": "события",
+    "verify": "верификация",
+    "proof": "доказательство",
+    "protocol": "протокол",
+    "success": "успех"
+  },
+  "modules": {
+    "m1": {"title": "Chaos VRF с Platon", "concept": "Непредсказуемая случайность от верифицируемого chaos-оракула.", "industry": "лотереи, гейминг"},
+    "m2": {"title": "VDF-время с Chronos", "concept": "Wesolowski VDF доказывает затраченную работу — без доверия к системным часам.", "industry": "временные метки, задержки"},
+    "m3": {"title": "ECVRF и Sortes", "concept": "Доказательства ECVRF по RFC 9381, которые проверяются офлайн.", "industry": "стандарты VRF"},
+    "m4": {"title": "Time-lock RSW с Aestus", "concept": "Зашифруйте сейчас — расшифруйте после доказуемой задержки.", "industry": "commit-reveal, запечатанные ставки"},
+    "m5": {"title": "Commit–reveal и атаки смещения", "concept": "Соберите смещённую лотерею, затем сломайте её верифицируемыми розыгрышами.", "industry": "аудит безопасности"},
+    "m6": {"title": "Верификация on-chain", "concept": "Верификация доказательств VDF и VRF в Solidity на тестнете Base.", "industry": "потребитель лотереи"}
+  },
+  "site": {
+    "modules_heading": "6 модулей",
+    "labs_heading": "Практические лабы",
+    "quickstart_heading": "Быстрый старт",
+    "quickstart_intro": "Клонируйте репозиторий, установите зависимости оракулов и запускайте лабы локально или в Colab.",
+    "quickstart_copy": "Скопировать команды",
+    "quickstart_copied": "Скопировано!",
+    "nav_quickstart": "Старт",
+    "nav_certificate": "Сертификат",
+    "nav_modules": "Модули",
+    "nav_labs": "Лабы",
+    "stat_modules": "модулей",
+    "stat_labs": "практических лаб",
+    "stat_langs": "языков",
+    "hero_badge": "Открытый курс · Python 3.11+ · живые оракулы",
+    "open_colab": "Открыть в Colab",
+    "view_source": "Исходник",
+    "run_local": "Локальный запуск",
+    "has_lab": "лаба",
+    "coming_soon": "только теория",
+    "advanced": "продвинутый",
+    "module": "Модуль",
+    "exercises_heading": "Упражнения и сертификат",
+    "exercises_body": "Пройдите все проверки командой <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Сертификат",
+    "certificate_heading": "Сертификат курса",
+    "certificate_intro": "Пройдите лабы и упражнения, чтобы открыть сертификат.",
+    "certificate_name_label": "Ваше имя в сертификате",
+    "certificate_name_placeholder": "Иван Петров",
+    "certificate_progress": "Прогресс",
+    "certificate_labs": "Лабы пройдены",
+    "certificate_exercises": "Упражнения сданы",
+    "certificate_generate": "Получить сертификат",
+    "certificate_locked": "Отметьте все лабы и упражнения, чтобы открыть",
+    "certificate_mark_lab": "Отметить пройденной",
+    "certificate_mark_done": "Готово ✓",
+    "footer": "Часть экосистемы AIMarket — оракулы Platon, Chronos, Sortes и Aestus как живая песочница."
+  },
+  "exercises": {
+    "heading": "Ваша очередь",
+    "lab01_hint": "Проверьте розыгрыш Platon со своим client_seed. Проверка: python labs/run_exercises.py --module m1",
+    "lab02_hint": "Подделайте выход VDF и посмотрите, как верификация не проходит. Проверка: python labs/run_exercises.py --module m2",
+    "lab03_hint": "Убедитесь, что доказательство ECVRF ровно 80 байт. Проверка: python labs/run_exercises.py --module m3",
+    "lab04_hint": "Запечатайте и откройте сообщение с T=300. Проверка: python labs/run_exercises.py --module m4",
+    "lab05_hint": "Сравните билеты смещённой и честной лотереи. Проверка: python labs/run_exercises.py --module m5",
+    "lab06_hint": "Соберите вектор VDF для проверки on-chain. Проверка: python labs/run_exercises.py --module m6"
+  },
+  "labs": {
+    "lab01": {"client_seed": "course-lab01-seed"},
+    "lab02": {"seed": "agent-delay-1", "tampered": "верификация подделанного VDF"},
+    "lab03": {"alpha": "lottery-alpha-2026"},
+    "lab04": {"secret": "запечатанная ставка: 42 ETH"},
+    "lab05": {"player_seed": "player-alice-7", "biased_ticket": "смещённый билет", "fair_ticket": "честный VRF-билет", "audit_note": "Честный розыгрыш привязывает одну beta к каждому seed — оператор не может перебирать."},
+    "lab06": {"round": "base-round-42", "word": "слово лотереи", "deploy_note": "См. lottery/docs/deployments-base.md — ChronosVDF на Base."}
+  }
+}

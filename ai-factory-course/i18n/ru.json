@@ -1,0 +1,127 @@
+{
+  "course": {
+    "title": "AI Factory Pipeline & Orchestration",
+    "tagline": "Research→design→build→test→ship — зондируйте API фабрики и этапы оркестратора."
+  },
+  "ui": {
+    "task": "задача",
+    "result": "результат",
+    "trace": "трейс",
+    "events": "события",
+    "success": "успех",
+    "verify": "проверка",
+    "proof": "доказательство",
+    "score": "оценка",
+    "blocked": "заблокировано",
+    "allowed": "разрешено"
+  },
+  "modules": {
+    "m1": {
+      "title": "Обзор пайплайна",
+      "concept": "Research, design, build, test и ship как оркестрируемые этапы.",
+      "industry": "AI-Factory"
+    },
+    "m2": {
+      "title": "API статуса пайплайна",
+      "concept": "Счётчики heartbeat из GET /api/public/pipeline-status.",
+      "industry": "наблюдаемость"
+    },
+    "m3": {
+      "title": "Каталог выпущенных продуктов",
+      "concept": "Список COMPLETED-продуктов и их возможностей с фабрики.",
+      "industry": "маркетплейс"
+    },
+    "m4": {
+      "title": "Поток этапов оркестратора",
+      "concept": "Конечный автомат от IDEA_RECEIVED до COMPLETED.",
+      "industry": "оркестратор"
+    },
+    "m5": {
+      "title": "Капстоун: зонд фабрики",
+      "concept": "Сквозной зонд по живой фабрике или встроенному моку.",
+      "industry": "интеграция"
+    }
+  },
+  "site": {
+    "modules_heading": "5 модулей",
+    "labs_heading": "Практические лабы",
+    "quickstart_heading": "Быстрый старт",
+    "quickstart_intro": "Клонируйте репозиторий, установите зависимости и запускайте лабы локально или в Colab.",
+    "quickstart_copy": "Скопировать команды",
+    "quickstart_copied": "Скопировано!",
+    "nav_quickstart": "Старт",
+    "nav_certificate": "Сертификат",
+    "nav_modules": "Модули",
+    "nav_labs": "Лабы",
+    "stat_modules": "модулей",
+    "stat_labs": "практических лаб",
+    "stat_langs": "языка",
+    "hero_badge": "Открытый курс · Python 3.11+",
+    "open_colab": "Открыть в Colab",
+    "view_source": "Исходник",
+    "run_local": "Локальный запуск",
+    "has_lab": "лаба",
+    "coming_soon": "только теория",
+    "advanced": "продвинутый",
+    "module": "Модуль",
+    "exercises_heading": "Упражнения и сертификат",
+    "exercises_body": "Проходите проверки командой <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Сертификат",
+    "certificate_heading": "Сертификат курса",
+    "certificate_intro": "Пройдите все лабы и упражнения, чтобы открыть свой сертификат.",
+    "certificate_name_label": "Ваше имя в сертификате",
+    "certificate_name_placeholder": "Иван Петров",
+    "certificate_progress": "Прогресс",
+    "certificate_labs": "Лабы пройдены",
+    "certificate_exercises": "Упражнения сданы",
+    "certificate_generate": "Получить сертификат",
+    "certificate_locked": "Отметьте все лабы и упражнения, чтобы открыть",
+    "certificate_mark_lab": "Отметить пройденной",
+    "certificate_mark_done": "Готово ✓",
+    "footer": "Часть экосистемы AIMarket — оркестратор AI-Factory и публичные API пайплайна."
+  },
+  "exercises": {
+    "heading": "Ваша очередь",
+    "all_ok": "Все упражнения пройдены.",
+    "lab01_hint": "Перечислите все пять фаз пайплайна. Проверка: python labs/run_exercises.py --module m1",
+    "lab02_hint": "Получите pipeline-status с мока или живой фабрики. Проверка: python labs/run_exercises.py --module m2",
+    "lab03_hint": "Перечислите выпущенные продукты из /ai-market/products. Проверка: python labs/run_exercises.py --module m3",
+    "lab04_hint": "Пройдите состояния оркестратора до COMPLETED. Проверка: python labs/run_exercises.py --module m4",
+    "lab05_hint": "Запустите probe_factory от начала до конца. Проверка: python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_pipeline_overview": {
+      "hint": "Сопоставьте фазы research→ship с агентами оркестратора."
+    },
+    "lab02_pipeline_status": {
+      "hint": "Зондируйте GET /api/public/pipeline-status."
+    },
+    "lab03_products_catalog": {
+      "hint": "Перечислите выпущенные продукты из API фабрики."
+    },
+    "lab04_orchestrator_stages": {
+      "hint": "Проследите переходы IDEA_RECEIVED → COMPLETED."
+    },
+    "lab05_factory_capstone": {
+      "hint": "Капстоун: статус + продукты в одном зонде."
+    },
+    "lab01": {
+      "phases_heading": "Пять фаз пайплайна"
+    },
+    "lab02": {
+      "in_pipeline": "В пайплайне",
+      "shipped": "Выпущено",
+      "source": "Источник данных"
+    },
+    "lab03": {
+      "count": "Выпущенных продуктов"
+    },
+    "lab04": {
+      "path_heading": "Путь оркестратора"
+    },
+    "lab05": {
+      "products": "Каталог",
+      "phases": "Фазы"
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "course": {
+    "title": "Verifiable Randomness & Cryptographic Time",
+    "tagline": "Build and break biased lotteries — then verify proofs offline from 80 bytes."
+  },
+  "ui": {
+    "task": "task",
+    "result": "result",
+    "trace": "trace",
+    "events": "events",
+    "verify": "verify",
+    "proof": "proof",
+    "protocol": "protocol",
+    "success": "success"
+  },
+  "modules": {
+    "m1": {"title": "Chaos VRF with Platon", "concept": "Unbiasable randomness from a verifiable chaos oracle.", "industry": "lottery, gaming"},
+    "m2": {"title": "VDF time with Chronos", "concept": "Vesolovsky VDF proves elapsed work — not wall-clock trust.", "industry": "time stamps, delays"},
+    "m3": {"title": "ECVRF & Sortes", "concept": "RFC 9381 ECVRF proofs you can verify offline.", "industry": "VRF standards"},
+    "m4": {"title": "Time-lock RSW with Aestus", "concept": "Encrypt now, decrypt after provable delay.", "industry": "commit-reveal, sealed bids"},
+    "m5": {"title": "Commit–reveal & bias attacks", "concept": "Build a biased lottery, then break it with verifiable draws.", "industry": "security audits"},
+    "m6": {"title": "On-chain verification", "concept": "Verify VDF and VRF proofs in Solidity on Base testnet.", "industry": "lottery consumer"}
+  },
+  "site": {
+    "modules_heading": "6 modules",
+    "labs_heading": "Hands-on labs",
+    "quickstart_heading": "Quick start",
+    "quickstart_intro": "Clone the repo, install oracle deps, run labs locally or in Colab.",
+    "quickstart_copy": "Copy commands",
+    "quickstart_copied": "Copied!",
+    "nav_quickstart": "Quick start",
+    "nav_certificate": "Certificate",
+    "nav_modules": "Modules",
+    "nav_labs": "Labs",
+    "stat_modules": "modules",
+    "stat_labs": "hands-on labs",
+    "stat_langs": "languages",
+    "hero_badge": "Open course · Python 3.11+ · live oracles",
+    "open_colab": "Open in Colab",
+    "view_source": "View source",
+    "run_local": "Local run",
+    "has_lab": "lab",
+    "coming_soon": "concept only",
+    "advanced": "advanced",
+    "module": "Module",
+    "exercises_heading": "Exercises & certificate",
+    "exercises_body": "Pass all checks with <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificate",
+    "certificate_heading": "Course certificate",
+    "certificate_intro": "Complete labs and exercises to unlock your certificate.",
+    "certificate_name_label": "Your name on the certificate",
+    "certificate_name_placeholder": "Jane Doe",
+    "certificate_progress": "Progress",
+    "certificate_labs": "Labs completed",
+    "certificate_exercises": "Exercises passed",
+    "certificate_generate": "Get certificate",
+    "certificate_locked": "Check off all labs and exercises to unlock",
+    "certificate_mark_lab": "Mark complete",
+    "certificate_mark_done": "Done ✓",
+    "footer": "Part of the AIMarket ecosystem — Platon, Chronos, Sortes, and Aestus oracles as a live sandbox."
+  },
+  "exercises": {
+    "heading": "Your turn",
+    "lab01_hint": "Verify a Platon draw with your own client_seed. Check: python labs/run_exercises.py --module m1",
+    "lab02_hint": "Tamper a VDF output and watch verify fail. Check: python labs/run_exercises.py --module m2",
+    "lab03_hint": "Confirm the ECVRF proof is exactly 80 bytes. Check: python labs/run_exercises.py --module m3",
+    "lab04_hint": "Seal and open a message with T=300. Check: python labs/run_exercises.py --module m4",
+    "lab05_hint": "Compare biased vs fair lottery tickets. Check: python labs/run_exercises.py --module m5",
+    "lab06_hint": "Build an on-chain VDF vector. Check: python labs/run_exercises.py --module m6"
+  },
+  "labs": {
+    "lab01": {"client_seed": "course-lab01-seed"},
+    "lab02": {"seed": "agent-delay-1", "tampered": "tampered VDF verify"},
+    "lab03": {"alpha": "lottery-alpha-2026"},
+    "lab04": {"secret": "sealed-bid: 42 ETH"},
+    "lab05": {"player_seed": "player-alice-7", "biased_ticket": "biased ticket", "fair_ticket": "fair VRF ticket", "audit_note": "Fair draw binds one beta per seed — operator cannot grind."},
+    "lab06": {"round": "base-round-42", "word": "lottery word", "deploy_note": "See lottery/docs/deployments-base.md for ChronosVDF on Base."}
+  }
+}

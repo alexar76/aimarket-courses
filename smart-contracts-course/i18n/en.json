@@ -1,0 +1,122 @@
+{
+  "course": {
+    "title": "Smart Contracts for Agent Lotteries",
+    "tagline": "Unbiasable draws, VDF verify, and escrow — lottery/ patterns in Python with Foundry vectors."
+  },
+  "ui": {
+    "task": "task",
+    "result": "result",
+    "trace": "trace",
+    "events": "events",
+    "success": "success",
+    "verify": "verify",
+    "proof": "proof",
+    "score": "score",
+    "blocked": "blocked",
+    "allowed": "allowed"
+  },
+  "modules": {
+    "m1": {
+      "title": "Unbiasable lottery draw",
+      "concept": "Commit–reveal and ECVRF fix operator grinding attacks.",
+      "industry": "lottery, gaming"
+    },
+    "m2": {
+      "title": "VDF verify on-chain",
+      "concept": "Wesolowski proofs from Chronos match Foundry test vectors.",
+      "industry": "trustless randomness"
+    },
+    "m3": {
+      "title": "Escrow & payment channels",
+      "concept": "Hold funds until delivery; receipt-gated debit like AIMarketEscrow.",
+      "industry": "USDC, agent economy"
+    },
+    "m4": {
+      "title": "Relayer round lifecycle",
+      "concept": "baseSeed, Sortes draw, optional on-chain VDF path.",
+      "industry": "lottery/ relayer"
+    },
+    "m5": {
+      "title": "Capstone: fair round",
+      "concept": "Simulate a full lottery round with verifiable artifacts.",
+      "industry": "lottery/ consumer"
+    }
+  },
+  "site": {
+    "modules_heading": "5 modules",
+    "labs_heading": "Hands-on labs",
+    "quickstart_heading": "Quick start",
+    "quickstart_intro": "Clone the repo, install deps, and run labs locally or in Colab.",
+    "quickstart_copy": "Copy commands",
+    "quickstart_copied": "Copied!",
+    "nav_quickstart": "Quick start",
+    "nav_certificate": "Certificate",
+    "nav_modules": "Modules",
+    "nav_labs": "Labs",
+    "stat_modules": "modules",
+    "stat_labs": "hands-on labs",
+    "stat_langs": "languages",
+    "hero_badge": "Open course · Python 3.11+",
+    "open_colab": "Open in Colab",
+    "view_source": "View source",
+    "run_local": "Local run",
+    "has_lab": "lab",
+    "coming_soon": "concept only",
+    "advanced": "advanced",
+    "module": "Module",
+    "exercises_heading": "Exercises & certificate",
+    "exercises_body": "Pass checks with <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificate",
+    "certificate_heading": "Course certificate",
+    "certificate_intro": "Complete all labs and exercises to unlock your certificate.",
+    "certificate_name_label": "Your name on the certificate",
+    "certificate_name_placeholder": "Jane Doe",
+    "certificate_progress": "Progress",
+    "certificate_labs": "Labs completed",
+    "certificate_exercises": "Exercises passed",
+    "certificate_generate": "Get certificate",
+    "certificate_locked": "Check off all labs and exercises to unlock",
+    "certificate_mark_lab": "Mark complete",
+    "certificate_mark_done": "Done ✓",
+    "footer": "Part of the AIMarket ecosystem — lottery/ on Base with Platon, Chronos, and Sortes oracles."
+  },
+  "exercises": {
+    "heading": "Your turn",
+    "all_ok": "All exercises passed.",
+    "lab01_hint": "Show fair draw verifies while biased lottery grinds. Check: python labs/run_exercises.py --module m1",
+    "lab02_hint": "Verify the bundled Foundry vector. Check: python labs/run_exercises.py --module m2",
+    "lab03_hint": "Debit twice with the same receipt — second must fail. Check: python labs/run_exercises.py --module m3",
+    "lab04_hint": "Trace baseSeed → Sortes → VDF beacon. Check: python labs/run_exercises.py --module m4",
+    "lab05_hint": "Run simulate_fair_round with onchain_vdf=True. Check: python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_unbiasable_draw": {"hint": "Compare biased grinding vs fair ECVRF draw."},
+    "lab02_vdf_verify": {"hint": "Verify lottery/contracts/test/vectors/chronos_vector.json."},
+    "lab03_escrow_channel": {"hint": "Open, debit, and settle an escrow channel."},
+    "lab04_relayer_round": {"hint": "Walk relayer round seed and draw phases."},
+    "lab05_lottery_capstone": {"hint": "Capstone round with VRF + VDF artifacts."},
+    "lab01": {
+      "player_seed": "player-alpha-2026",
+      "biased_label": "Biased lottery (operator grind)",
+      "fair_label": "Fair lottery (ECVRF)",
+      "docs_note": "On-chain consumer: see lottery/docs/ and AIAgentLottery.sol."
+    },
+    "lab02": {
+      "foundry_note": "Run forge test in lottery/contracts — ChronosVDF.t.sol uses the same vector."
+    },
+    "lab03": {
+      "depositor": "alice-course",
+      "replay": "Receipt replay"
+    },
+    "lab04": {
+      "client_seed": "relayer|42|course",
+      "seed": "Chronos seed",
+      "ticket": "Sortes ticket",
+      "vdf": "VDF vector"
+    },
+    "lab05": {
+      "client_seed": "capstone-player",
+      "docs": "Lottery docs"
+    }
+  }
+}

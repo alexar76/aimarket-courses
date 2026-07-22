@@ -1,0 +1,132 @@
+{
+  "course": {
+    "title": "Smart Contracts for Agent Lotteries",
+    "tagline": "Sorteos insesgables, verificación de VDF y depósito en garantía — patrones de lottery/ en Python con vectores de Foundry."
+  },
+  "ui": {
+    "task": "tarea",
+    "result": "resultado",
+    "trace": "traza",
+    "events": "eventos",
+    "success": "éxito",
+    "verify": "verificación",
+    "proof": "prueba",
+    "score": "puntuación",
+    "blocked": "bloqueado",
+    "allowed": "permitido"
+  },
+  "modules": {
+    "m1": {
+      "title": "Sorteo de lotería insesgable",
+      "concept": "Commit–reveal y ECVRF cierran los ataques de grinding del operador.",
+      "industry": "lotería, gaming"
+    },
+    "m2": {
+      "title": "Verificación de VDF on-chain",
+      "concept": "Las pruebas Wesolowski de Chronos coinciden con los vectores de test de Foundry.",
+      "industry": "aleatoriedad sin confianza"
+    },
+    "m3": {
+      "title": "Depósito en garantía y canales de pago",
+      "concept": "Retener fondos hasta la entrega; débito autorizado por recibo, como en AIMarketEscrow.",
+      "industry": "USDC, economía de agentes"
+    },
+    "m4": {
+      "title": "Ciclo de vida de la ronda del relayer",
+      "concept": "baseSeed, sorteo de Sortes, ruta opcional de VDF on-chain.",
+      "industry": "lottery/ relayer"
+    },
+    "m5": {
+      "title": "Proyecto final: ronda justa",
+      "concept": "Simula una ronda completa de lotería con artefactos verificables.",
+      "industry": "lottery/ consumidor"
+    }
+  },
+  "site": {
+    "modules_heading": "5 módulos",
+    "labs_heading": "Laboratorios prácticos",
+    "quickstart_heading": "Inicio rápido",
+    "quickstart_intro": "Clona el repo, instala dependencias y ejecuta los labs localmente o en Colab.",
+    "quickstart_copy": "Copiar comandos",
+    "quickstart_copied": "¡Copiado!",
+    "nav_quickstart": "Inicio",
+    "nav_certificate": "Certificado",
+    "nav_modules": "Módulos",
+    "nav_labs": "Labs",
+    "stat_modules": "módulos",
+    "stat_labs": "labs prácticos",
+    "stat_langs": "idiomas",
+    "hero_badge": "Curso abierto · Python 3.11+",
+    "open_colab": "Abrir en Colab",
+    "view_source": "Ver código",
+    "run_local": "Ejecución local",
+    "has_lab": "lab",
+    "coming_soon": "solo concepto",
+    "advanced": "avanzado",
+    "module": "Módulo",
+    "exercises_heading": "Ejercicios y certificado",
+    "exercises_body": "Pasa las comprobaciones con <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificado",
+    "certificate_heading": "Certificado del curso",
+    "certificate_intro": "Completa todos los labs y ejercicios para desbloquear tu certificado.",
+    "certificate_name_label": "Tu nombre en el certificado",
+    "certificate_name_placeholder": "María López",
+    "certificate_progress": "Progreso",
+    "certificate_labs": "Labs completados",
+    "certificate_exercises": "Ejercicios aprobados",
+    "certificate_generate": "Obtener certificado",
+    "certificate_locked": "Marca todos los labs y ejercicios para desbloquear",
+    "certificate_mark_lab": "Marcar completado",
+    "certificate_mark_done": "Hecho ✓",
+    "footer": "Parte del ecosistema AIMarket — lottery/ en Base con los oráculos Platon, Chronos y Sortes."
+  },
+  "exercises": {
+    "heading": "Tu turno",
+    "all_ok": "Todos los ejercicios aprobados.",
+    "lab01_hint": "Muestra que el sorteo justo se verifica mientras la lotería sesgada hace grinding. Comprueba: python labs/run_exercises.py --module m1",
+    "lab02_hint": "Verifica el vector de Foundry incluido. Comprueba: python labs/run_exercises.py --module m2",
+    "lab03_hint": "Debita dos veces con el mismo recibo — el segundo debe fallar. Comprueba: python labs/run_exercises.py --module m3",
+    "lab04_hint": "Traza baseSeed → Sortes → baliza VDF. Comprueba: python labs/run_exercises.py --module m4",
+    "lab05_hint": "Ejecuta simulate_fair_round con onchain_vdf=True. Comprueba: python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_unbiasable_draw": {
+      "hint": "Compara el grinding sesgado con el sorteo justo ECVRF."
+    },
+    "lab02_vdf_verify": {
+      "hint": "Verifica lottery/contracts/test/vectors/chronos_vector.json."
+    },
+    "lab03_escrow_channel": {
+      "hint": "Abre, debita y liquida un canal de depósito en garantía."
+    },
+    "lab04_relayer_round": {
+      "hint": "Recorre las fases de semilla y sorteo de la ronda del relayer."
+    },
+    "lab05_lottery_capstone": {
+      "hint": "Ronda final con artefactos VRF + VDF."
+    },
+    "lab01": {
+      "player_seed": "player-alpha-2026",
+      "biased_label": "Lotería sesgada (grinding del operador)",
+      "fair_label": "Lotería justa (ECVRF)",
+      "docs_note": "Consumidor on-chain: ver lottery/docs/ y AIAgentLottery.sol."
+    },
+    "lab02": {
+      "foundry_note": "Ejecuta forge test en lottery/contracts — ChronosVDF.t.sol usa el mismo vector."
+    },
+    "lab03": {
+      "depositor": "alice-course",
+      "replay": "Repetición de recibo"
+    },
+    "lab04": {
+      "client_seed": "relayer|42|course",
+      "seed": "Semilla de Chronos",
+      "ticket": "Boleto de Sortes",
+      "vdf": "Vector VDF"
+    },
+    "lab05": {
+      "client_seed": "capstone-player",
+      "docs": "Documentación de la lotería"
+    }
+  }
+}

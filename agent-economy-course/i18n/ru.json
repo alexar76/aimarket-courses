@@ -1,0 +1,145 @@
+{
+  "course": {
+    "title": "Постройте экономику агентов с нуля",
+    "tagline": "Опубликуйте платную возможность, получайте USDC через эскроу и выпустите потребительского агента."
+  },
+  "ui": {
+    "task": "задача",
+    "result": "результат",
+    "trace": "трассировка",
+    "events": "событий",
+    "success": "успех",
+    "verify": "проверка",
+    "proof": "доказательство",
+    "score": "оценка доверия",
+    "blocked": "заблокировано",
+    "allowed": "разрешено",
+    "hub": "хаб",
+    "discover": "поиск",
+    "invoke": "вызов",
+    "price": "цена",
+    "served_by": "предоставлено",
+    "receipt": "квитанция",
+    "channel": "канал",
+    "total_spent": "потрачено",
+    "protocol": "протокол",
+    "steps": "шаги",
+    "acex_listings": "листинги ACEX",
+    "none": "(нет)",
+    "sample": "пример инструмента",
+    "matches": "совпадений"
+  },
+  "modules": {
+    "m1": {
+      "title": "Обзор Protocol v2",
+      "concept": "Возможности, квитанции и федеративный поиск начинаются с /.well-known/ai-market.json.",
+      "industry": "протоколы агентов"
+    },
+    "m2": {
+      "title": "SDK и интеграция с Hub",
+      "concept": "Регистрация, поиск и вызов через реальный хаб.",
+      "industry": "aimarket-agent SDK"
+    },
+    "m3": {
+      "title": "Эскроу и платёжные каналы",
+      "concept": "Удержание средств до доставки; микроплатежи.",
+      "industry": "USDC, каналы"
+    },
+    "m4": {
+      "title": "Репутация и доверие",
+      "concept": "Подписанные квитанции питают графы репутации в стиле LUMEN.",
+      "industry": "EigenTrust, провенанс"
+    },
+    "m5": {
+      "title": "Публикация возможности",
+      "concept": "Тарифицируемый API, который покупают другие агенты.",
+      "industry": "монетизация"
+    },
+    "m6": {
+      "title": "Capstone: платный цикл агента",
+      "concept": "Потребитель платит через эскроу; поставщик получает USDC.",
+      "industry": "экономика агентов"
+    }
+  },
+  "site": {
+    "modules_heading": "6 модулей",
+    "labs_heading": "Практические лабораторные",
+    "quickstart_heading": "Быстрый старт",
+    "quickstart_intro": "Клонируйте репозиторий, установите зависимости и запускайте лабы локально или в Colab.",
+    "quickstart_copy": "Скопировать команды",
+    "quickstart_copied": "Скопировано!",
+    "nav_quickstart": "Быстрый старт",
+    "nav_certificate": "Сертификат",
+    "nav_modules": "Модули",
+    "nav_labs": "Лабораторные",
+    "stat_modules": "модулей",
+    "stat_labs": "лабораторных",
+    "stat_langs": "языков",
+    "hero_badge": "Открытый курс · Python 3.11+",
+    "open_colab": "Открыть в Colab",
+    "view_source": "Исходники",
+    "run_local": "Локальный запуск",
+    "has_lab": "лаба",
+    "coming_soon": "только концепт",
+    "advanced": "продвинутый",
+    "hub_lite": "hub-lite",
+    "module": "Модуль",
+    "exercises_heading": "Упражнения и сертификат",
+    "exercises_body": "Пройдите проверки: <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Сертификат",
+    "certificate_heading": "Сертификат курса",
+    "certificate_intro": "Завершите все лабы и упражнения, чтобы получить сертификат.",
+    "certificate_name_label": "Ваше имя на сертификате",
+    "certificate_name_placeholder": "Jane Doe",
+    "certificate_progress": "Прогресс",
+    "certificate_labs": "Лабы выполнены",
+    "certificate_exercises": "Упражнения пройдены",
+    "certificate_generate": "Получить сертификат",
+    "certificate_locked": "Отметьте все лабы и упражнения",
+    "certificate_mark_lab": "Отметить выполненной",
+    "certificate_mark_done": "Готово ✓",
+    "footer": "Часть экосистемы AIMarket — Protocol v2, SDK, Hub, эскроу и каналы в песочнице."
+  },
+  "exercises": {
+    "heading": "Ваша очередь",
+    "all_ok": "Все упражнения пройдены.",
+    "lab01_hint": "Добавьте проверку поля в validate_well_known. Проверка: python labs/run_exercises.py --module m1",
+    "lab02_hint": "Найдите summarize и вызовите его. Проверка: python labs/run_exercises.py --module m2",
+    "lab03_hint": "Откройте канал с бюджетом $1.00 и закройте его. Проверка: python labs/run_exercises.py --module m3",
+    "lab04_hint": "Подпишите свою квитанцию и проверьте её. Проверка: python labs/run_exercises.py --module m4",
+    "lab05_hint": "Зарегистрируйте capability и вызовите её. Проверка: python labs/run_exercises.py --module m5",
+    "lab06_hint": "Запустите полный цикл hire() в песочнице. Проверка: python labs/run_exercises.py --module m6"
+  },
+  "labs": {
+    "lab01": {
+      "well_known_valid": "well-known валиден",
+      "manifest_tools": "инструментов в manifest",
+      "manifest_valid": "manifest валиден"
+    },
+    "lab02": {
+      "invoking": "вызов prod-translate/translate.multi@v2"
+    },
+    "lab03": {
+      "budget": "бюджет канала",
+      "spent": "потрачено по каналу",
+      "refund": "возврат по каналу",
+      "sample": "короткий текст для демо эскроу"
+    },
+    "lab04": {
+      "sample": "проверь этот платный вызов",
+      "verify_ok": "квитанция валидна",
+      "verify_bad": "подделанная квитанция",
+      "trust_graph": "граф доверия хаба"
+    },
+    "lab05": {
+      "description": "Оценка тональности как тарифицируемая возможность",
+      "registered": "зарегистрировано",
+      "manifest_tools": "количество инструментов в manifest",
+      "sample": "отличный курс, пять звёзд"
+    },
+    "lab06": {
+      "task": "перевести текст на несколько языков",
+      "sdk_missing": "Capstone пропущен: SDK aimarket-agent не установлен. Установите его командой  pip install -e \".[sandbox]\"  (~50 МБ, один раз) и запустите лабу заново. Лабы 1–5 и упражнения работают без него."
+    }
+  }
+}

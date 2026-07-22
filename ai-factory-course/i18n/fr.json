@@ -1,0 +1,111 @@
+{
+  "course": {
+    "title": "AI Factory Pipeline & Orchestration",
+    "tagline": "Research→design→build→test→ship — sondez les APIs de l'usine et les étapes de l'orchestrateur."
+  },
+  "ui": {
+    "task": "tâche",
+    "result": "résultat",
+    "trace": "trace",
+    "events": "événements",
+    "success": "succès",
+    "verify": "vérifier",
+    "proof": "preuve",
+    "score": "score",
+    "blocked": "bloqué",
+    "allowed": "autorisé"
+  },
+  "modules": {
+    "m1": {
+      "title": "Vue d'ensemble du pipeline",
+      "concept": "Research, design, build, test et ship comme étapes orchestrées.",
+      "industry": "AI-Factory"
+    },
+    "m2": {
+      "title": "API de statut du pipeline",
+      "concept": "Compteurs heartbeat de GET /api/public/pipeline-status.",
+      "industry": "observabilité"
+    },
+    "m3": {
+      "title": "Catalogue des produits livrés",
+      "concept": "Listez les produits COMPLETED et leurs capacités depuis l'usine.",
+      "industry": "place de marché"
+    },
+    "m4": {
+      "title": "Flux des étapes de l'orchestrateur",
+      "concept": "Machine à états de IDEA_RECEIVED à COMPLETED.",
+      "industry": "orchestrateur"
+    },
+    "m5": {
+      "title": "Capstone : sondage de l'usine",
+      "concept": "Sondage de bout en bout avec usine en direct ou mock embarqué.",
+      "industry": "intégration"
+    }
+  },
+  "site": {
+    "modules_heading": "5 modules",
+    "labs_heading": "Labs pratiques",
+    "quickstart_heading": "Démarrage rapide",
+    "quickstart_intro": "Clonez le repo, installez les dépendances et lancez les labs en local ou dans Colab.",
+    "quickstart_copy": "Copier les commandes",
+    "quickstart_copied": "Copié !",
+    "nav_quickstart": "Démarrage rapide",
+    "nav_certificate": "Certificat",
+    "nav_modules": "Modules",
+    "nav_labs": "Labs",
+    "stat_modules": "modules",
+    "stat_labs": "labs pratiques",
+    "stat_langs": "langues",
+    "hero_badge": "Cours ouvert · Python 3.11+",
+    "open_colab": "Ouvrir dans Colab",
+    "view_source": "Voir le code",
+    "run_local": "Exécution locale",
+    "has_lab": "lab",
+    "coming_soon": "concept seulement",
+    "advanced": "avancé",
+    "module": "Module",
+    "exercises_heading": "Exercices et certificat",
+    "exercises_body": "Validez les vérifications avec <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificat",
+    "certificate_heading": "Certificat du cours",
+    "certificate_intro": "Terminez tous les labs et exercices pour débloquer votre certificat.",
+    "certificate_name_label": "Votre nom sur le certificat",
+    "certificate_name_placeholder": "Jean Dupont",
+    "certificate_progress": "Progression",
+    "certificate_labs": "Labs terminés",
+    "certificate_exercises": "Exercices réussis",
+    "certificate_generate": "Obtenir le certificat",
+    "certificate_locked": "Cochez tous les labs et exercices pour débloquer",
+    "certificate_mark_lab": "Marquer comme terminé",
+    "certificate_mark_done": "Terminé ✓",
+    "footer": "Fait partie de l'écosystème AIMarket — orchestrateur AI-Factory et APIs publiques du pipeline."
+  },
+  "exercises": {
+    "heading": "À vous de jouer",
+    "all_ok": "Tous les exercices réussis.",
+    "lab01_hint": "Listez les cinq phases du pipeline. Vérifiez : python labs/run_exercises.py --module m1",
+    "lab02_hint": "Récupérez pipeline-status depuis le mock ou l'usine en direct. Vérifiez : python labs/run_exercises.py --module m2",
+    "lab03_hint": "Listez les produits livrés depuis /ai-market/products. Vérifiez : python labs/run_exercises.py --module m3",
+    "lab04_hint": "Parcourez les états de l'orchestrateur jusqu'à COMPLETED. Vérifiez : python labs/run_exercises.py --module m4",
+    "lab05_hint": "Exécutez probe_factory de bout en bout. Vérifiez : python labs/run_exercises.py --module m5"
+  },
+  "labs": {
+    "lab01_pipeline_overview": {"hint": "Mappez les phases research→ship vers les agents de l'orchestrateur."},
+    "lab02_pipeline_status": {"hint": "Sondez GET /api/public/pipeline-status."},
+    "lab03_products_catalog": {"hint": "Listez les produits livrés depuis l'API de l'usine."},
+    "lab04_orchestrator_stages": {"hint": "Tracez les transitions IDEA_RECEIVED → COMPLETED."},
+    "lab05_factory_capstone": {"hint": "Capstone : statut + produits en un seul sondage."},
+    "lab01": {"phases_heading": "Cinq phases du pipeline"},
+    "lab02": {
+      "in_pipeline": "Dans le pipeline",
+      "shipped": "Livré",
+      "source": "Source de données"
+    },
+    "lab03": {"count": "Produits livrés"},
+    "lab04": {"path_heading": "Chemin de l'orchestrateur"},
+    "lab05": {
+      "products": "Catalogue",
+      "phases": "Phases"
+    }
+  }
+}
