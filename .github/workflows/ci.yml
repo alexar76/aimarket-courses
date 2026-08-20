@@ -1,0 +1,68 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  pytest-courses:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        course:
+          - orchestration-course
+          - verifiable-randomness-course
+          - mcp-security-course
+          - agent-economy-course
+          - mathematics-of-trust-course
+          - optimization-with-proofs-course
+          - smart-contracts-course
+          - ai-factory-course
+          - 3d-data-viz-course
+          - physics-inspired-computing-course
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install & test course
+        working-directory: ${{ matrix.course }}
+        run: |
+          python -m pip install --upgrade pip
+          if [[ "${{ matrix.course }}" == orchestration-course || "${{ matrix.course }}" == agent-economy-course ]]; then
+            mkdir -p _deps
+            git clone --depth 1 https://github.com/alexar76/acex.git _deps/acex
+            git clone --depth 1 https://github.com/alexar76/aimarket-hub.git _deps/aimarket-hub
+            git clone --depth 1 https://github.com/alexar76/aimarket-agent.git _deps/aimarket-agent
+            python3 scripts/patch_aimarket_hub.py _deps/aimarket-hub 2>/dev/null || true
+            pip install -e _deps/aimarket-agent -e _deps/aimarket-hub
+          fi
+          ORACLES=$(python3 -c "import json; print(len(json.load(open('course.config.json')).get('oracles') or []))")
+          if [[ "$ORACLES" != "0" ]]; then
+            git clone --depth 1 https://github.com/alexar76/oracles.git _deps/oracles
+            python3 <<'PY'
+          import json, subprocess, sys
+          cfg = json.load(open("course.config.json"))
+          for pkg in cfg.get("oracles") or []:
+              subprocess.check_call([sys.executable, "-m", "pip", "install", "-q", "-e", f"_deps/oracles/{pkg}"])
+          PY
+          fi
+          EXTRAS=$(python3 -c "import json; print(json.load(open('course.config.json')).get('pip_extras_default','[dev]'))")
+          pip install -e ".${EXTRAS}"
+          pytest -q --maxfail=3
+          python3 scripts/build_course_assets.py
+
+  portal-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build unified Pages tree
+        run: python3 _tooling/build_monorepo_pages.py

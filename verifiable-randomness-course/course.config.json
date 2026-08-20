@@ -1,0 +1,79 @@
+{
+  "id": "verifiable-randomness",
+  "github_repo": "alexar76/aimarket-courses",
+  "github_pages": "https://alexar76.github.io/aimarket-courses/verifiable-randomness-course/",
+  "clone_dir": "aimarket-courses",
+  "package_name": "verifiable-randomness-course",
+  "title": "Verifiable Randomness & Cryptographic Time",
+  "description": "Hands-on course on verifiable randomness, VDFs, ECVRF, and time-lock puzzles using live AIMarket oracles.",
+  "pip_extras_default": "[oracles,dev]",
+  "oracles": [
+    "core",
+    "oracles/chronos",
+    "oracles/sortes",
+    "oracles/aestus",
+    "oracles/platon/backend"
+  ],
+  "module_count": 6,
+  "modules": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5",
+    "m6"
+  ],
+  "labs": [
+    {
+      "stem": "lab01_platon_chaos",
+      "module": "m1",
+      "track": "basic",
+      "sandbox": false
+    },
+    {
+      "stem": "lab02_chronos_vdf",
+      "module": "m2",
+      "track": "basic",
+      "sandbox": false
+    },
+    {
+      "stem": "lab03_sortes_ecvrf",
+      "module": "m3",
+      "track": "basic",
+      "sandbox": false
+    },
+    {
+      "stem": "lab04_aestus_timelock",
+      "module": "m4",
+      "track": "basic",
+      "sandbox": false
+    },
+    {
+      "stem": "lab05_commit_reveal",
+      "module": "m5",
+      "track": "economy",
+      "sandbox": false
+    },
+    {
+      "stem": "lab06_onchain_consumer",
+      "module": "m6",
+      "track": "advanced",
+      "sandbox": false
+    }
+  ],
+  "quickstart_commands": [
+    "git clone https://github.com/alexar76/aimarket-courses.git",
+    "cd aimarket-courses/verifiable-randomness-course",
+    "pip install -e \".[oracles,dev]\"",
+    "python labs/lab01_platon_chaos.py",
+    "python labs/run_exercises.py"
+  ],
+  "smoke_labs": [
+    "lab01_platon_chaos",
+    "lab02_chronos_vdf",
+    "lab03_sortes_ecvrf",
+    "lab04_aestus_timelock",
+    "lab05_commit_reveal"
+  ],
+  "repo_subpath": "verifiable-randomness-course"
+}

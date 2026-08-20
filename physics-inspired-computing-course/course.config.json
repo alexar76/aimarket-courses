@@ -1,0 +1,68 @@
+{
+  "id": "physics-inspired-computing",
+  "github_repo": "alexar76/aimarket-courses",
+  "github_pages": "https://alexar76.github.io/aimarket-courses/physics-inspired-computing-course/",
+  "clone_dir": "aimarket-courses",
+  "package_name": "physics-inspired-computing-course",
+  "title": "Physics-Inspired Computing for Engineers",
+  "description": "Hands-on course on physics-inspired AIMarket oracles — Murmuration, Colony, Turing, Ablation, and Landauer with live calls.",
+  "pip_extras_default": "[oracles,dev]",
+  "oracles": [
+    "core",
+    "oracles/murmuration",
+    "oracles/colony",
+    "oracles/turing",
+    "oracles/ablation",
+    "oracles/landauer"
+  ],
+  "module_count": 5,
+  "modules": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5"
+  ],
+  "labs": [
+    {
+      "stem": "lab01_murmuration_consensus",
+      "module": "m1",
+      "track": "basic"
+    },
+    {
+      "stem": "lab02_colony_tsp",
+      "module": "m2",
+      "track": "basic"
+    },
+    {
+      "stem": "lab03_turing_bluenoise",
+      "module": "m3",
+      "track": "basic"
+    },
+    {
+      "stem": "lab04_ablation_cascade",
+      "module": "m4",
+      "track": "basic"
+    },
+    {
+      "stem": "lab05_landauer_audit",
+      "module": "m5",
+      "track": "advanced"
+    }
+  ],
+  "quickstart_commands": [
+    "git clone https://github.com/alexar76/aimarket-courses.git",
+    "cd aimarket-courses/physics-inspired-computing-course",
+    "pip install -e \".[oracles,dev]\"",
+    "python labs/lab01_murmuration_consensus.py",
+    "python labs/run_exercises.py"
+  ],
+  "smoke_labs": [
+    "lab01_murmuration_consensus",
+    "lab02_colony_tsp",
+    "lab03_turing_bluenoise",
+    "lab04_ablation_cascade",
+    "lab05_landauer_audit"
+  ],
+  "repo_subpath": "physics-inspired-computing-course"
+}

@@ -1,0 +1,224 @@
+# Course catalog — source specs for courses/_tooling/scaffold_course.py
+# Each entry becomes courses/<folder>/ in the monorepo and a GitHub satellite repo.
+#
+# NOTE: orchestration-course is the TEMPLATE the scaffolder copies from, not a
+# scaffold target, so it is intentionally absent here (see courses/README.md for
+# the full index of all 10 courses). The live courses under courses/<folder>/ are
+# the source of truth and have grown beyond these starting specs; the `labs:` lists
+# below are kept in sync with each course's real course.config.json. Re-running the
+# scaffolder over an existing course needs --force and will OVERWRITE real content —
+# don't do that for a shipped course.
+
+courses:
+  - id: course-verifiable-randomness
+    folder: verifiable-randomness-course
+    repo: verifiable-randomness-course
+    package_name: verifiable-randomness-course
+    title: "Verifiable Randomness & Cryptographic Time"
+    tagline: "Build and break biased lotteries — then verify proofs offline from 80 bytes."
+    description: "Hands-on course on verifiable randomness, VDFs, ECVRF, and time-lock puzzles using live AIMarket oracles."
+    pip_extras_default: "[dev]"
+    footer: "Part of the AIMarket ecosystem — Platon, Chronos, Sortes, and Aestus oracles as a live sandbox."
+    topic_module: randomness
+    modules:
+      m1: {title: "Chaos VRF with Platon", concept: "Unbiasable randomness from a verifiable chaos oracle.", industry: "lottery, gaming"}
+      m2: {title: "VDF time with Chronos", concept: "Vesolovsky VDF proves elapsed work — not wall-clock trust.", industry: "time stamps, delays"}
+      m3: {title: "ECVRF & Sortes", concept: "RFC 9381 ECVRF proofs you can verify offline.", industry: "VRF standards"}
+      m4: {title: "Time-lock RSW with Aestus", concept: "Encrypt now, decrypt after provable delay.", industry: "commit-reveal, sealed bids"}
+      m5: {title: "Commit–reveal & bias attacks", concept: "Build a biased lottery, then break it with verifiable draws.", industry: "security audits"}
+      m6: {title: "On-chain verification", concept: "Verify VDF and VRF proofs in Solidity on Base testnet.", industry: "lottery/ consumer"}
+    labs:
+      - {stem: lab01_platon_chaos, module: m1, track: basic}
+      - {stem: lab02_chronos_vdf, module: m2, track: basic}
+      - {stem: lab03_sortes_ecvrf, module: m3, track: basic}
+      - {stem: lab04_aestus_timelock, module: m4, track: basic}
+      - {stem: lab05_commit_reveal, module: m5, track: economy}
+      - {stem: lab06_onchain_consumer, module: m6, track: advanced}
+
+  - id: course-mcp-security
+    folder: mcp-security-course
+    repo: mcp-security-course
+    package_name: mcp-security-course
+    title: "MCP Security & Agent Safety"
+    tagline: "Threat-model MCP, catch tool poisoning with WARDEN, harden agents with LUMEN scoring."
+    description: "Hands-on course on MCP threat models, static scanning, and the WARDEN firewall for agent safety."
+    pip_extras_default: "[dev]"
+    footer: "Part of the AIMarket ecosystem — WARDEN (argus) as a live MCP firewall sandbox."
+    topic_module: warden
+    modules:
+      m1: {title: "MCP threat model", concept: "Prompt injection, tool poisoning, and data exfiltration paths.", industry: "MCP, agent frameworks"}
+      m2: {title: "Static scan & policy", concept: "Catch malicious tool schemas before an agent runs them.", industry: "SAST, policy engines"}
+      m3: {title: "LUMEN trust scoring", concept: "Score MCP servers and capabilities with graph-based trust.", industry: "reputation, PageRank"}
+      m4: {title: "Owner-lock & fail-closed", concept: "Bind agents to owner-approved tool allowlists.", industry: "zero-trust agents"}
+      m5: {title: "Capstone: malicious server", concept: "Write a poisoned MCP server and catch it with WARDEN.", industry: "red team / blue team"}
+    labs:
+      - {stem: lab01_threat_model, module: m1, track: basic}
+      - {stem: lab02_static_scan, module: m2, track: basic}
+      - {stem: lab03_lumen_score, module: m3, track: basic}
+      - {stem: lab04_owner_lock, module: m4, track: basic}
+      - {stem: lab05_warden_capstone, module: m5, track: advanced}
+
+  - id: course-agent-economy
+    folder: agent-economy-course
+    repo: agent-economy-course
+    package_name: agent-economy-course
+    title: "Build an Agent Economy from Scratch"
+    tagline: "Publish a paid capability, collect USDC via escrow, and ship a consumer agent."
+    description: "Hands-on course on AIMarket Protocol v2, SDK, Hub, escrow, channels, and monetizing agent capabilities."
+    pip_extras_default: "[hub-lite,dev]"
+    footer: "Part of the AIMarket ecosystem — Protocol v2, SDK, Hub, escrow, and channels as a live sandbox."
+    topic_module: economy
+    modules:
+      m1: {title: "Protocol v2 overview", concept: "Capabilities, receipts, and federated discovery.", industry: "agent protocols"}
+      m2: {title: "SDK & Hub integration", concept: "Register, discover, and invoke across a real hub.", industry: "aimarket-agent SDK"}
+      m3: {title: "Escrow & payment channels", concept: "Hold funds until delivery; stream micropayments.", industry: "USDC, channels"}
+      m4: {title: "Reputation & trust", concept: "Signed receipts feed LUMEN-style reputation graphs.", industry: "EigenTrust, provenance"}
+      m5: {title: "Publish a capability", concept: "Ship a metered API other agents can buy.", industry: "monetization"}
+      m6: {title: "Capstone: paid agent loop", concept: "Consumer agent pays via escrow; provider gets USDC.", industry: "agent economy"}
+    labs:
+      - {stem: lab01_protocol_overview, module: m1, track: basic, sandbox: hub-lite}
+      - {stem: lab02_hub_discover, module: m2, track: economy, sandbox: hub-lite}
+      - {stem: lab03_escrow_channel, module: m3, track: economy, sandbox: hub-lite}
+      - {stem: lab04_reputation_trust, module: m4, track: economy, sandbox: hub-lite}
+      - {stem: lab05_publish_capability, module: m5, track: economy, sandbox: hub-lite}
+      - {stem: lab06_paid_capability_capstone, module: m6, track: advanced, sandbox: true}
+
+  - id: course-3d-data-viz
+    folder: 3d-data-viz-course
+    repo: 3d-data-viz-course
+    package_name: 3d-data-viz-course
+    title: "3D Data Visualization with Alien Monitor"
+    tagline: "Probe alien-monitor API health, topology, and LUMEN reputation — then map oracle scenes to R3F."
+    description: "Hands-on course on the alien-monitor ecosystem visualizer — REST probes, graph models, and React Three Fiber scene mapping."
+    pip_extras_default: "[dev]"
+    footer: "Part of the AIMarket ecosystem — alien-monitor oracle scenes as a live 3D sandbox."
+    topic_module: viz
+    modules:
+      m1: {title: "Monitor health & modes", concept: "Probe /api/health and understand TEST vs REAL vs UNIVERSE modes.", industry: "observability, SRE"}
+      m2: {title: "Topology graph model", concept: "Parse nodes + links from /api/topology into typed graph structures.", industry: "graph viz, React Flow"}
+      m3: {title: "Federation reputation", concept: "Enrich the trust graph with /api/reputation/peers from the Hub.", industry: "EigenTrust, federation"}
+      m4: {title: "LUMEN PageRank scores", concept: "Call /api/reputation/lumen and bind scores to graph nodes.", industry: "reputation oracles"}
+      m5: {title: "R3F oracle scene mapping", concept: "Map oracle slugs to camera, accent, and primitive metadata for Three.js scenes.", industry: "React Three Fiber, WebGL"}
+    labs:
+      - {stem: lab01_health_probe, module: m1, track: basic}
+      - {stem: lab02_topology_graph, module: m2, track: basic}
+      - {stem: lab03_reputation_peers, module: m3, track: basic}
+      - {stem: lab04_lumen_scores, module: m4, track: basic}
+      - {stem: lab05_r3f_scenes, module: m5, track: advanced}
+
+  - id: course-physics-inspired-computing
+    folder: physics-inspired-computing-course
+    repo: physics-inspired-computing-course
+    package_name: physics-inspired-computing-course
+    title: "Physics-Inspired Computing for Engineers"
+    tagline: "Consensus swarms, TSP certificates, blue-noise sampling, cascade risk, and Landauer thermodynamics."
+    description: "Hands-on course on physics-inspired AIMarket oracles — Murmuration, Colony, Turing, Ablation, and Landauer with live calls."
+    pip_extras_default: "[oracles,dev]"
+    footer: "Part of the AIMarket ecosystem — Murmuration, Colony, Turing, Ablation, and Landauer oracles as a live sandbox."
+    topic_module: physics
+    modules:
+      m1: {title: "Murmuration consensus", concept: "Robust DeGroot consensus and Tukey-biweight aggregation over agent estimates.", industry: "swarm intelligence, robust stats"}
+      m2: {title: "Colony TSP certificate", concept: "Nearest-neighbour + 2-opt tour with an admissible optimality-gap bound.", industry: "routing, combinatorial optimization"}
+      m3: {title: "Turing blue-noise", concept: "Mitchell best-candidate sampling for even-but-irregular point sets.", industry: "Monte Carlo, procedural placement"}
+      m4: {title: "Ablation cascade risk", concept: "Abelian sandpile SOC — power-law avalanche sizes and tail risk.", industry: "systemic risk, SOC"}
+      m5: {title: "Landauer thermodynamic audit", concept: "Bit-erasure energy floor kT·ln2 over an operation DAG.", industry: "reversible computing, thermodynamics"}
+    labs:
+      - {stem: lab01_murmuration_consensus, module: m1, track: basic}
+      - {stem: lab02_colony_tsp, module: m2, track: basic}
+      - {stem: lab03_turing_bluenoise, module: m3, track: basic}
+      - {stem: lab04_ablation_cascade, module: m4, track: basic}
+      - {stem: lab05_landauer_audit, module: m5, track: advanced}
+
+  - id: course-mathematics-of-trust
+    folder: mathematics-of-trust-course
+    repo: mathematics-of-trust-course
+    package_name: mathematics-of-trust-course
+    title: "Mathematics of Trust"
+    tagline: "PageRank, percolation, spectral cuts, consensus, and cascade risk — with live AIMarket oracles."
+    description: "Hands-on course on graph-based trust: EigenTrust, percolation thresholds, Fiedler connectivity, robust consensus, and sandpile cascades."
+    pip_extras_default: "[oracles,dev]"
+    footer: "Part of the AIMarket ecosystem — LUMEN, PERCOLA, FOURIER, MURMURATION, and ABLATION oracles as a live sandbox."
+    topic_module: trust
+    modules:
+      m1: {title: "EigenTrust with LUMEN", concept: "PageRank stationary distribution over a who-trusts-whom graph.", industry: "reputation, MCP"}
+      m2: {title: "Percolation & keystones", concept: "Targeted node removal and critical thresholds on trust graphs.", industry: "network resilience"}
+      m3: {title: "Spectral connectivity", concept: "Fiedler value and spectral bisection — how close is the graph to splitting?", industry: "community detection"}
+      m4: {title: "Robust consensus", concept: "Median, trimmed mean, and biweight location over agent estimates.", industry: "swarm, oracle aggregation"}
+      m5: {title: "Cascade risk", concept: "Abelian sandpile avalanches and power-law tail risk.", industry: "systemic risk, DeFi"}
+      m6: {title: "Trust math capstone", concept: "Combine percolation, spectral, and cascade signals into one audit.", industry: "agent safety"}
+    labs:
+      - {stem: lab01_keystone_nodes, module: m2, track: basic}
+      - {stem: lab02_trust_pagerank, module: m1, track: basic}
+      - {stem: lab03_spectral_cut, module: m3, track: basic}
+      - {stem: lab04_consensus_aggregate, module: m4, track: basic}
+      - {stem: lab05_sandpile_cascade, module: m5, track: advanced}
+      - {stem: lab06_trust_audit, module: m6, track: advanced}
+
+  - id: course-optimization-with-proofs
+    folder: optimization-with-proofs-course
+    repo: optimization-with-proofs-course
+    package_name: optimization-with-proofs-course
+    title: "Optimization with Proofs"
+    tagline: "TSP gaps, transport duals, eikonal certificates, and GP uncertainty — every answer ships a proof."
+    description: "Hands-on course on combinatorial and continuous optimization with verifiable quality certificates from live AIMarket oracles."
+    pip_extras_default: "[oracles,dev]"
+    footer: "Part of the AIMarket ecosystem — COLONY, KANTOR, FERMAT, and GAUSS oracles as a live sandbox."
+    topic_module: optimization
+    modules:
+      m1: {title: "TSP with quality gap", concept: "Nearest-neighbour + 2-opt tour with admissible lower bound.", industry: "routing, logistics"}
+      m2: {title: "Optimal transport", concept: "Exact Kantorovich plan with dual certificate.", industry: "matching, economics"}
+      m3: {title: "Least-time routing", concept: "Eikonal potentials and dual optimality on agent networks.", industry: "MCP composition"}
+      m4: {title: "Gaussian processes", concept: "Posterior uncertainty and Expected Improvement.", industry: "active learning, bayes opt"}
+      m5: {title: "Proof portfolio capstone", concept: "Chain TSP, transport, route, and GP certificates in one audit.", industry: "verifiable agents"}
+    labs:
+      - {stem: lab01_colony_tsp, module: m1, track: basic}
+      - {stem: lab02_kantor_transport, module: m2, track: basic}
+      - {stem: lab03_fermat_route, module: m3, track: basic}
+      - {stem: lab04_gauss_gp, module: m4, track: basic}
+      - {stem: lab05_proof_capstone, module: m5, track: advanced}
+
+  - id: course-smart-contracts
+    folder: smart-contracts-course
+    repo: smart-contracts-course
+    package_name: smart-contracts-course
+    title: "Smart Contracts for Agent Lotteries"
+    tagline: "Unbiasable draws, VDF verify, and escrow — lottery/ patterns in Python with Foundry vectors."
+    description: "Hands-on course on lottery smart-contract concepts: fair draws, Chronos VDF verification, relayer rounds, and escrow channels."
+    pip_extras_default: "[oracles,dev]"
+    footer: "Part of the AIMarket ecosystem — lottery/ on Base with Platon, Chronos, and Sortes oracles."
+    topic_module: contracts
+    modules:
+      m1: {title: "Unbiasable lottery draw", concept: "Commit–reveal and ECVRF fix operator grinding attacks.", industry: "lottery, gaming"}
+      m2: {title: "VDF verify on-chain", concept: "Wesolowski proofs from Chronos match Foundry test vectors.", industry: "trustless randomness"}
+      m3: {title: "Escrow & payment channels", concept: "Hold funds until delivery; receipt-gated debit like AIMarketEscrow.", industry: "USDC, agent economy"}
+      m4: {title: "Relayer round lifecycle", concept: "baseSeed, Sortes draw, optional on-chain VDF path.", industry: "lottery/ relayer"}
+      m5: {title: "Capstone: fair round", concept: "Simulate a full lottery round with verifiable artifacts.", industry: "lottery/ consumer"}
+    labs:
+      - {stem: lab01_unbiasable_draw, module: m1, track: basic}
+      - {stem: lab02_vdf_verify, module: m2, track: basic}
+      - {stem: lab03_escrow_channel, module: m3, track: basic}
+      - {stem: lab04_relayer_round, module: m4, track: basic}
+      - {stem: lab05_lottery_capstone, module: m5, track: advanced}
+
+  - id: course-ai-factory
+    folder: ai-factory-course
+    repo: ai-factory-course
+    package_name: ai-factory-course
+    title: "AI Factory Pipeline & Orchestration"
+    tagline: "Research→design→build→test→ship — probe factory APIs and orchestrator stages."
+    description: "Hands-on course on the AI-Factory pipeline: public status endpoints, shipped products, stage flow, and embedded mock factory."
+    pip_extras_default: "[factory,dev]"
+    footer: "Part of the AIMarket ecosystem — AI-Factory orchestrator and public pipeline APIs."
+    topic_module: factory
+    modules:
+      m1: {title: "Pipeline overview", concept: "Research, design, build, test, and ship as orchestrated stages.", industry: "AI-Factory"}
+      m2: {title: "Pipeline status API", concept: "GET /api/public/pipeline-status heartbeat counters.", industry: "observability"}
+      m3: {title: "Shipped products catalog", concept: "List COMPLETED products and capabilities from the factory.", industry: "marketplace"}
+      m4: {title: "Orchestrator stage flow", concept: "State machine from IDEA_RECEIVED to COMPLETED.", industry: "orchestrator"}
+      m5: {title: "Capstone: factory probe", concept: "End-to-end probe with live factory or embedded mock.", industry: "integration"}
+    labs:
+      - {stem: lab01_pipeline_overview, module: m1, track: basic, sandbox: mock-factory}
+      - {stem: lab02_pipeline_status, module: m2, track: basic, sandbox: mock-factory}
+      - {stem: lab03_products_catalog, module: m3, track: basic, sandbox: mock-factory}
+      - {stem: lab04_orchestrator_stages, module: m4, track: basic}
+      - {stem: lab05_factory_capstone, module: m5, track: advanced, sandbox: mock-factory}

@@ -1,0 +1,72 @@
+{
+  "id": "agent-economy",
+  "github_repo": "alexar76/aimarket-courses",
+  "github_pages": "https://alexar76.github.io/aimarket-courses/agent-economy-course/",
+  "clone_dir": "aimarket-courses",
+  "package_name": "agent-economy-course",
+  "title": "Build an Agent Economy from Scratch",
+  "description": "Hands-on course on AIMarket Protocol v2, SDK, Hub, escrow, channels, and monetizing agent capabilities.",
+  "pip_extras_default": "[hub-lite,dev]",
+  "module_count": 6,
+  "modules": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5",
+    "m6"
+  ],
+  "labs": [
+    {
+      "stem": "lab01_protocol_overview",
+      "module": "m1",
+      "track": "basic",
+      "sandbox": "hub-lite"
+    },
+    {
+      "stem": "lab02_hub_discover",
+      "module": "m2",
+      "track": "economy",
+      "sandbox": "hub-lite"
+    },
+    {
+      "stem": "lab03_escrow_channel",
+      "module": "m3",
+      "track": "economy",
+      "sandbox": "hub-lite"
+    },
+    {
+      "stem": "lab04_reputation_trust",
+      "module": "m4",
+      "track": "economy",
+      "sandbox": "hub-lite"
+    },
+    {
+      "stem": "lab05_publish_capability",
+      "module": "m5",
+      "track": "economy",
+      "sandbox": "hub-lite"
+    },
+    {
+      "stem": "lab06_paid_capability_capstone",
+      "module": "m6",
+      "track": "advanced",
+      "sandbox": true
+    }
+  ],
+  "quickstart_commands": [
+    "git clone https://github.com/alexar76/aimarket-courses.git",
+    "cd aimarket-courses/agent-economy-course",
+    "pip install -e \".[hub-lite,dev]\"",
+    "python labs/lab01_protocol_overview.py",
+    "python labs/run_exercises.py"
+  ],
+  "smoke_labs": [
+    "lab01_protocol_overview",
+    "lab02_hub_discover",
+    "lab03_escrow_channel",
+    "lab04_reputation_trust",
+    "lab05_publish_capability"
+  ],
+  "repo_subpath": "agent-economy-course"
+}
