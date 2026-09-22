@@ -1,0 +1,59 @@
+{
+  "id": "gaia-atlas-sensors",
+  "github_repo": "alexar76/gaia-atlas-sensors-course",
+  "github_pages": "https://alexar76.github.io/gaia-atlas-sensors-course/",
+  "clone_dir": "gaia-atlas-sensors-course",
+  "package_name": "gaia-atlas-sensors-course",
+  "title": "GAIA · ATLAS · Physical World Sensors",
+  "description": "Hands-on course on GAIA live relays and ATLAS operator maps — provenance, allowlists, sensor honesty, and commercial-rail licence gates.",
+  "pip_extras_default": "[dev]",
+  "module_count": 5,
+  "modules": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5"
+  ],
+  "labs": [
+    {
+      "stem": "lab01_live_vs_sim",
+      "module": "m1",
+      "track": "basic"
+    },
+    {
+      "stem": "lab02_licence_gate",
+      "module": "m2",
+      "track": "basic"
+    },
+    {
+      "stem": "lab03_honesty_claims",
+      "module": "m3",
+      "track": "basic"
+    },
+    {
+      "stem": "lab04_atlas_map_read",
+      "module": "m4",
+      "track": "basic"
+    },
+    {
+      "stem": "lab05_add_sensor_capstone",
+      "module": "m5",
+      "track": "advanced"
+    }
+  ],
+  "quickstart_commands": [
+    "git clone https://github.com/alexar76/aimarket-courses.git",
+    "cd aimarket-courses/gaia-atlas-sensors-course",
+    "pip install -e \".[dev]\"",
+    "python labs/lab01_live_vs_sim.py",
+    "python labs/run_exercises.py"
+  ],
+  "smoke_labs": [
+    "lab01_live_vs_sim",
+    "lab02_licence_gate",
+    "lab03_honesty_claims",
+    "lab04_atlas_map_read",
+    "lab05_add_sensor_capstone"
+  ]
+}

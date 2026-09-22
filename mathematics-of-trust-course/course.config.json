@@ -1,0 +1,75 @@
+{
+  "id": "mathematics-of-trust",
+  "github_repo": "alexar76/aimarket-courses",
+  "github_pages": "https://alexar76.github.io/aimarket-courses/mathematics-of-trust-course/",
+  "clone_dir": "aimarket-courses",
+  "package_name": "mathematics-of-trust-course",
+  "title": "Mathematics of Trust",
+  "description": "Hands-on course on graph-based trust: EigenTrust, percolation thresholds, Fiedler connectivity, robust consensus, and sandpile cascades.",
+  "pip_extras_default": "[oracles,dev]",
+  "oracles": [
+    "core",
+    "oracles/lumen",
+    "oracles/percola",
+    "oracles/fourier",
+    "oracles/murmuration",
+    "oracles/ablation"
+  ],
+  "module_count": 6,
+  "modules": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5",
+    "m6"
+  ],
+  "labs": [
+    {
+      "stem": "lab01_keystone_nodes",
+      "module": "m2",
+      "track": "basic"
+    },
+    {
+      "stem": "lab02_trust_pagerank",
+      "module": "m1",
+      "track": "basic"
+    },
+    {
+      "stem": "lab03_spectral_cut",
+      "module": "m3",
+      "track": "basic"
+    },
+    {
+      "stem": "lab04_consensus_aggregate",
+      "module": "m4",
+      "track": "basic"
+    },
+    {
+      "stem": "lab05_sandpile_cascade",
+      "module": "m5",
+      "track": "advanced"
+    },
+    {
+      "stem": "lab06_trust_audit",
+      "module": "m6",
+      "track": "advanced"
+    }
+  ],
+  "quickstart_commands": [
+    "git clone https://github.com/alexar76/aimarket-courses.git",
+    "cd aimarket-courses/mathematics-of-trust-course",
+    "pip install -e \".[oracles,dev]\"",
+    "python labs/lab01_keystone_nodes.py",
+    "python labs/run_exercises.py"
+  ],
+  "smoke_labs": [
+    "lab01_keystone_nodes",
+    "lab02_trust_pagerank",
+    "lab03_spectral_cut",
+    "lab04_consensus_aggregate",
+    "lab05_sandpile_cascade",
+    "lab06_trust_audit"
+  ],
+  "repo_subpath": "mathematics-of-trust-course"
+}

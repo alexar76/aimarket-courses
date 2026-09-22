@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mathematics-of-trust-course"
+version = "0.1.0"
+description = "Hands-on course on graph-based trust: EigenTrust, percolation, spectral cuts, consensus, and sandpile cascades."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "AI-Factory" }]
+dependencies = []
+
+[project.urls]
+Homepage = "https://alexar76.github.io/aimarket-courses/mathematics-of-trust-course/"
+Documentation = "https://alexar76.github.io/aimarket-courses/mathematics-of-trust-course/"
+Repository = "https://github.com/alexar76/aimarket-courses"
+Issues = "https://github.com/alexar76/aimarket-courses/issues"
+
+[project.optional-dependencies]
+oracles = [
+    "numpy>=1.24",
+]
+dev = ["pytest>=8"]
+all = ["mathematics-of-trust-course[oracles,dev]"]
+
+[tool.setuptools.packages.find]
+include = ["courselib*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

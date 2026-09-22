@@ -1,0 +1,124 @@
+{
+  "course": {
+    "title": "PQC · Гибридная подпись",
+    "tagline": "Классический Ed25519 + постквантум — две орбиты, одна квитанция, офлайн-проверка."
+  },
+  "ui": {
+    "task": "задача",
+    "result": "результат",
+    "trace": "трассировка",
+    "events": "события",
+    "success": "успех",
+    "verify": "проверка",
+    "proof": "доказательство",
+    "score": "счёт",
+    "blocked": "отклонено",
+    "allowed": "разрешено"
+  },
+  "modules": {
+    "m1": {
+      "title": "Зачем гибрид",
+      "concept": "Классика сломается позже; один PQ ломает совместимость сегодня.",
+      "industry": "крипто-миграция"
+    },
+    "m2": {
+      "title": "Ключи и идентичность",
+      "concept": "Ed25519 + PQ-пара как одна идентичность пира.",
+      "industry": "управление ключами"
+    },
+    "m3": {
+      "title": "Подписать квитанцию",
+      "concept": "Двойной конверт подписи над выходом capability.",
+      "industry": "provenance"
+    },
+    "m4": {
+      "title": "Проверить офлайн",
+      "concept": "Проверить обе орбиты без повторного вызова хаба.",
+      "industry": "аудит в изоляции"
+    },
+    "m5": {
+      "title": "Капстоун: гибридный шлюз",
+      "concept": "Отклонить квитанцию только с одной орбитой.",
+      "industry": "усиление протокола"
+    }
+  },
+  "site": {
+    "modules_heading": "5 модулей",
+    "labs_heading": "Практические лабы",
+    "quickstart_heading": "Быстрый старт",
+    "quickstart_intro": "Клонируйте репозиторий, установите зависимости и запускайте лабы локально или в Colab.",
+    "quickstart_copy": "Копировать команды",
+    "quickstart_copied": "Скопировано!",
+    "nav_quickstart": "Быстрый старт",
+    "nav_certificate": "Сертификат",
+    "nav_modules": "Модули",
+    "nav_labs": "Лабы",
+    "stat_modules": "модулей",
+    "stat_labs": "практических лаб",
+    "stat_langs": "языков",
+    "hero_badge": "Открытый курс · Python 3.11+",
+    "open_colab": "Открыть в Colab",
+    "view_source": "Исходники",
+    "run_local": "Локальный запуск",
+    "has_lab": "лаб",
+    "coming_soon": "только концепт",
+    "advanced": "продвинутый",
+    "module": "Модуль",
+    "exercises_heading": "Упражнения и сертификат",
+    "exercises_body": "Пройдите проверки: <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Сертификат",
+    "certificate_heading": "Сертификат курса",
+    "certificate_intro": "Сертификат выдаёт только CLI после прохождения всех упражнений — не галочки в браузере.",
+    "certificate_name_label": "Ваше имя на сертификате",
+    "certificate_name_placeholder": "Иван Иванов",
+    "certificate_progress": "Прогресс",
+    "certificate_progress_local": "только локальный чеклист",
+    "certificate_labs": "Лабы завершены",
+    "certificate_exercises": "Упражнения сданы",
+    "certificate_generate": "Получить сертификат",
+    "certificate_locked": "Заполните # YOUR CODE в courselib/exercises.py, затем python labs/run_exercises.py --certificate \"Ваше Имя\".",
+    "certificate_mark_lab": "Отметить",
+    "certificate_mark_done": "Готово ✓",
+    "footer": "Часть экосистемы AIMarket — гибридная подпись хаба (Ed25519 + ML-DSA-65) как живой крипто-песочница.",
+    "wow_caption": "Две орбиты · Ed25519 циан · ML-DSA фиолет · одна запечатанная квитанция"
+  },
+  "exercises": {
+    "heading": "Упражнение",
+    "all_ok": "Все упражнения пройдены."
+  },
+  "labs": {
+    "lab01_why_hybrid": {
+      "hint": "Проверьте ключи why_hybrid_brief и что classical-only не envelope_is_hybrid."
+    },
+    "lab02_key_identity": {
+      "hint": "Создайте HybridSigner; проверьте classical-ключ и PQ-ключ или явную пометку skip."
+    },
+    "lab03_sign_receipt": {
+      "hint": "sign_receipt и поля Ed25519; при dilithium — hybrid envelope."
+    },
+    "lab04_verify_offline": {
+      "hint": "Офлайн-проверка квитанции; не заявляйте успех PQ без dilithium-py."
+    },
+    "lab05_hybrid_gate_capstone": {
+      "hint": "strip_pq + refuse_single_orbit должны отказать; hybrid принимается только при реальном PQ."
+    },
+    "lab01": {
+      "industry_note": "Тот же паттерн миграции, что у хаба для .well-known и квитанций.",
+      "live_hint": "Опционально LIVE: PQC_COURSE_FETCH_LIVE=1 python labs/lab01_why_hybrid.py"
+    },
+    "lab02": {
+      "pinning_note": "Фиксируйте оба ключа вне полосы — самозаявленный PQ бесполезен против сломанного classical."
+    },
+    "lab03": {
+      "pq_skipped_note": "PQ-подпись пропущена (не SIM). Ed25519 всё ещё настоящий. Установка: pip install '.[pqc]'"
+    },
+    "lab04": {
+      "pq_skipped_note": "Офлайн classical-проверка всё равно засчитывается. Hybrid-успех требует реальной проверки ML-DSA.",
+      "live_hint": "Опционально LIVE: PQC_COURSE_FETCH_LIVE=1 проверяет classical офлайн на живом конверте хаба."
+    },
+    "lab05": {
+      "pq_skipped_note": "Шлюз всё равно отклоняет single-orbit. Установите dilithium-py, чтобы принимать реальный hybrid.",
+      "takeaway": "Фаза 3 = refuse_single_orbit. Без неё hybrid — способность мигрировать, не PQ-безопасность."
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "course": {
+    "title": "GAIA · ATLAS · Physical World Sensors",
+    "tagline": "Attested IoT pins, LIVE vs SIM honesty, and operator map reads — physical world as capability."
+  },
+  "ui": {
+    "task": "task",
+    "result": "result",
+    "trace": "trace",
+    "events": "events",
+    "success": "success",
+    "verify": "verify",
+    "proof": "proof",
+    "score": "score",
+    "blocked": "blocked",
+    "allowed": "allowed"
+  },
+  "modules": {
+    "m1": {
+      "title": "What a LIVE relay is",
+      "concept": "HTTPS allowlist, offline-on-fail, never invent readings.",
+      "industry": "IoT, provenance"
+    },
+    "m2": {
+      "title": "Licence & commercial rail",
+      "concept": "CC0 / CC BY / OGL / PD only — why AirNow waits and OpenAQ ships.",
+      "industry": "open data law"
+    },
+    "m3": {
+      "title": "Fleet & pin honesty",
+      "concept": "Open-Meteo ≠ station; public AIS ≠ own-edge; warning ≠ in-situ.",
+      "industry": "operator UX"
+    },
+    "m4": {
+      "title": "ATLAS operator map",
+      "concept": "Read a fleet catalog, layer counts, and priced SKUs from the map.",
+      "industry": "geospatial ops"
+    },
+    "m5": {
+      "title": "Capstone: add a sensor",
+      "concept": "Walk Recipe A — device id, source URL, ATLAS mirror, redeploy order.",
+      "industry": "GAIA/ATLAS ops"
+    }
+  },
+  "site": {
+    "modules_heading": "5 modules",
+    "labs_heading": "Hands-on labs",
+    "quickstart_heading": "Quick start",
+    "quickstart_intro": "Clone the repo, install deps, and run labs locally or in Colab.",
+    "quickstart_copy": "Copy commands",
+    "quickstart_copied": "Copied!",
+    "nav_quickstart": "Quick start",
+    "nav_certificate": "Certificate",
+    "nav_modules": "Modules",
+    "nav_labs": "Labs",
+    "stat_modules": "modules",
+    "stat_labs": "hands-on labs",
+    "stat_langs": "languages",
+    "hero_badge": "Open course · Python 3.11+",
+    "open_colab": "Open in Colab",
+    "view_source": "View source",
+    "run_local": "Local run",
+    "has_lab": "lab",
+    "coming_soon": "concept only",
+    "advanced": "advanced",
+    "module": "Module",
+    "exercises_heading": "Exercises & certificate",
+    "exercises_body": "Pass checks with <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificate",
+    "certificate_heading": "Course certificate",
+    "certificate_intro": "Certificates are issued only by the CLI after every exercise stub passes — not by ticking boxes in the browser.",
+    "certificate_name_label": "Your name on the certificate",
+    "certificate_name_placeholder": "Jane Doe",
+    "certificate_progress": "Progress",
+    "certificate_labs": "Labs completed",
+    "certificate_exercises": "Exercises passed",
+    "certificate_generate": "Get certificate",
+    "certificate_locked": "Fill # YOUR CODE stubs in courselib/exercises.py, then run python labs/run_exercises.py --certificate \"Your Name\".",
+    "certificate_mark_lab": "Mark complete",
+    "certificate_mark_done": "Done ✓",
+    "footer": "Part of the AIMarket ecosystem — GAIA (iot.modelmarket.dev) and ATLAS (atlas.modelmarket.dev) as a live physical-world sandbox."
+  },
+  "exercises": {
+    "heading": "Exercise",
+    "all_ok": "All exercises passed."
+  },
+  "labs": {
+    "lab01_live_vs_sim": {
+      "hint": "Compare om-wx-01 (LIVE, source set) vs ws-01 (SIM). Check: python labs/run_exercises.py --module m1"
+    },
+    "lab02_licence_gate": {
+      "hint": "Gate OpenAQ vs AirNow / BY-NC. Check: python labs/run_exercises.py --module m2"
+    },
+    "lab03_honesty_claims": {
+      "hint": "Reject Open-Meteo-as-station claims. Check: python labs/run_exercises.py --module m3"
+    },
+    "lab04_atlas_map_read": {
+      "hint": "Assert nearest payload has distance_km + id. Check: python labs/run_exercises.py --module m4"
+    },
+    "lab05_add_sensor_capstone": {
+      "hint": "Checklist must include licence, redeploy, honesty. Check: python labs/run_exercises.py --module m5"
+    }
+  }
+}

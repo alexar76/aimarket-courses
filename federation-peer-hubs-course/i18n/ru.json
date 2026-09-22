@@ -1,0 +1,166 @@
+{
+  "course": {
+    "title": "Федерация и peer-хабы",
+    "tagline": "Announce, карантин, preview, approve — как хабы входят без доверия незнакомцам."
+  },
+  "ui": {
+    "task": "задача",
+    "result": "результат",
+    "trace": "трассировка",
+    "events": "события",
+    "success": "успех",
+    "verify": "проверка",
+    "proof": "доказательство",
+    "score": "оценка",
+    "blocked": "заблокировано",
+    "allowed": "разрешено",
+    "error": "ошибка",
+    "live": "LIVE",
+    "fixture": "фикстура"
+  },
+  "modules": {
+    "m1": {
+      "title": "Well-known и announce",
+      "concept": "Как хаб представляется и стучится к пиру — только наблюдение, никогда индекс.",
+      "industry": "федерация"
+    },
+    "m2": {
+      "title": "Открытая дверь vs закрытая",
+      "concept": "Pending-пиры есть в любом случае — preview это отдельный переключатель.",
+      "industry": "ops хаба"
+    },
+    "m3": {
+      "title": "Карантин preview",
+      "concept": "Подписанные манифесты попадают в таблицу, которую invoke/search не читают.",
+      "industry": "zero-trust индекс"
+    },
+    "m4": {
+      "title": "Declared vs read",
+      "concept": "Что пир заявил ≠ что вы проверили — UI должен показывать оба числа.",
+      "industry": "честность оператора"
+    },
+    "m5": {
+      "title": "Capstone: одобрить незнакомца",
+      "concept": "Пройдите announce → preview → approve → crawl без доверия «на глаз».",
+      "industry": "оператор хаба"
+    }
+  },
+  "site": {
+    "modules_heading": "5 модулей",
+    "labs_heading": "Практические лабораторные",
+    "quickstart_heading": "Быстрый старт",
+    "quickstart_intro": "Клонируйте репозиторий, установите зависимости и запустите labs против публичного хаба (или COURSE_OFFLINE=1).",
+    "quickstart_copy": "Копировать команды",
+    "quickstart_copied": "Скопировано!",
+    "nav_quickstart": "Быстрый старт",
+    "nav_certificate": "Сертификат",
+    "nav_modules": "Модули",
+    "nav_labs": "Лабораторные",
+    "stat_modules": "модулей",
+    "stat_labs": "лабораторных",
+    "stat_langs": "языков",
+    "hero_badge": "Открытый курс · Python 3.11+ · live modelmarket.dev",
+    "open_colab": "Открыть в Colab",
+    "view_source": "Исходник",
+    "run_local": "Локальный запуск",
+    "has_lab": "lab",
+    "coming_soon": "только концепт",
+    "advanced": "advanced",
+    "module": "Модуль",
+    "exercises_heading": "Упражнения и сертификат",
+    "exercises_body": "Заполните stubs в <code class=\"inline\">courselib/exercises.py</code>, затем <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Сертификат",
+    "certificate_heading": "Сертификат курса",
+    "certificate_intro": "Сертификат выдаётся только CLI после прохождения всех упражнений — не галочками в браузере.",
+    "certificate_name_label": "Имя на сертификате",
+    "certificate_name_placeholder": "Иван Иванов",
+    "certificate_progress": "Прогресс",
+    "certificate_labs": "Лабораторные пройдены",
+    "certificate_exercises": "Упражнения сданы",
+    "certificate_generate": "Получить сертификат",
+    "certificate_locked": "Заполните # YOUR CODE в courselib/exercises.py, затем python labs/run_exercises.py --certificate \"Ваше Имя\".",
+    "certificate_mark_lab": "Отметить",
+    "certificate_mark_done": "Готово ✓",
+    "footer": "Экосистема AIMarket — живые federation API на modelmarket.dev."
+  },
+  "exercises": {
+    "heading": "Упражнение",
+    "all_ok": "Все упражнения пройдены.",
+    "lab01_hint": "Проверьте, что fixture well-known содержит name, federated_capabilities_count и hybrid signature.",
+    "lab02_hint": "Вызовите open_vs_closed(FIXTURE_PEERS); door=open и preview_independent_of_door.",
+    "lab03_hint": "preview_quarantine: search/invoke никогда не читают preview-таблицу.",
+    "lab04_hint": "peer_summary pending stranger: declared=7, preview=3, gap=4.",
+    "lab05_hint": "announce_checklist(): announce → pending → preview → approve → crawl."
+  },
+  "labs": {
+    "lab01_well_known_announce": {
+      "hint": "Читайте live /.well-known/ai-market.json — имя, счётчики, hybrid sig."
+    },
+    "lab02_open_vs_closed": {
+      "hint": "Сравните open_federation с pending_count; preview отдельно."
+    },
+    "lab03_preview_quarantine": {
+      "hint": "Таблица карантина не ищется и не вызывается."
+    },
+    "lab04_declared_vs_read": {
+      "hint": "Показывайте declared и observed рядом."
+    },
+    "lab05_approve_capstone": {
+      "hint": "Чеклист + live probe modelmarket.dev."
+    },
+    "lab01": {
+      "source": "Источник",
+      "well_known_path": "/.well-known/ai-market.json",
+      "name": "имя хаба",
+      "version": "версия хаба",
+      "federated_count": "федеративные capability",
+      "signer": "публичный ключ подписанта",
+      "classical": "классическая подпись",
+      "pq": "постквантовая",
+      "knock_note": "Стук (announce) — только наблюдение; он не должен индексировать каталог.",
+      "offline_hint": "Сеть недоступна. COURSE_OFFLINE=1 для фикстур или повторите позже.",
+      "fallback": "Переход на помеченную фикстуру (не LIVE)"
+    },
+    "lab02": {
+      "source": "Источник",
+      "door": "Дверь",
+      "trusted": "Доверенные пиры",
+      "pending": "Pending-пиры",
+      "preview_switch": "Preview независимо от двери",
+      "teaching": "Учебная модель",
+      "counterfactual": "Контрфактуал (дверь закрыта)",
+      "counterfactual_note": "Pending может остаться при закрытой двери — сиды и краулер держат очередь карантина.",
+      "fallback": "Переход на помеченную фикстуру (не LIVE)"
+    },
+    "lab03": {
+      "source": "Источник",
+      "rule": "Правило карантина",
+      "guards": "Защиты чтения (все false)",
+      "pending_count": "Pending-пиры",
+      "snapshot": "Снимок pending",
+      "empty": "Пустая очередь",
+      "fallback": "Переход на помеченную фикстуру (не LIVE)"
+    },
+    "lab04": {
+      "source": "Источник",
+      "hub_federated": "Hub federated_capabilities_count",
+      "trusted_heading": "Доверенные пиры (индекс / read)",
+      "pending_heading": "Pending (declared vs preview)",
+      "no_pending": "(сейчас нет pending на этом хабе)",
+      "demo_gap": "Учебный gap из фикстуры stranger",
+      "sum_note": "Проверка",
+      "ui_rule": "UI оператора показывает declared и read — никогда только заявку knock.",
+      "fallback": "Переход на помеченную фикстуру (не LIVE)"
+    },
+    "lab05": {
+      "checklist_heading": "Чеклист admission",
+      "source": "Источник",
+      "probe_heading": "Live probe пиров",
+      "peers_heading": "Пиры",
+      "no_pending": "(карантин пуст — незнакомцев в очереди нет)",
+      "operator_note": "Approve / repin требуют admin bearer — lab останавливается на публичном probe.",
+      "docs_hint": "Читайте aimarket-hub/docs/federation-admission.md и federation-peer-keys.md.",
+      "fallback": "Переход на помеченную фикстуру (не LIVE)"
+    }
+  }
+}

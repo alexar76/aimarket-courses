@@ -1,0 +1,64 @@
+{
+  "id": "ai-factory",
+  "github_repo": "alexar76/aimarket-courses",
+  "github_pages": "https://alexar76.github.io/aimarket-courses/ai-factory-course/",
+  "clone_dir": "aimarket-courses",
+  "package_name": "ai-factory-course",
+  "title": "AI Factory Pipeline & Orchestration",
+  "description": "Hands-on course on the AI-Factory pipeline: public status endpoints, shipped products, stage flow, and embedded mock factory.",
+  "pip_extras_default": "[factory,dev]",
+  "module_count": 5,
+  "modules": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5"
+  ],
+  "labs": [
+    {
+      "stem": "lab01_pipeline_overview",
+      "module": "m1",
+      "track": "basic",
+      "sandbox": "mock-factory"
+    },
+    {
+      "stem": "lab02_pipeline_status",
+      "module": "m2",
+      "track": "basic",
+      "sandbox": "mock-factory"
+    },
+    {
+      "stem": "lab03_products_catalog",
+      "module": "m3",
+      "track": "basic",
+      "sandbox": "mock-factory"
+    },
+    {
+      "stem": "lab04_orchestrator_stages",
+      "module": "m4",
+      "track": "basic"
+    },
+    {
+      "stem": "lab05_factory_capstone",
+      "module": "m5",
+      "track": "advanced",
+      "sandbox": "mock-factory"
+    }
+  ],
+  "quickstart_commands": [
+    "git clone https://github.com/alexar76/aimarket-courses.git",
+    "cd aimarket-courses/ai-factory-course",
+    "pip install -e \".[factory,dev]\"",
+    "python labs/lab01_pipeline_overview.py",
+    "python labs/run_exercises.py"
+  ],
+  "smoke_labs": [
+    "lab01_pipeline_overview",
+    "lab02_pipeline_status",
+    "lab03_products_catalog",
+    "lab04_orchestrator_stages",
+    "lab05_factory_capstone"
+  ],
+  "repo_subpath": "ai-factory-course"
+}

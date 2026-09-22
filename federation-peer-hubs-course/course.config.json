@@ -1,0 +1,63 @@
+{
+  "id": "federation-peer-hubs",
+  "github_repo": "alexar76/federation-peer-hubs-course",
+  "github_pages": "https://alexar76.github.io/federation-peer-hubs-course/",
+  "clone_dir": "federation-peer-hubs-course",
+  "package_name": "federation-peer-hubs-course",
+  "title": "Federation & Peer Hubs",
+  "description": "Hands-on course on AIMarket Hub federation: live well-known & peers probes, open vs closed door, preview quarantine, declared vs read counts, and approve→crawl admission.",
+  "pip_extras_default": "[hub-lite,dev]",
+  "module_count": 5,
+  "modules": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5"
+  ],
+  "labs": [
+    {
+      "stem": "lab01_well_known_announce",
+      "module": "m1",
+      "track": "basic",
+      "sandbox": "hub-lite"
+    },
+    {
+      "stem": "lab02_open_vs_closed",
+      "module": "m2",
+      "track": "basic",
+      "sandbox": "hub-lite"
+    },
+    {
+      "stem": "lab03_preview_quarantine",
+      "module": "m3",
+      "track": "basic",
+      "sandbox": "hub-lite"
+    },
+    {
+      "stem": "lab04_declared_vs_read",
+      "module": "m4",
+      "track": "basic",
+      "sandbox": "hub-lite"
+    },
+    {
+      "stem": "lab05_approve_capstone",
+      "module": "m5",
+      "track": "advanced",
+      "sandbox": "hub-lite"
+    }
+  ],
+  "quickstart_commands": [
+    "git clone https://github.com/alexar76/aimarket-courses.git",
+    "cd aimarket-courses/federation-peer-hubs-course",
+    "pip install -e \".[hub-lite,dev]\"",
+    "python labs/lab01_well_known_announce.py",
+    "python labs/run_exercises.py"
+  ],
+  "smoke_labs": [
+    "lab01_well_known_announce",
+    "lab02_open_vs_closed",
+    "lab03_preview_quarantine",
+    "lab04_declared_vs_read"
+  ]
+}

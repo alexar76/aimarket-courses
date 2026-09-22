@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orchestration-course"
+version = "0.1.0"
+description = "AI Agent Orchestration — hands-on labs with neutral patterns and a real agent economy sandbox"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "AI-Factory" }]
+dependencies = []
+
+[project.urls]
+Homepage = "https://alexar76.github.io/aimarket-courses/orchestration-course/"
+Documentation = "https://alexar76.github.io/aimarket-courses/orchestration-course/"
+Repository = "https://github.com/alexar76/aimarket-courses"
+Issues = "https://github.com/alexar76/aimarket-courses/issues"
+
+[project.optional-dependencies]
+# fastapi>=0.136 is required: it supports starlette 1.x. Older floors (e.g.
+# 0.115) still pass on_startup= into starlette.Router, which starlette>=1.0
+# removed — a fresh resolver then breaks at app construction with
+# "Router.__init__() got an unexpected keyword argument 'on_startup'".
+hub-lite = [
+    "uvicorn>=0.34",
+    "httpx>=0.28",
+    "fastapi>=0.136",
+]
+sandbox = [
+    "uvicorn>=0.34",
+    "httpx>=0.28",
+    "fastapi>=0.136",
+    "aimarket-agent>=2.1.0",
+    "aimarket-hub @ git+https://github.com/alexar76/aimarket-hub.git",
+]
+dev = ["pytest>=8"]
+all = ["orchestration-course[hub-lite,sandbox,dev]"]
+
+[tool.setuptools.packages.find]
+include = ["courselib*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

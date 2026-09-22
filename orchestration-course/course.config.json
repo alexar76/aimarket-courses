@@ -1,0 +1,87 @@
+{
+  "id": "orchestration",
+  "github_repo": "alexar76/aimarket-courses",
+  "github_pages": "https://alexar76.github.io/aimarket-courses/orchestration-course/",
+  "clone_dir": "aimarket-courses",
+  "package_name": "orchestration-course",
+  "title": "AI Agent Orchestration",
+  "description": "Hands-on Python course on AI agent orchestration patterns and agent economy.",
+  "pip_extras_default": "[hub-lite,dev]",
+  "module_count": 9,
+  "modules": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5",
+    "m6",
+    "m7",
+    "m8",
+    "m9"
+  ],
+  "labs": [
+    {
+      "stem": "lab01_agent_and_tool",
+      "module": "m1",
+      "track": "basic",
+      "sandbox": false
+    },
+    {
+      "stem": "lab02_topologies",
+      "module": "m2",
+      "track": "basic",
+      "sandbox": false
+    },
+    {
+      "stem": "lab03_handoff",
+      "module": "m3",
+      "track": "basic",
+      "sandbox": false
+    },
+    {
+      "stem": "lab04_discover_invoke",
+      "module": "m4",
+      "track": "economy",
+      "sandbox": "hub-lite"
+    },
+    {
+      "stem": "lab05_state_context",
+      "module": "m5",
+      "track": "basic",
+      "sandbox": false
+    },
+    {
+      "stem": "lab06_guardrails",
+      "module": "m6",
+      "track": "basic",
+      "sandbox": false
+    },
+    {
+      "stem": "lab07_receipt_verify",
+      "module": "m7",
+      "track": "economy",
+      "sandbox": "hub-lite"
+    },
+    {
+      "stem": "lab08_metered_economy",
+      "module": "m8",
+      "track": "advanced",
+      "sandbox": true
+    }
+  ],
+  "quickstart_commands": [
+    "git clone https://github.com/alexar76/aimarket-courses.git",
+    "cd aimarket-courses/orchestration-course",
+    "pip install -e \".[hub-lite,dev]\"",
+    "python labs/lab01_agent_and_tool.py",
+    "python labs/run_exercises.py"
+  ],
+  "smoke_labs": [
+    "lab01_agent_and_tool",
+    "lab02_topologies",
+    "lab03_handoff",
+    "lab05_state_context",
+    "lab06_guardrails"
+  ],
+  "repo_subpath": "orchestration-course"
+}

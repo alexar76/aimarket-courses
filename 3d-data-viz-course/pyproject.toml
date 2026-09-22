@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "3d-data-viz-course"
+version = "0.1.0"
+description = "Hands-on course on the alien-monitor ecosystem visualizer — REST probes, graph models, and React Three Fiber scene mapping."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "AI-Factory" }]
+dependencies = []
+
+[project.urls]
+Homepage = "https://alexar76.github.io/aimarket-courses/3d-data-viz-course/"
+Documentation = "https://alexar76.github.io/aimarket-courses/3d-data-viz-course/"
+Repository = "https://github.com/alexar76/aimarket-courses"
+Issues = "https://github.com/alexar76/aimarket-courses/issues"
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+all = ["3d-data-viz-course[dev]"]
+
+[tool.setuptools.packages.find]
+include = ["courselib*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

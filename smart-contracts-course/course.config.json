@@ -1,0 +1,66 @@
+{
+  "id": "smart-contracts",
+  "github_repo": "alexar76/aimarket-courses",
+  "github_pages": "https://alexar76.github.io/aimarket-courses/smart-contracts-course/",
+  "clone_dir": "aimarket-courses",
+  "package_name": "smart-contracts-course",
+  "title": "Smart Contracts for Agent Lotteries",
+  "description": "Hands-on course on lottery smart-contract concepts: fair draws, Chronos VDF verification, relayer rounds, and escrow channels.",
+  "pip_extras_default": "[oracles,dev]",
+  "oracles": [
+    "core",
+    "oracles/chronos",
+    "oracles/sortes",
+    "oracles/platon/backend"
+  ],
+  "module_count": 5,
+  "modules": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5"
+  ],
+  "labs": [
+    {
+      "stem": "lab01_unbiasable_draw",
+      "module": "m1",
+      "track": "basic"
+    },
+    {
+      "stem": "lab02_vdf_verify",
+      "module": "m2",
+      "track": "basic"
+    },
+    {
+      "stem": "lab03_escrow_channel",
+      "module": "m3",
+      "track": "basic"
+    },
+    {
+      "stem": "lab04_relayer_round",
+      "module": "m4",
+      "track": "basic"
+    },
+    {
+      "stem": "lab05_lottery_capstone",
+      "module": "m5",
+      "track": "advanced"
+    }
+  ],
+  "quickstart_commands": [
+    "git clone https://github.com/alexar76/aimarket-courses.git",
+    "cd aimarket-courses/smart-contracts-course",
+    "pip install -e \".[oracles,dev]\"",
+    "python labs/lab01_unbiasable_draw.py",
+    "python labs/run_exercises.py"
+  ],
+  "smoke_labs": [
+    "lab01_unbiasable_draw",
+    "lab02_vdf_verify",
+    "lab03_escrow_channel",
+    "lab04_relayer_round",
+    "lab05_lottery_capstone"
+  ],
+  "repo_subpath": "smart-contracts-course"
+}
