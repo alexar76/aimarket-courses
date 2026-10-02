@@ -1,0 +1,104 @@
+{
+  "course": {
+    "title": "GAIA · ATLAS · 物理世界传感器",
+    "tagline": "经证明的 IoT 图钉、LIVE 与 SIM 诚实标注，以及运营者地图读取——把物理世界当作能力。"
+  },
+  "ui": {
+    "task": "任务",
+    "result": "结果",
+    "trace": "跟踪",
+    "events": "事件",
+    "success": "成功",
+    "verify": "验证",
+    "proof": "证明",
+    "score": "分数",
+    "blocked": "已拦截",
+    "allowed": "已允许"
+  },
+  "modules": {
+    "m1": {
+      "title": "什么是 LIVE 中继",
+      "concept": "HTTPS 允许列表、失败即离线、绝不编造读数。",
+      "industry": "物联网、溯源"
+    },
+    "m2": {
+      "title": "许可证与商业轨道",
+      "concept": "仅 CC0 / CC BY / OGL / PD——为何 AirNow 等待而 OpenAQ 已上线。",
+      "industry": "开放数据与合规"
+    },
+    "m3": {
+      "title": "机队与图钉诚实性",
+      "concept": "Open-Meteo ≠ 测站；公共 AIS ≠ 自有边缘；预警 ≠ 实地测量。",
+      "industry": "运营者体验"
+    },
+    "m4": {
+      "title": "ATLAS 运营者地图",
+      "concept": "从地图读取机队目录、图层与计价 SKU。",
+      "industry": "地理空间运维"
+    },
+    "m5": {
+      "title": "顶点项目：添加传感器",
+      "concept": "走完 Recipe A——device id、source URL、ATLAS 镜像、重新部署顺序。",
+      "industry": "GAIA/ATLAS 运维"
+    }
+  },
+  "site": {
+    "modules_heading": "5 个模块",
+    "labs_heading": "动手实验",
+    "quickstart_heading": "快速开始",
+    "quickstart_intro": "克隆仓库、安装依赖，在本地或 Colab 中运行实验。",
+    "quickstart_copy": "复制命令",
+    "quickstart_copied": "已复制！",
+    "nav_quickstart": "快速开始",
+    "nav_certificate": "证书",
+    "nav_modules": "模块",
+    "nav_labs": "实验",
+    "stat_modules": "模块",
+    "stat_labs": "动手实验",
+    "stat_langs": "语言",
+    "hero_badge": "开放课程 · Python 3.11+",
+    "open_colab": "在 Colab 中打开",
+    "view_source": "查看源码",
+    "run_local": "本地运行",
+    "has_lab": "实验",
+    "coming_soon": "仅概念",
+    "advanced": "进阶",
+    "module": "模块",
+    "exercises_heading": "练习与证书",
+    "exercises_body": "通过检查：<code class=\"inline\">python labs/run_exercises.py</code>。",
+    "certificate_nav": "证书",
+    "certificate_heading": "课程证书",
+    "certificate_intro": "证书仅在 CLI 中全部练习通过后签发——不是浏览器里勾选。",
+    "certificate_name_label": "证书上的姓名",
+    "certificate_name_placeholder": "张三",
+    "certificate_progress": "进度",
+    "certificate_labs": "已完成实验",
+    "certificate_exercises": "已通过练习",
+    "certificate_generate": "获取证书",
+    "certificate_locked": "在 courselib/exercises.py 中填写 # YOUR CODE，然后运行 python labs/run_exercises.py --certificate \"你的姓名\"。",
+    "certificate_mark_lab": "标记完成",
+    "certificate_mark_done": "完成 ✓",
+    "footer": "AIMarket 生态的一部分——以 GAIA（iot.modelmarket.dev）与 ATLAS（atlas.modelmarket.dev）作为真实物理世界沙箱。"
+  },
+  "exercises": {
+    "heading": "练习",
+    "all_ok": "全部练习已通过。"
+  },
+  "labs": {
+    "lab01_live_vs_sim": {
+      "hint": "比较 om-wx-01（LIVE）与 ws-01（SIM）。检查：python labs/run_exercises.py --module m1"
+    },
+    "lab02_licence_gate": {
+      "hint": "放行 OpenAQ；拒绝 AirNow / BY-NC。检查：python labs/run_exercises.py --module m2"
+    },
+    "lab03_honesty_claims": {
+      "hint": "拒绝「Open-Meteo = 测站」。检查：python labs/run_exercises.py --module m3"
+    },
+    "lab04_atlas_map_read": {
+      "hint": "断言 nearest 含 distance_km 与 id。检查：python labs/run_exercises.py --module m4"
+    },
+    "lab05_add_sensor_capstone": {
+      "hint": "清单须含 licence、redeploy、honesty。检查：python labs/run_exercises.py --module m5"
+    }
+  }
+}

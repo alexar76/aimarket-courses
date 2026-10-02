@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "federation-peer-hubs-course"
+version = "0.1.0"
+description = "Hands-on course on AIMarket Hub federation: live peers probes, open vs closed door, preview quarantine, declared vs read, approve→crawl."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "AI-Factory" }]
+dependencies = []
+
+[project.urls]
+Homepage = "https://alexar76.github.io/aimarket-courses/federation-peer-hubs-course/"
+Documentation = "https://alexar76.github.io/aimarket-courses/federation-peer-hubs-course/"
+Repository = "https://github.com/alexar76/aimarket-courses"
+Issues = "https://github.com/alexar76/aimarket-courses/issues"
+
+[project.optional-dependencies]
+hub-lite = [
+    "uvicorn>=0.34",
+    "httpx>=0.28",
+    "fastapi>=0.136",
+]
+dev = ["pytest>=8"]
+all = ["federation-peer-hubs-course[hub-lite,dev]"]
+
+[tool.setuptools.packages.find]
+include = ["courselib*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

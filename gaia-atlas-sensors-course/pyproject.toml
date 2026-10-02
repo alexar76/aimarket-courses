@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gaia-atlas-sensors-course"
+version = "0.1.0"
+description = "Hands-on course on GAIA live relays and ATLAS operator maps — provenance, allowlists, sensor honesty, and commercial-rail licence gates."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "AI-Factory" }]
+dependencies = []
+
+[project.urls]
+Homepage = "https://alexar76.github.io/aimarket-courses/gaia-atlas-sensors-course/"
+Documentation = "https://alexar76.github.io/aimarket-courses/gaia-atlas-sensors-course/"
+Repository = "https://github.com/alexar76/aimarket-courses"
+Issues = "https://github.com/alexar76/aimarket-courses/issues"
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+all = ["gaia-atlas-sensors-course[dev]"]
+
+[tool.setuptools.packages.find]
+include = ["courselib*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "network: tests that call live GAIA/ATLAS (skipped offline or with COURSE_SKIP_NETWORK=1)",
+]

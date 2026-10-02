@@ -1,0 +1,61 @@
+# Guide pas à pas — 3D Data Visualization with Alien Monitor
+
+> **Public :** développeurs qui construisent sur l'écosystème AIMarket.  
+> **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · chaînes UI dans `i18n/`  
+> **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **中文:** [step-by-step.zh.md](./step-by-step.zh.md)
+
+---
+
+## Pourquoi ce cours
+
+Probe alien-monitor API health, topology, and LUMEN reputation — then map oracle scenes to R3F.
+
+Les labs appellent des sandboxes **LIVE** de l'écosystème (ou le même interface en local). Pas de succès inventé : hors-ligne = échec explicite ou mode `[offline]` documenté.
+
+---
+
+## Installation (10 minutes)
+
+```bash
+git clone https://github.com/alexar76/aimarket-courses.git
+cd aimarket-courses/3d-data-viz-course
+pip install -e ".[dev]"
+pytest -q
+export COURSE_LANG=fr
+python labs/lab01_health_probe.py
+```
+
+Colab : ouvrez le [site du cours](https://alexar76.github.io/aimarket-courses/3d-data-viz-course/) → **Open in Colab**.
+
+---
+
+## Modules
+
+| Module | Titre | Lab |
+|--------|-------|-----|
+| M1 | Monitor health & modes | `lab01_health_probe` |
+| M2 | Topology graph model | `lab02_topology_graph` |
+| M3 | Federation reputation | `lab03_reputation_peers` |
+| M4 | LUMEN PageRank scores | `lab04_lumen_scores` |
+| M5 | R3F oracle scene mapping | `lab05_r3f_scenes` |
+
+---
+
+## Parcours recommandé
+
+1. Lisez le concept dans la docstring du lab.
+2. Exécutez le lab (`COURSE_LANG=fr` optionnel).
+3. Complétez les stubs `# YOUR CODE` dans `courselib/exercises.py`.
+4. `python labs/run_exercises.py --certificate "Votre Nom"`.
+
+---
+
+## Certificat
+
+Les certificats sont **uniquement** émis par le CLI après réussite de tous les exercices — pas en cochant des cases dans le navigateur.
+
+---
+
+## Suite
+
+Retournez au [portail des académies](https://alexar76.github.io/aimarket-courses/) ou à l'[School](https://edu.modelmarket.dev/) pour le clip on-ramp.
