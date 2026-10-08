@@ -1,0 +1,166 @@
+{
+  "course": {
+    "title": "联邦与对等 Hub",
+    "tagline": "Announce、隔离、preview、approve —— Hub 如何在不信任陌生人的情况下加入。"
+  },
+  "ui": {
+    "task": "任务",
+    "result": "结果",
+    "trace": "跟踪",
+    "events": "事件",
+    "success": "成功",
+    "verify": "验证",
+    "proof": "证明",
+    "score": "分数",
+    "blocked": "已阻止",
+    "allowed": "已允许",
+    "error": "错误",
+    "live": "LIVE",
+    "fixture": "夹具"
+  },
+  "modules": {
+    "m1": {
+      "title": "Well-known 与 announce",
+      "concept": "Hub 如何自我介绍并敲门 —— 仅观察，绝不写入索引。",
+      "industry": "联邦"
+    },
+    "m2": {
+      "title": "开门 vs 关门",
+      "concept": "无论门开闭，pending 对等节点都可能存在 —— preview 是独立开关。",
+      "industry": "Hub 运维"
+    },
+    "m3": {
+      "title": "Preview 隔离区",
+      "concept": "已签名清单进入隔离表，search/invoke 永不读取。",
+      "industry": "零信任索引"
+    },
+    "m4": {
+      "title": "Declared vs read",
+      "concept": "对等节点声称的 ≠ 你验证的 —— UI 必须同时展示。",
+      "industry": "运营诚实性"
+    },
+    "m5": {
+      "title": "Capstone：批准陌生人",
+      "concept": "走完 announce → preview → approve → crawl，不凭感觉信任。",
+      "industry": "Hub 运营者"
+    }
+  },
+  "site": {
+    "modules_heading": "5 个模块",
+    "labs_heading": "实操实验",
+    "quickstart_heading": "快速开始",
+    "quickstart_intro": "克隆仓库、安装依赖，对公共 Hub 运行实验（或 COURSE_OFFLINE=1）。",
+    "quickstart_copy": "复制命令",
+    "quickstart_copied": "已复制！",
+    "nav_quickstart": "快速开始",
+    "nav_certificate": "证书",
+    "nav_modules": "模块",
+    "nav_labs": "实验",
+    "stat_modules": "模块",
+    "stat_labs": "实操实验",
+    "stat_langs": "语言",
+    "hero_badge": "开放课程 · Python 3.11+ · live modelmarket.dev",
+    "open_colab": "在 Colab 打开",
+    "view_source": "查看源码",
+    "run_local": "本地运行",
+    "has_lab": "实验",
+    "coming_soon": "仅概念",
+    "advanced": "进阶",
+    "module": "模块",
+    "exercises_heading": "练习与证书",
+    "exercises_body": "填写 <code class=\"inline\">courselib/exercises.py</code> 中的 stubs，然后运行 <code class=\"inline\">python labs/run_exercises.py</code>。",
+    "certificate_nav": "证书",
+    "certificate_heading": "课程证书",
+    "certificate_intro": "证书仅在 CLI 确认所有练习通过后签发 —— 不是浏览器勾选。",
+    "certificate_name_label": "证书上的姓名",
+    "certificate_name_placeholder": "张三",
+    "certificate_progress": "进度",
+    "certificate_labs": "已完成实验",
+    "certificate_exercises": "已通过练习",
+    "certificate_generate": "获取证书",
+    "certificate_locked": "填写 courselib/exercises.py 中的 # YOUR CODE，然后运行 python labs/run_exercises.py --certificate \"你的名字\"。",
+    "certificate_mark_lab": "标记完成",
+    "certificate_mark_done": "完成 ✓",
+    "footer": "AIMarket 生态 —— modelmarket.dev 上的实时联邦 API。"
+  },
+  "exercises": {
+    "heading": "练习",
+    "all_ok": "全部练习已通过。",
+    "lab01_hint": "断言 fixture well-known 含 name、federated_capabilities_count 与混合签名。",
+    "lab02_hint": "对 FIXTURE_PEERS 调用 open_vs_closed；door=open 且 preview_independent_of_door。",
+    "lab03_hint": "preview_quarantine：search/invoke 永不读取 preview 表。",
+    "lab04_hint": "pending stranger 的 peer_summary：declared=7，preview=3，gap=4。",
+    "lab05_hint": "announce_checklist() 步骤为 announce → pending → preview → approve → crawl。"
+  },
+  "labs": {
+    "lab01_well_known_announce": {
+      "hint": "读取 live /.well-known/ai-market.json —— 名称、计数、混合签名。"
+    },
+    "lab02_open_vs_closed": {
+      "hint": "比较 open_federation 与 pending_count；preview 独立。"
+    },
+    "lab03_preview_quarantine": {
+      "hint": "隔离表不可搜索、不可调用。"
+    },
+    "lab04_declared_vs_read": {
+      "hint": "并排显示 declared 与 observed。"
+    },
+    "lab05_approve_capstone": {
+      "hint": "清单 + modelmarket.dev 实时探测。"
+    },
+    "lab01": {
+      "source": "来源",
+      "well_known_path": "/.well-known/ai-market.json",
+      "name": "Hub 名称",
+      "version": "Hub 版本",
+      "federated_count": "联邦 capability 数",
+      "signer": "签名公钥",
+      "classical": "经典签名",
+      "pq": "后量子",
+      "knock_note": "敲门（announce）只是观察 —— 绝不能写入目录索引。",
+      "offline_hint": "网络失败。设置 COURSE_OFFLINE=1 学习夹具，或稍后重试。",
+      "fallback": "回退到已标注夹具（非 LIVE）"
+    },
+    "lab02": {
+      "source": "来源",
+      "door": "门",
+      "trusted": "受信任对等节点",
+      "pending": "Pending 对等节点",
+      "preview_switch": "Preview 独立于门",
+      "teaching": "教学模型",
+      "counterfactual": "反事实（强制关门）",
+      "counterfactual_note": "关门时 pending 仍可存在 —— 种子与爬虫维持隔离队列。",
+      "fallback": "回退到已标注夹具（非 LIVE）"
+    },
+    "lab03": {
+      "source": "来源",
+      "rule": "隔离规则",
+      "guards": "读取防护（必须全为 false）",
+      "pending_count": "Pending 对等节点",
+      "snapshot": "实时 pending 快照",
+      "empty": "空队列",
+      "fallback": "回退到已标注夹具（非 LIVE）"
+    },
+    "lab04": {
+      "source": "来源",
+      "hub_federated": "Hub federated_capabilities_count",
+      "trusted_heading": "受信任对等节点（已索引 / read）",
+      "pending_heading": "Pending（declared vs preview）",
+      "no_pending": "（当前此 Hub 无 pending）",
+      "demo_gap": "夹具 stranger 的教学差距",
+      "sum_note": "健全性检查",
+      "ui_rule": "运营 UI 必须同时显示 declared 与 read —— 绝不能只显示敲门声明。",
+      "fallback": "回退到已标注夹具（非 LIVE）"
+    },
+    "lab05": {
+      "checklist_heading": "准入清单",
+      "source": "来源",
+      "probe_heading": "实时对等节点探测",
+      "peers_heading": "对等节点",
+      "no_pending": "（隔离区为空 —— 当前无陌生人排队）",
+      "operator_note": "Approve / repin 需要 admin bearer —— 本实验止于公开探测。",
+      "docs_hint": "阅读 aimarket-hub/docs/federation-admission.md 与 federation-peer-keys.md。",
+      "fallback": "回退到已标注夹具（非 LIVE）"
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "id": "mcp-security",
+  "github_repo": "alexar76/aimarket-courses",
+  "github_pages": "https://alexar76.github.io/aimarket-courses/mcp-security-course/",
+  "clone_dir": "aimarket-courses",
+  "package_name": "mcp-security-course",
+  "title": "MCP Security & Agent Safety",
+  "description": "Hands-on course on MCP threat models, static scanning, and the WARDEN firewall for agent safety.",
+  "pip_extras_default": "[oracles,dev]",
+  "oracles": [
+    "core",
+    "oracles/lumen"
+  ],
+  "module_count": 5,
+  "modules": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5"
+  ],
+  "labs": [
+    {
+      "stem": "lab01_threat_model",
+      "module": "m1",
+      "track": "basic"
+    },
+    {
+      "stem": "lab02_static_scan",
+      "module": "m2",
+      "track": "basic"
+    },
+    {
+      "stem": "lab03_lumen_score",
+      "module": "m3",
+      "track": "basic"
+    },
+    {
+      "stem": "lab04_owner_lock",
+      "module": "m4",
+      "track": "basic"
+    },
+    {
+      "stem": "lab05_warden_capstone",
+      "module": "m5",
+      "track": "advanced"
+    }
+  ],
+  "quickstart_commands": [
+    "git clone https://github.com/alexar76/aimarket-courses.git",
+    "cd aimarket-courses/mcp-security-course",
+    "pip install -e \".[oracles,dev]\"",
+    "python labs/lab01_threat_model.py",
+    "python labs/run_exercises.py"
+  ],
+  "smoke_labs": [
+    "lab01_threat_model",
+    "lab02_static_scan",
+    "lab03_lumen_score",
+    "lab04_owner_lock",
+    "lab05_warden_capstone"
+  ],
+  "repo_subpath": "mcp-security-course"
+}

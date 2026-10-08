@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smart-contracts-course"
+version = "0.1.0"
+description = "Hands-on course on lottery smart-contract concepts: fair draws, Chronos VDF verification, relayer rounds, and escrow channels."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "AI-Factory" }]
+dependencies = []
+
+[project.urls]
+Homepage = "https://alexar76.github.io/aimarket-courses/smart-contracts-course/"
+Documentation = "https://alexar76.github.io/aimarket-courses/smart-contracts-course/"
+Repository = "https://github.com/alexar76/aimarket-courses"
+Issues = "https://github.com/alexar76/aimarket-courses/issues"
+
+[project.optional-dependencies]
+oracles = [
+    "numpy>=1.24",
+]
+dev = ["pytest>=8"]
+all = ["smart-contracts-course[oracles,dev]"]
+
+[tool.setuptools.packages.find]
+include = ["courselib*"]
+
+[tool.setuptools.package-data]
+courselib = ["fixtures/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

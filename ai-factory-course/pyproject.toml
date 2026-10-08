@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-factory-course"
+version = "0.1.0"
+description = "Hands-on course on the AI-Factory pipeline: public status endpoints, shipped products, stage flow, and embedded mock factory."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+authors = [{ name = "AI-Factory" }]
+dependencies = [
+    "httpx>=0.28",
+]
+
+[project.urls]
+Homepage = "https://alexar76.github.io/aimarket-courses/ai-factory-course/"
+Documentation = "https://alexar76.github.io/aimarket-courses/ai-factory-course/"
+Repository = "https://github.com/alexar76/aimarket-courses"
+Issues = "https://github.com/alexar76/aimarket-courses/issues"
+
+[project.optional-dependencies]
+factory = [
+    "uvicorn>=0.34",
+    "fastapi>=0.136",
+]
+dev = ["pytest>=8"]
+all = ["ai-factory-course[factory,dev]"]
+
+[tool.setuptools.packages.find]
+include = ["courselib*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

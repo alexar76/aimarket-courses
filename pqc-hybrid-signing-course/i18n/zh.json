@@ -1,0 +1,124 @@
+{
+  "course": {
+    "title": "PQC · 混合签名",
+    "tagline": "经典 Ed25519 + 后量子 — 双轨道、一张回执、离线校验。"
+  },
+  "ui": {
+    "task": "任务",
+    "result": "结果",
+    "trace": "追踪",
+    "events": "事件",
+    "success": "成功",
+    "verify": "校验",
+    "proof": "证明",
+    "score": "得分",
+    "blocked": "拒绝",
+    "allowed": "允许"
+  },
+  "modules": {
+    "m1": {
+      "title": "为何混合",
+      "concept": "经典算法以后会破；仅用 PQ 今天会破坏互操作。",
+      "industry": "密码迁移"
+    },
+    "m2": {
+      "title": "密钥材料与身份",
+      "concept": "Ed25519 + PQ 密钥对作为同一对等身份。",
+      "industry": "密钥管理"
+    },
+    "m3": {
+      "title": "签署回执",
+      "concept": "对 capability 输出的双签名信封。",
+      "industry": "溯源"
+    },
+    "m4": {
+      "title": "离线校验",
+      "concept": "无需回呼 Hub 即可检查两条轨道。",
+      "industry": "气隙审计"
+    },
+    "m5": {
+      "title": "毕业设计：混合门控",
+      "concept": "拒绝只携带单轨道的回执。",
+      "industry": "协议加固"
+    }
+  },
+  "site": {
+    "modules_heading": "5 个模块",
+    "labs_heading": "动手实验",
+    "quickstart_heading": "快速开始",
+    "quickstart_intro": "克隆仓库、安装依赖，在本地或 Colab 运行实验。",
+    "quickstart_copy": "复制命令",
+    "quickstart_copied": "已复制！",
+    "nav_quickstart": "快速开始",
+    "nav_certificate": "证书",
+    "nav_modules": "模块",
+    "nav_labs": "实验",
+    "stat_modules": "模块",
+    "stat_labs": "动手实验",
+    "stat_langs": "语言",
+    "hero_badge": "开放课程 · Python 3.11+",
+    "open_colab": "在 Colab 打开",
+    "view_source": "查看源码",
+    "run_local": "本地运行",
+    "has_lab": "实验",
+    "coming_soon": "仅概念",
+    "advanced": "进阶",
+    "module": "模块",
+    "exercises_heading": "练习与证书",
+    "exercises_body": "用 <code class=\"inline\">python labs/run_exercises.py</code> 通过检查。",
+    "certificate_nav": "证书",
+    "certificate_heading": "课程证书",
+    "certificate_intro": "证书仅在 CLI 中于全部练习通过后签发 — 不是浏览器勾选。",
+    "certificate_name_label": "证书上的姓名",
+    "certificate_name_placeholder": "张三",
+    "certificate_progress": "进度",
+    "certificate_progress_local": "仅本地清单",
+    "certificate_labs": "已完成实验",
+    "certificate_exercises": "已通过练习",
+    "certificate_generate": "获取证书",
+    "certificate_locked": "在 courselib/exercises.py 填写 # YOUR CODE，然后运行 python labs/run_exercises.py --certificate \"你的姓名\"。",
+    "certificate_mark_lab": "标记完成",
+    "certificate_mark_done": "完成 ✓",
+    "footer": "AIMarket 生态的一部分 — Hub 混合签名（Ed25519 + ML-DSA-65）作为真实密码学沙箱。",
+    "wow_caption": "双轨道 · Ed25519 青 · ML-DSA 紫 · 一张封印回执"
+  },
+  "exercises": {
+    "heading": "练习",
+    "all_ok": "全部练习已通过。"
+  },
+  "labs": {
+    "lab01_why_hybrid": {
+      "hint": "断言 why_hybrid_brief 的键，并确认纯经典形状不是 envelope_is_hybrid。"
+    },
+    "lab02_key_identity": {
+      "hint": "生成 HybridSigner 身份；断言经典公钥，以及 PQ 公钥或明确的跳过标记。"
+    },
+    "lab03_sign_receipt": {
+      "hint": "sign_receipt 并断言 Ed25519 字段；若有 dilithium 则断言混合信封。"
+    },
+    "lab04_verify_offline": {
+      "hint": "离线校验已签回执；没有 dilithium-py 时切勿声称 PQ 成功。"
+    },
+    "lab05_hybrid_gate_capstone": {
+      "hint": "strip_pq 后 refuse_single_orbit 必须拒绝；仅在真实 PQ 时接受混合。"
+    },
+    "lab01": {
+      "industry_note": "与 Hub 对 .well-known 与回执所用的迁移模式相同。",
+      "live_hint": "可选 LIVE：PQC_COURSE_FETCH_LIVE=1 python labs/lab01_why_hybrid.py"
+    },
+    "lab02": {
+      "pinning_note": "带外固定两把公钥 — 面对已破的经典密钥，自声明的 PQ 密钥毫无价值。"
+    },
+    "lab03": {
+      "pq_skipped_note": "已跳过 PQ 签名（非 SIM）。Ed25519 仍是真实签名。安装：pip install '.[pqc]'"
+    },
+    "lab04": {
+      "pq_skipped_note": "离线经典校验仍然有效。混合成功需要真实的 ML-DSA 检查。",
+      "live_hint": "可选 LIVE：PQC_COURSE_FETCH_LIVE=1 对线上 Hub 信封离线校验经典签名。"
+    },
+    "lab05": {
+      "pq_skipped_note": "门控仍会拒绝单轨道。安装 dilithium-py 才能接受真实混合封印。",
+      "takeaway": "阶段 3 = refuse_single_orbit。没有它，混合只是迁移能力，不是后量子安全。"
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "course": {
+    "title": "PQC · Hybrid Signing",
+    "tagline": "Classical Ed25519 + post-quantum — dual orbits, one receipt, offline verify."
+  },
+  "ui": {
+    "task": "task",
+    "result": "result",
+    "trace": "trace",
+    "events": "events",
+    "success": "success",
+    "verify": "verify",
+    "proof": "proof",
+    "score": "score",
+    "blocked": "blocked",
+    "allowed": "allowed"
+  },
+  "modules": {
+    "m1": {
+      "title": "Why hybrid",
+      "concept": "Classical breaks later; PQ alone breaks interoperability today.",
+      "industry": "crypto migration"
+    },
+    "m2": {
+      "title": "Key material & identity",
+      "concept": "Ed25519 + PQ keypair as one peer identity.",
+      "industry": "key management"
+    },
+    "m3": {
+      "title": "Sign a receipt",
+      "concept": "Dual-signature envelope over capability output.",
+      "industry": "provenance"
+    },
+    "m4": {
+      "title": "Verify offline",
+      "concept": "Check both orbits without calling the hub back.",
+      "industry": "air-gapped audit"
+    },
+    "m5": {
+      "title": "Capstone: hybrid gate",
+      "concept": "Refuse a receipt that only carries one orbit.",
+      "industry": "protocol hardening"
+    }
+  },
+  "site": {
+    "modules_heading": "5 modules",
+    "labs_heading": "Hands-on labs",
+    "quickstart_heading": "Quick start",
+    "quickstart_intro": "Clone the repo, install deps, and run labs locally or in Colab.",
+    "quickstart_copy": "Copy commands",
+    "quickstart_copied": "Copied!",
+    "nav_quickstart": "Quick start",
+    "nav_certificate": "Certificate",
+    "nav_modules": "Modules",
+    "nav_labs": "Labs",
+    "stat_modules": "modules",
+    "stat_labs": "hands-on labs",
+    "stat_langs": "languages",
+    "hero_badge": "Open course · Python 3.11+",
+    "open_colab": "Open in Colab",
+    "view_source": "View source",
+    "run_local": "Local run",
+    "has_lab": "lab",
+    "coming_soon": "concept only",
+    "advanced": "advanced",
+    "module": "Module",
+    "exercises_heading": "Exercises & certificate",
+    "exercises_body": "Pass checks with <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificate",
+    "certificate_heading": "Course certificate",
+    "certificate_intro": "Certificates are issued only by the CLI after every exercise stub passes — not by ticking boxes in the browser.",
+    "certificate_name_label": "Your name on the certificate",
+    "certificate_name_placeholder": "Jane Doe",
+    "certificate_progress": "Progress",
+    "certificate_progress_local": "local checklist only",
+    "certificate_labs": "Labs completed",
+    "certificate_exercises": "Exercises passed",
+    "certificate_generate": "Get certificate",
+    "certificate_locked": "Fill # YOUR CODE stubs in courselib/exercises.py, then run python labs/run_exercises.py --certificate \"Your Name\".",
+    "certificate_mark_lab": "Mark complete",
+    "certificate_mark_done": "Done ✓",
+    "footer": "Part of the AIMarket ecosystem — hub hybrid signing (Ed25519 + ML-DSA-65) as a live cryptography sandbox.",
+    "wow_caption": "Dual orbits · Ed25519 cyan · ML-DSA violet · one sealed receipt"
+  },
+  "exercises": {
+    "heading": "Exercise",
+    "all_ok": "All exercises passed."
+  },
+  "labs": {
+    "lab01_why_hybrid": {
+      "hint": "Assert why_hybrid_brief keys and that a classical-only shape is not envelope_is_hybrid."
+    },
+    "lab02_key_identity": {
+      "hint": "Generate HybridSigner identity; assert classical key, and PQ key or labeled skip."
+    },
+    "lab03_sign_receipt": {
+      "hint": "sign_receipt and assert Ed25519 fields; if dilithium present, assert hybrid envelope."
+    },
+    "lab04_verify_offline": {
+      "hint": "Verify a signed receipt offline; never claim PQ success without dilithium-py."
+    },
+    "lab05_hybrid_gate_capstone": {
+      "hint": "strip_pq then refuse_single_orbit must refuse; hybrid accepts only when PQ is real."
+    },
+    "lab01": {
+      "industry_note": "Same migration pattern the hub uses for .well-known and receipts.",
+      "live_hint": "Optional LIVE inspect: PQC_COURSE_FETCH_LIVE=1 python labs/lab01_why_hybrid.py"
+    },
+    "lab02": {
+      "pinning_note": "Pin both public keys out-of-band — a self-asserted PQ key is worthless against a broken classical key."
+    },
+    "lab03": {
+      "pq_skipped_note": "PQ sign skipped (not SIM). Classical Ed25519 signature is still real. Install: pip install '.[pqc]'"
+    },
+    "lab04": {
+      "pq_skipped_note": "Offline classical verify still counts. Hybrid success requires a real ML-DSA check.",
+      "live_hint": "Optional LIVE: PQC_COURSE_FETCH_LIVE=1 verifies classical offline on the live hub envelope."
+    },
+    "lab05": {
+      "pq_skipped_note": "Gate still refuses single-orbit. Install dilithium-py to also accept a real hybrid seal.",
+      "takeaway": "Phase 3 = refuse_single_orbit. Without it, hybrid is migration ability, not PQ security."
+    }
+  }
+}
