@@ -1,0 +1,104 @@
+{
+  "course": {
+    "title": "GAIA · ATLAS · Capteurs du monde physique",
+    "tagline": "Pins IoT attestés, honnêteté LIVE vs SIM et lectures de carte opérateur — le monde physique comme capacité."
+  },
+  "ui": {
+    "task": "tâche",
+    "result": "résultat",
+    "trace": "trace",
+    "events": "événements",
+    "success": "succès",
+    "verify": "vérifier",
+    "proof": "preuve",
+    "score": "score",
+    "blocked": "bloqué",
+    "allowed": "autorisé"
+  },
+  "modules": {
+    "m1": {
+      "title": "Qu'est-ce qu'un relais LIVE",
+      "concept": "Allowlist HTTPS, offline en cas d'échec, ne jamais inventer de lectures.",
+      "industry": "IoT, provenance"
+    },
+    "m2": {
+      "title": "Licence et rail commercial",
+      "concept": "CC0 / CC BY / OGL / PD uniquement — pourquoi AirNow attend et OpenAQ est déjà en prod.",
+      "industry": "données ouvertes et droit"
+    },
+    "m3": {
+      "title": "Flotte et honnêteté des pins",
+      "concept": "Open-Meteo ≠ station ; AIS public ≠ edge propre ; warning ≠ in-situ.",
+      "industry": "UX opérateur"
+    },
+    "m4": {
+      "title": "Carte opérateur ATLAS",
+      "concept": "Lire le catalogue de flotte, les couches et les SKU tarifés depuis la carte.",
+      "industry": "ops géospatiales"
+    },
+    "m5": {
+      "title": "Capstone : ajouter un capteur",
+      "concept": "Parcourir Recipe A — device id, URL source, miroir ATLAS, ordre de redeploy.",
+      "industry": "ops GAIA/ATLAS"
+    }
+  },
+  "site": {
+    "modules_heading": "5 modules",
+    "labs_heading": "Labs pratiques",
+    "quickstart_heading": "Démarrage rapide",
+    "quickstart_intro": "Clonez le dépôt, installez les dépendances et lancez les labs en local ou dans Colab.",
+    "quickstart_copy": "Copier les commandes",
+    "quickstart_copied": "Copié !",
+    "nav_quickstart": "Démarrage",
+    "nav_certificate": "Certificat",
+    "nav_modules": "Modules",
+    "nav_labs": "Labs",
+    "stat_modules": "modules",
+    "stat_labs": "labs pratiques",
+    "stat_langs": "langues",
+    "hero_badge": "Cours ouvert · Python 3.11+",
+    "open_colab": "Ouvrir dans Colab",
+    "view_source": "Voir le code",
+    "run_local": "Exécution locale",
+    "has_lab": "lab",
+    "coming_soon": "concept seul",
+    "advanced": "avancé",
+    "module": "Module",
+    "exercises_heading": "Exercices et certificat",
+    "exercises_body": "Validez avec <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificat",
+    "certificate_heading": "Certificat du cours",
+    "certificate_intro": "Les certificats sont émis uniquement par la CLI après réussite de tous les exercices — pas par les cases du navigateur.",
+    "certificate_name_label": "Votre nom sur le certificat",
+    "certificate_name_placeholder": "Camille Dupont",
+    "certificate_progress": "Progression",
+    "certificate_labs": "Labs terminés",
+    "certificate_exercises": "Exercices réussis",
+    "certificate_generate": "Obtenir le certificat",
+    "certificate_locked": "Remplissez # YOUR CODE dans courselib/exercises.py, puis python labs/run_exercises.py --certificate \"Votre Nom\".",
+    "certificate_mark_lab": "Marquer terminé",
+    "certificate_mark_done": "Fait ✓",
+    "footer": "Fait partie de l'écosystème AIMarket — GAIA (iot.modelmarket.dev) et ATLAS (atlas.modelmarket.dev) comme bac à sable du monde physique."
+  },
+  "exercises": {
+    "heading": "Exercice",
+    "all_ok": "Tous les exercices sont réussis."
+  },
+  "labs": {
+    "lab01_live_vs_sim": {
+      "hint": "Comparez om-wx-01 (LIVE) et ws-01 (SIM). Vérifiez : python labs/run_exercises.py --module m1"
+    },
+    "lab02_licence_gate": {
+      "hint": "Acceptez OpenAQ ; refusez AirNow / BY-NC. Vérifiez : python labs/run_exercises.py --module m2"
+    },
+    "lab03_honesty_claims": {
+      "hint": "Rejetez « Open-Meteo = station ». Vérifiez : python labs/run_exercises.py --module m3"
+    },
+    "lab04_atlas_map_read": {
+      "hint": "Exigez distance_km et id sur nearest. Vérifiez : python labs/run_exercises.py --module m4"
+    },
+    "lab05_add_sensor_capstone": {
+      "hint": "Checklist : licence, redeploy, honesty. Vérifiez : python labs/run_exercises.py --module m5"
+    }
+  }
+}

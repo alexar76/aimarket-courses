@@ -1,0 +1,124 @@
+{
+  "course": {
+    "title": "PQC · Signature hybride",
+    "tagline": "Ed25519 classique + post-quantique — deux orbites, un reçu, vérification hors ligne."
+  },
+  "ui": {
+    "task": "tâche",
+    "result": "résultat",
+    "trace": "trace",
+    "events": "événements",
+    "success": "succès",
+    "verify": "vérifier",
+    "proof": "preuve",
+    "score": "score",
+    "blocked": "bloqué",
+    "allowed": "autorisé"
+  },
+  "modules": {
+    "m1": {
+      "title": "Pourquoi l'hybride",
+      "concept": "Le classique casse plus tard ; le PQ seul casse l'interop aujourd'hui.",
+      "industry": "migration crypto"
+    },
+    "m2": {
+      "title": "Matériel de clés & identité",
+      "concept": "Paire Ed25519 + PQ comme une seule identité de pair.",
+      "industry": "gestion des clés"
+    },
+    "m3": {
+      "title": "Signer un reçu",
+      "concept": "Enveloppe à double signature sur la sortie d'une capability.",
+      "industry": "provenance"
+    },
+    "m4": {
+      "title": "Vérifier hors ligne",
+      "concept": "Contrôler les deux orbites sans rappeler le hub.",
+      "industry": "audit air-gap"
+    },
+    "m5": {
+      "title": "Capstone : porte hybride",
+      "concept": "Refuser un reçu qui ne porte qu'une seule orbite.",
+      "industry": "durcissement protocole"
+    }
+  },
+  "site": {
+    "modules_heading": "5 modules",
+    "labs_heading": "Labs pratiques",
+    "quickstart_heading": "Démarrage rapide",
+    "quickstart_intro": "Clonez le dépôt, installez les deps, lancez les labs en local ou sur Colab.",
+    "quickstart_copy": "Copier les commandes",
+    "quickstart_copied": "Copié !",
+    "nav_quickstart": "Démarrage",
+    "nav_certificate": "Certificat",
+    "nav_modules": "Modules",
+    "nav_labs": "Labs",
+    "stat_modules": "modules",
+    "stat_labs": "labs pratiques",
+    "stat_langs": "langues",
+    "hero_badge": "Cours ouvert · Python 3.11+",
+    "open_colab": "Ouvrir dans Colab",
+    "view_source": "Voir le code",
+    "run_local": "Exécution locale",
+    "has_lab": "lab",
+    "coming_soon": "concept seul",
+    "advanced": "avancé",
+    "module": "Module",
+    "exercises_heading": "Exercices & certificat",
+    "exercises_body": "Validez avec <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificat",
+    "certificate_heading": "Certificat du cours",
+    "certificate_intro": "Les certificats sont émis uniquement par la CLI après tous les exercices — pas via le navigateur.",
+    "certificate_name_label": "Votre nom sur le certificat",
+    "certificate_name_placeholder": "Camille Dupont",
+    "certificate_progress": "Progression",
+    "certificate_progress_local": "checklist locale uniquement",
+    "certificate_labs": "Labs terminés",
+    "certificate_exercises": "Exercices réussis",
+    "certificate_generate": "Obtenir le certificat",
+    "certificate_locked": "Remplissez les stubs # YOUR CODE dans courselib/exercises.py, puis python labs/run_exercises.py --certificate \"Votre Nom\".",
+    "certificate_mark_lab": "Marquer",
+    "certificate_mark_done": "Fait ✓",
+    "footer": "Écosystème AIMarket — signature hybride du hub (Ed25519 + ML-DSA-65) comme bac à sable crypto live.",
+    "wow_caption": "Orbites duales · Ed25519 cyan · ML-DSA violet · un reçu scellé"
+  },
+  "exercises": {
+    "heading": "Exercice",
+    "all_ok": "Tous les exercices réussis."
+  },
+  "labs": {
+    "lab01_why_hybrid": {
+      "hint": "Vérifiez why_hybrid_brief et qu'une forme classical-only n'est pas envelope_is_hybrid."
+    },
+    "lab02_key_identity": {
+      "hint": "Générez HybridSigner ; affirmez la clé classique et la clé PQ ou le skip étiqueté."
+    },
+    "lab03_sign_receipt": {
+      "hint": "sign_receipt et champs Ed25519 ; avec dilithium, enveloppe hybride."
+    },
+    "lab04_verify_offline": {
+      "hint": "Vérifiez un reçu hors ligne ; n'inventez pas un succès PQ sans dilithium-py."
+    },
+    "lab05_hybrid_gate_capstone": {
+      "hint": "strip_pq + refuse_single_orbit doit refuser ; l'hybride n'est accepté que si le PQ est réel."
+    },
+    "lab01": {
+      "industry_note": "Le même motif de migration que le hub pour .well-known et les reçus.",
+      "live_hint": "LIVE optionnel : PQC_COURSE_FETCH_LIVE=1 python labs/lab01_why_hybrid.py"
+    },
+    "lab02": {
+      "pinning_note": "Épinglez les deux clés hors bande — une clé PQ auto-déclarée est inutile face à Ed25519 cassé."
+    },
+    "lab03": {
+      "pq_skipped_note": "Signature PQ omise (pas du SIM). Ed25519 reste réel. Installez : pip install '.[pqc]'"
+    },
+    "lab04": {
+      "pq_skipped_note": "La vérif classique hors ligne compte. Le succès hybride exige un vrai contrôle ML-DSA.",
+      "live_hint": "LIVE optionnel : PQC_COURSE_FETCH_LIVE=1 vérifie le classique hors ligne sur l'enveloppe live."
+    },
+    "lab05": {
+      "pq_skipped_note": "La porte refuse toujours le single-orbit. Installez dilithium-py pour accepter un vrai sceau hybride.",
+      "takeaway": "Phase 3 = refuse_single_orbit. Sans elle, l'hybride est capacité de migration, pas sécurité PQ."
+    }
+  }
+}

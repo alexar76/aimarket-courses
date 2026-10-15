@@ -1,0 +1,104 @@
+{
+  "course": {
+    "title": "GAIA · ATLAS · Sensores del mundo físico",
+    "tagline": "Pines IoT atestados, honestidad LIVE vs SIM y lecturas del mapa de operador — el mundo físico como capacidad."
+  },
+  "ui": {
+    "task": "tarea",
+    "result": "resultado",
+    "trace": "traza",
+    "events": "eventos",
+    "success": "éxito",
+    "verify": "verificar",
+    "proof": "prueba",
+    "score": "puntuación",
+    "blocked": "bloqueado",
+    "allowed": "permitido"
+  },
+  "modules": {
+    "m1": {
+      "title": "Qué es un relé LIVE",
+      "concept": "Allowlist HTTPS, offline ante fallo, nunca inventar lecturas.",
+      "industry": "IoT, procedencia"
+    },
+    "m2": {
+      "title": "Licencia y riel comercial",
+      "concept": "Solo CC0 / CC BY / OGL / PD — por qué AirNow espera y OpenAQ ya está en producción.",
+      "industry": "datos abiertos y derecho"
+    },
+    "m3": {
+      "title": "Flota y honestidad de pines",
+      "concept": "Open-Meteo ≠ estación; AIS público ≠ edge propio; warning ≠ in-situ.",
+      "industry": "UX de operador"
+    },
+    "m4": {
+      "title": "Mapa de operador ATLAS",
+      "concept": "Leer el catálogo de flota, capas y SKUs con precio desde el mapa.",
+      "industry": "ops geoespaciales"
+    },
+    "m5": {
+      "title": "Capstone: añadir un sensor",
+      "concept": "Recorrer Recipe A — device id, URL de origen, espejo ATLAS, orden de redeploy.",
+      "industry": "ops GAIA/ATLAS"
+    }
+  },
+  "site": {
+    "modules_heading": "5 módulos",
+    "labs_heading": "Laboratorios prácticos",
+    "quickstart_heading": "Inicio rápido",
+    "quickstart_intro": "Clona el repo, instala dependencias y ejecuta labs en local o en Colab.",
+    "quickstart_copy": "Copiar comandos",
+    "quickstart_copied": "¡Copiado!",
+    "nav_quickstart": "Inicio rápido",
+    "nav_certificate": "Certificado",
+    "nav_modules": "Módulos",
+    "nav_labs": "Labs",
+    "stat_modules": "módulos",
+    "stat_labs": "labs prácticos",
+    "stat_langs": "idiomas",
+    "hero_badge": "Curso abierto · Python 3.11+",
+    "open_colab": "Abrir en Colab",
+    "view_source": "Ver código",
+    "run_local": "Ejecución local",
+    "has_lab": "lab",
+    "coming_soon": "solo concepto",
+    "advanced": "avanzado",
+    "module": "Módulo",
+    "exercises_heading": "Ejercicios y certificado",
+    "exercises_body": "Pasa las comprobaciones con <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificado",
+    "certificate_heading": "Certificado del curso",
+    "certificate_intro": "Los certificados solo los emite la CLI tras pasar todos los ejercicios — no las casillas del navegador.",
+    "certificate_name_label": "Tu nombre en el certificado",
+    "certificate_name_placeholder": "Ana García",
+    "certificate_progress": "Progreso",
+    "certificate_labs": "Labs completados",
+    "certificate_exercises": "Ejercicios aprobados",
+    "certificate_generate": "Obtener certificado",
+    "certificate_locked": "Rellena # YOUR CODE en courselib/exercises.py y ejecuta python labs/run_exercises.py --certificate \"Tu Nombre\".",
+    "certificate_mark_lab": "Marcar completo",
+    "certificate_mark_done": "Hecho ✓",
+    "footer": "Parte del ecosistema AIMarket — GAIA (iot.modelmarket.dev) y ATLAS (atlas.modelmarket.dev) como sandbox del mundo físico."
+  },
+  "exercises": {
+    "heading": "Ejercicio",
+    "all_ok": "Todos los ejercicios aprobados."
+  },
+  "labs": {
+    "lab01_live_vs_sim": {
+      "hint": "Compara om-wx-01 (LIVE) vs ws-01 (SIM). Comprueba: python labs/run_exercises.py --module m1"
+    },
+    "lab02_licence_gate": {
+      "hint": "Aprueba OpenAQ; rechaza AirNow / BY-NC. Comprueba: python labs/run_exercises.py --module m2"
+    },
+    "lab03_honesty_claims": {
+      "hint": "Rechaza «Open-Meteo = estación». Comprueba: python labs/run_exercises.py --module m3"
+    },
+    "lab04_atlas_map_read": {
+      "hint": "Exige distance_km e id en nearest. Comprueba: python labs/run_exercises.py --module m4"
+    },
+    "lab05_add_sensor_capstone": {
+      "hint": "Checklist: licence, redeploy, honesty. Comprueba: python labs/run_exercises.py --module m5"
+    }
+  }
+}

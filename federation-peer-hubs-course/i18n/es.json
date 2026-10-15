@@ -1,0 +1,166 @@
+{
+  "course": {
+    "title": "Federación y hubs peer",
+    "tagline": "Announce, cuarentena, preview, approve — cómo entran los hubs sin confiar en extraños."
+  },
+  "ui": {
+    "task": "tarea",
+    "result": "resultado",
+    "trace": "traza",
+    "events": "eventos",
+    "success": "éxito",
+    "verify": "verificar",
+    "proof": "prueba",
+    "score": "puntuación",
+    "blocked": "bloqueado",
+    "allowed": "permitido",
+    "error": "error",
+    "live": "LIVE",
+    "fixture": "fixture"
+  },
+  "modules": {
+    "m1": {
+      "title": "Well-known y announce",
+      "concept": "Cómo un hub se presenta y llama a un peer — solo observación, nunca un índice.",
+      "industry": "federación"
+    },
+    "m2": {
+      "title": "Puerta abierta vs cerrada",
+      "concept": "Los peers pending existen de ambos modos — preview es otro interruptor.",
+      "industry": "ops del hub"
+    },
+    "m3": {
+      "title": "Cuarentena de preview",
+      "concept": "Los manifiestos firmados van a una tabla que invoke/search no leen.",
+      "industry": "indexación zero-trust"
+    },
+    "m4": {
+      "title": "Declared vs read",
+      "concept": "Lo que el peer declara ≠ lo que verificaste — la UI debe mostrar ambos.",
+      "industry": "honestidad del operador"
+    },
+    "m5": {
+      "title": "Capstone: aprobar un extraño",
+      "concept": "Recorre announce → preview → approve → crawl sin confiar en la vibra.",
+      "industry": "operador del hub"
+    }
+  },
+  "site": {
+    "modules_heading": "5 módulos",
+    "labs_heading": "Labs prácticos",
+    "quickstart_heading": "Inicio rápido",
+    "quickstart_intro": "Clona el repo, instala deps y ejecuta labs contra el hub público (o COURSE_OFFLINE=1).",
+    "quickstart_copy": "Copiar comandos",
+    "quickstart_copied": "¡Copiado!",
+    "nav_quickstart": "Inicio rápido",
+    "nav_certificate": "Certificado",
+    "nav_modules": "Módulos",
+    "nav_labs": "Labs",
+    "stat_modules": "módulos",
+    "stat_labs": "labs prácticos",
+    "stat_langs": "idiomas",
+    "hero_badge": "Curso abierto · Python 3.11+ · live modelmarket.dev",
+    "open_colab": "Abrir en Colab",
+    "view_source": "Ver código",
+    "run_local": "Ejecutar local",
+    "has_lab": "lab",
+    "coming_soon": "solo concepto",
+    "advanced": "avanzado",
+    "module": "Módulo",
+    "exercises_heading": "Ejercicios y certificado",
+    "exercises_body": "Completa stubs en <code class=\"inline\">courselib/exercises.py</code>, luego <code class=\"inline\">python labs/run_exercises.py</code>.",
+    "certificate_nav": "Certificado",
+    "certificate_heading": "Certificado del curso",
+    "certificate_intro": "El certificado solo lo emite el CLI cuando pasan todos los ejercicios — no las casillas del navegador.",
+    "certificate_name_label": "Tu nombre en el certificado",
+    "certificate_name_placeholder": "Jane Doe",
+    "certificate_progress": "Progreso",
+    "certificate_labs": "Labs completados",
+    "certificate_exercises": "Ejercicios aprobados",
+    "certificate_generate": "Obtener certificado",
+    "certificate_locked": "Rellena # YOUR CODE en courselib/exercises.py y ejecuta python labs/run_exercises.py --certificate \"Tu Nombre\".",
+    "certificate_mark_lab": "Marcar completo",
+    "certificate_mark_done": "Hecho ✓",
+    "footer": "Ecosistema AIMarket — APIs de federación en vivo en modelmarket.dev."
+  },
+  "exercises": {
+    "heading": "Ejercicio",
+    "all_ok": "Todos los ejercicios aprobados.",
+    "lab01_hint": "Asegura que el well-known fixture tenga name, federated_capabilities_count y firma híbrida.",
+    "lab02_hint": "Llama open_vs_closed(FIXTURE_PEERS); door=open y preview_independent_of_door.",
+    "lab03_hint": "preview_quarantine: search/invoke nunca leen la tabla preview.",
+    "lab04_hint": "peer_summary del stranger pending: declared=7, preview=3, gap=4.",
+    "lab05_hint": "announce_checklist(): announce → pending → preview → approve → crawl."
+  },
+  "labs": {
+    "lab01_well_known_announce": {
+      "hint": "Lee live /.well-known/ai-market.json — nombre, conteos, firma híbrida."
+    },
+    "lab02_open_vs_closed": {
+      "hint": "Compara open_federation con pending_count; preview es aparte."
+    },
+    "lab03_preview_quarantine": {
+      "hint": "La tabla de cuarentena no es searchable ni invocable."
+    },
+    "lab04_declared_vs_read": {
+      "hint": "Muestra declared y observed juntos."
+    },
+    "lab05_approve_capstone": {
+      "hint": "Checklist + probe live de modelmarket.dev."
+    },
+    "lab01": {
+      "source": "Fuente",
+      "well_known_path": "/.well-known/ai-market.json",
+      "name": "nombre del hub",
+      "version": "versión del hub",
+      "federated_count": "capabilities federadas",
+      "signer": "clave pública del firmante",
+      "classical": "firma clásica",
+      "pq": "post-cuántica",
+      "knock_note": "Un knock (announce) es solo observación — nunca debe indexar un catálogo.",
+      "offline_hint": "Falló la red. COURSE_OFFLINE=1 para fixtures, o reintenta cuando el hub responda.",
+      "fallback": "Usando fixture etiquetado (no LIVE)"
+    },
+    "lab02": {
+      "source": "Fuente",
+      "door": "Puerta",
+      "trusted": "Peers de confianza",
+      "pending": "Peers pending",
+      "preview_switch": "Preview independiente de la puerta",
+      "teaching": "Modelo didáctico",
+      "counterfactual": "Contrafactual (puerta cerrada)",
+      "counterfactual_note": "Pending puede existir con la puerta cerrada — seeds y crawler mantienen la cuarentena.",
+      "fallback": "Usando fixture etiquetado (no LIVE)"
+    },
+    "lab03": {
+      "source": "Fuente",
+      "rule": "Regla de cuarentena",
+      "guards": "Guardas de lectura (todas false)",
+      "pending_count": "Peers pending",
+      "snapshot": "Snapshot pending en vivo",
+      "empty": "Cola vacía",
+      "fallback": "Usando fixture etiquetado (no LIVE)"
+    },
+    "lab04": {
+      "source": "Fuente",
+      "hub_federated": "Hub federated_capabilities_count",
+      "trusted_heading": "Peers de confianza (indexados / read)",
+      "pending_heading": "Pending (declared vs preview)",
+      "no_pending": "(no hay peers pending ahora)",
+      "demo_gap": "Gap didáctico del stranger fixture",
+      "sum_note": "Comprobación",
+      "ui_rule": "La UI del operador muestra declared y read — nunca solo el claim del knock.",
+      "fallback": "Usando fixture etiquetado (no LIVE)"
+    },
+    "lab05": {
+      "checklist_heading": "Checklist de admisión",
+      "source": "Fuente",
+      "probe_heading": "Probe live de peers",
+      "peers_heading": "Peers",
+      "no_pending": "(cuarentena vacía — no hay extraños en cola)",
+      "operator_note": "Approve / repin requieren bearer admin — este lab se detiene en el probe público.",
+      "docs_hint": "Lee aimarket-hub/docs/federation-admission.md y federation-peer-keys.md.",
+      "fallback": "Usando fixture etiquetado (no LIVE)"
+    }
+  }
+}

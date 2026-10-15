@@ -1,0 +1,66 @@
+{
+  "id": "optimization-with-proofs",
+  "github_repo": "alexar76/aimarket-courses",
+  "github_pages": "https://alexar76.github.io/aimarket-courses/optimization-with-proofs-course/",
+  "clone_dir": "aimarket-courses",
+  "package_name": "optimization-with-proofs-course",
+  "title": "Optimization with Proofs",
+  "description": "Hands-on course on combinatorial and continuous optimization with verifiable quality certificates from live AIMarket oracles.",
+  "pip_extras_default": "[oracles,dev]",
+  "oracles": [
+    "core",
+    "oracles/colony",
+    "oracles/kantor",
+    "oracles/fermat",
+    "oracles/gauss"
+  ],
+  "module_count": 5,
+  "modules": [
+    "m1",
+    "m2",
+    "m3",
+    "m4",
+    "m5"
+  ],
+  "labs": [
+    {
+      "stem": "lab01_colony_tsp",
+      "module": "m1",
+      "track": "basic"
+    },
+    {
+      "stem": "lab02_kantor_transport",
+      "module": "m2",
+      "track": "basic"
+    },
+    {
+      "stem": "lab03_fermat_route",
+      "module": "m3",
+      "track": "basic"
+    },
+    {
+      "stem": "lab04_gauss_gp",
+      "module": "m4",
+      "track": "basic"
+    },
+    {
+      "stem": "lab05_proof_capstone",
+      "module": "m5",
+      "track": "advanced"
+    }
+  ],
+  "quickstart_commands": [
+    "git clone https://github.com/alexar76/aimarket-courses.git",
+    "cd aimarket-courses/optimization-with-proofs-course",
+    "pip install -e \".[oracles,dev]\"",
+    "python labs/lab01_colony_tsp.py",
+    "python labs/run_exercises.py"
+  ],
+  "smoke_labs": [
+    "lab01_colony_tsp",
+    "lab02_kantor_transport",
+    "lab03_fermat_route",
+    "lab04_gauss_gp"
+  ],
+  "repo_subpath": "optimization-with-proofs-course"
+}
