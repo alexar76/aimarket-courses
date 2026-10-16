@@ -3,6 +3,16 @@
 A LIVE pin has fleet provenance ``source`` set (HTTPS allowlisted upstream).
 A SIM pin (ws-01) has ``source=null`` — never badge it LIVE.
 
+Where the readings come from: ``gaia.fleet.status@v1`` is free, so it is read from
+GAIA directly. ``gaia.weather.read@v1`` costs $0.001 a call, and GAIA sells it only
+through the hub (https://modelmarket.dev): with its price gate on, a direct call gets
+402 and the hub's name. This lab buys it on the hub's free sandbox trial instead: no
+wallet, no account, 5 calls per visitor id per hour. Each run reads two devices, so
+it spends 2 of the 5; a sixth call in the hour gets 429 ``trial_quota_exhausted`` and
+costs nothing, and the allowance comes back the next hour. Your visitor id is a
+random one kept in ``~/.config/gaia-atlas-sensors-course/sandbox-visitor``. Point
+``COURSE_HUB_URL`` at another hub if you use one.
+
 Run:  python labs/lab01_live_vs_sim.py
       COURSE_LANG=ru python labs/lab01_live_vs_sim.py
 """
@@ -22,6 +32,7 @@ from courselib.sensors import (
     fleet_devices,
     gaia_health,
     gaia_weather_read,
+    hub_base_url,
     reading_from_invoke,
     try_live,
 )
@@ -34,6 +45,10 @@ def main() -> None:
     print()
     print("Rule: LIVE iff source is set. Offline upstream → fail loud, never invent.")
     print(f"Teaching pair: LIVE={LIVE_WEATHER_DEVICE}  SIM={SIM_WEATHER_DEVICE}")
+    print(
+        f"Weather reads are priced, so they go through the hub's free trial at {hub_base_url()} "
+        "(5 calls an hour; this lab spends 2)."
+    )
     print()
 
     # Offline teaching assert
@@ -55,6 +70,9 @@ def main() -> None:
             f"{t('ui.result')}: {device_id} temp_c={values.get('temperature_c')} "
             f"model={reading.get('model')}"
         )
+        trial = payload.get("sandbox") or {}
+        if isinstance(trial, dict) and "remaining" in trial:
+            print(f"  hub trial: {trial['remaining']} of {trial.get('max_trials')} calls left this hour")
         # Prefer fleet source when available
         devices = try_live(fleet_devices, label="fleet.status")
         mode = expect

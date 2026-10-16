@@ -83,7 +83,10 @@ python labs/lab01_live_vs_sim.py
 ```bash
 export COURSE_GAIA_URL=https://iot.modelmarket.dev
 export COURSE_ATLAS_URL=https://atlas.modelmarket.dev
+export COURSE_HUB_URL=https://modelmarket.dev
 ```
+
+GAIA 的付费读取（`gaia.weather.read@v1`，$0.001）通过 `COURSE_HUB_URL` 上 hub 的免费 sandbox 试用进行：每个 visitor id 每小时 5 次，无需钱包或账户。启用 price gate 后，直接调用付费 capability 时 GAIA 返回 402 并指明 hub；`gaia.fleet.status@v1` 免费，直接从 GAIA 读取。
 
 ---
 
@@ -193,8 +196,9 @@ python labs/run_exercises.py --certificate "张三" --lang zh
 |------|------|
 | `[offline] … unreachable` | 检查网络，或继续离线——单元路径仍可教学 |
 | `SensorsError: HTTP …` | 检查 `capability_id` 与 `device_id` |
+| `HTTP 429 … trial_quota_exhausted` | hub 的免费试用（每小时 5 次）已用完；下一小时恢复，未产生任何费用 |
 | pytest 网络测试 skip | 离线属正常；去掉 `COURSE_SKIP_NETWORK` 可跑 live |
 | 全部 exercises 失败 | 填写 stubs——设计如此 |
 | 语言不对 | `COURSE_LANG` ∈ `en,ru,es,fr,zh` |
 
-环境变量：`COURSE_GAIA_URL`、`COURSE_ATLAS_URL`、`COURSE_LANG`、`COURSE_SKIP_NETWORK=1`。
+环境变量：`COURSE_GAIA_URL`、`COURSE_ATLAS_URL`、`COURSE_HUB_URL`、`COURSE_SANDBOX_VISITOR`、`COURSE_LANG`、`COURSE_SKIP_NETWORK=1`。

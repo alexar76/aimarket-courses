@@ -83,7 +83,10 @@ python labs/lab01_live_vs_sim.py
 ```bash
 export COURSE_GAIA_URL=https://iot.modelmarket.dev
 export COURSE_ATLAS_URL=https://atlas.modelmarket.dev
+export COURSE_HUB_URL=https://modelmarket.dev
 ```
+
+Las lecturas de pago de GAIA (`gaia.weather.read@v1`, $0.001) pasan por la prueba gratuita (sandbox) del hub en `COURSE_HUB_URL`: 5 llamadas por visitor id por hora, sin cartera ni cuenta. con su price gate activo, GAIA responde 402 a una llamada directa a una capacidad de pago y nombra el hub; `gaia.fleet.status@v1` es gratis y se lee de GAIA directamente.
 
 ---
 
@@ -193,8 +196,9 @@ Las casillas del navegador **no** emiten certificado.
 |---------|-----------|
 | `[offline] … unreachable` | Red o sigue offline — la parte unitaria sigue enseñando |
 | `SensorsError: HTTP …` | Revisa `capability_id` y `device_id` |
+| `HTTP 429 … trial_quota_exhausted` | La prueba gratuita del hub (5 llamadas por hora) se agotó; se renueva la hora siguiente y no se cobró nada |
 | pytest network skip | Normal offline; quita `COURSE_SKIP_NETWORK` para live |
 | Todos los exercises fallan | Rellena stubs — es intencional |
 | Idioma incorrecto | `COURSE_LANG` ∈ `en,ru,es,fr,zh` |
 
-Variables: `COURSE_GAIA_URL`, `COURSE_ATLAS_URL`, `COURSE_LANG`, `COURSE_SKIP_NETWORK=1`.
+Variables: `COURSE_GAIA_URL`, `COURSE_ATLAS_URL`, `COURSE_HUB_URL`, `COURSE_SANDBOX_VISITOR`, `COURSE_LANG`, `COURSE_SKIP_NETWORK=1`.

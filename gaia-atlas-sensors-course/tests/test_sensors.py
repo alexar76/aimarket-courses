@@ -2,10 +2,15 @@
 
 from __future__ import annotations
 
+import io
+import json
 import os
+import re
+import urllib.error
 
 import pytest
 
+import courselib.sensors as sensors
 from courselib.sensors import (
     HONESTY_TABLE,
     LICENCE_TABLE,
@@ -86,6 +91,111 @@ def test_licence_table_rows_well_formed():
     for row in LICENCE_TABLE:
         assert row["verdict"] in ("pass", "fail")
         assert row["id"] and row["name"] and row["licence"]
+
+
+# ── Where each read goes: priced via the hub's sandbox trial, free direct ─────
+
+
+class _Recorder:
+    """Stands in for urlopen: records each request and answers like GAIA via the hub."""
+
+    def __init__(self, status: int = 200, body: dict | None = None) -> None:
+        self.requests: list = []
+        self.status = status
+        self.body = body
+
+    def __call__(self, req, timeout=None, context=None):
+        self.requests.append(req)
+        if self.status != 200:
+            raise urllib.error.HTTPError(
+                req.full_url, self.status, "refused", {}, io.BytesIO(json.dumps(self.body).encode())
+            )
+        body = self.body or {
+            "ok": True,
+            "success": True,
+            "output": {"reading": {"device_id": "ws-01", "values": {"temperature_c": 11.5}}},
+            "sandbox": {"sandbox": True, "remaining": 4, "used": 1, "max_trials": 5},
+        }
+        return io.BytesIO(json.dumps(body).encode())
+
+
+@pytest.fixture
+def offline_home(tmp_path, monkeypatch):
+    monkeypatch.setenv("XDG_CONFIG_HOME", str(tmp_path))
+    for name in ("COURSE_SANDBOX_VISITOR", "COURSE_HUB_URL", "COURSE_GAIA_URL", "GAIA_PUBLIC_URL"):
+        monkeypatch.delenv(name, raising=False)
+    monkeypatch.setattr(sensors, "_session_visitor", None)
+    return tmp_path
+
+
+def test_priced_weather_read_goes_through_the_hub_trial(offline_home, monkeypatch):
+    rec = _Recorder()
+    monkeypatch.setattr(sensors.urllib.request, "urlopen", rec)
+    payload = gaia_weather_read(SIM_WEATHER_DEVICE)
+    assert reading_from_invoke(payload)["device_id"] == "ws-01"
+
+    (req,) = rec.requests
+    assert req.full_url == "https://modelmarket.dev/ai-market/v2/invoke"
+    assert json.loads(req.data) == {
+        "product_id": "gaia.gateway",
+        "capability_id": "gaia.weather.read@v1",
+        "input": {"device_id": "ws-01"},
+        "source_hub": "https://iot.modelmarket.dev",
+    }
+    visitor = req.get_header("X-aimarket-sandbox-visitor")
+    assert re.fullmatch(r"[A-Za-z0-9_-]{8,64}", visitor)
+    assert not req.get_header("X-payment-channel")
+
+
+def test_hub_url_is_configurable(offline_home, monkeypatch):
+    monkeypatch.setenv("COURSE_HUB_URL", "https://hub.example/")
+    rec = _Recorder()
+    monkeypatch.setattr(sensors.urllib.request, "urlopen", rec)
+    gaia_weather_read(LIVE_WEATHER_DEVICE)
+    assert rec.requests[0].full_url == "https://hub.example/ai-market/v2/invoke"
+
+
+def test_free_fleet_status_stays_direct_to_gaia(offline_home, monkeypatch):
+    rec = _Recorder(body={"ok": True, "output": {"devices": [{"device_id": "ws-01", "source": None}]}})
+    monkeypatch.setattr(sensors.urllib.request, "urlopen", rec)
+    assert fleet_devices()[0]["device_id"] == "ws-01"
+    (req,) = rec.requests
+    assert req.full_url == "https://iot.modelmarket.dev/ai-market/v2/invoke"
+    assert json.loads(req.data) == {"capability_id": "gaia.fleet.status@v1", "input": {}}
+    assert not req.get_header("X-aimarket-sandbox-visitor")
+
+
+def test_visitor_id_is_random_once_then_stable(offline_home):
+    first = sensors.sandbox_visitor_id()
+    assert re.fullmatch(r"course-[0-9a-f]{24}", first)
+    saved = offline_home / "gaia-atlas-sensors-course" / "sandbox-visitor"
+    assert saved.read_text().strip() == first
+    sensors._session_visitor = None  # a new process reads the same file
+    assert sensors.sandbox_visitor_id() == first
+
+
+def test_visitor_id_override_is_checked(offline_home, monkeypatch):
+    monkeypatch.setenv("COURSE_SANDBOX_VISITOR", "my-lab-seat-07")
+    assert sensors.sandbox_visitor_id() == "my-lab-seat-07"
+    monkeypatch.setenv("COURSE_SANDBOX_VISITOR", "short")
+    with pytest.raises(SensorsError, match="8-64"):
+        sensors.sandbox_visitor_id()
+
+
+def test_a_spent_trial_says_so(offline_home, monkeypatch):
+    rec = _Recorder(429, {"success": False, "error": "trial_quota_exhausted"})
+    monkeypatch.setattr(sensors.urllib.request, "urlopen", rec)
+    with pytest.raises(SensorsError, match="free trial is spent") as info:
+        gaia_weather_read(SIM_WEATHER_DEVICE)
+    assert info.value.status == 429 and "trial_quota_exhausted" in str(info.value)
+
+
+def test_a_network_rate_limit_is_not_called_a_spent_trial(offline_home, monkeypatch):
+    rec = _Recorder(429, {"success": False, "error": "rate_limit_exceeded"})
+    monkeypatch.setattr(sensors.urllib.request, "urlopen", rec)
+    with pytest.raises(SensorsError) as info:
+        gaia_weather_read(SIM_WEATHER_DEVICE)
+    assert info.value.status == 429 and "free trial" not in str(info.value)
 
 
 def _online() -> bool:

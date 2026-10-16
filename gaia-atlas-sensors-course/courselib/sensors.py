@@ -3,6 +3,13 @@
 Live endpoints (override with env):
   COURSE_GAIA_URL / GAIA_PUBLIC_URL  → https://iot.modelmarket.dev
   COURSE_ATLAS_URL / ATLAS_PUBLIC_URL → https://atlas.modelmarket.dev
+  COURSE_HUB_URL                     → https://modelmarket.dev
+
+GAIA sells its priced readings (gaia.weather.read@v1 is $0.001) through the hub; with
+its price gate on, it answers a direct call to one with 402 pointing at the hub. So
+priced reads go through the hub's free sandbox trial (5 calls per visitor per hour),
+with a stable visitor id kept in ~/.config/gaia-atlas-sensors-course/ (or
+COURSE_SANDBOX_VISITOR). Free reads (gaia.fleet.status@v1) still go to GAIA directly.
 
 No mocks on LIVE paths — network failures raise SensorsError loudly.
 Licence / honesty tables are embedded teaching data (offline-safe).
@@ -12,14 +19,24 @@ from __future__ import annotations
 
 import json
 import os
+import re
+import secrets
 import ssl
 import urllib.error
 import urllib.request
+from pathlib import Path
 from typing import Any
 
 DEFAULT_GAIA_URL = "https://iot.modelmarket.dev"
 DEFAULT_ATLAS_URL = "https://atlas.modelmarket.dev"
+DEFAULT_HUB_URL = "https://modelmarket.dev"
 DEFAULT_TIMEOUT = 12.0
+
+# How the hub names GAIA's listing: the product, and the provider it routes the call to.
+GAIA_PRODUCT_ID = "gaia.gateway"
+SANDBOX_HEADER = "X-AIMarket-Sandbox-Visitor"
+# The hub's rule for a visitor id; anything else is refused before the trial is touched.
+_VISITOR_RE = re.compile(r"[A-Za-z0-9_-]{8,64}")
 
 # Teaching defaults — LIVE Open-Meteo relay vs SIM campus pin
 LIVE_WEATHER_DEVICE = "om-wx-01"
@@ -31,7 +48,18 @@ ATLAS_POINT_CAP = "atlas.point.read@v1"
 
 
 class SensorsError(RuntimeError):
-    """Raised when a live GAIA/ATLAS call fails or returns a non-ok payload."""
+    """Raised when a live GAIA/ATLAS call fails or returns a non-ok payload.
+
+    ``status`` is the HTTP status when there was one (402, 429, …), else None, and
+    ``body`` the error's JSON object when it sent one.
+    """
+
+    def __init__(
+        self, message: str, *, status: int | None = None, body: dict[str, Any] | None = None
+    ) -> None:
+        super().__init__(message)
+        self.status = status
+        self.body = body
 
 
 def gaia_base_url() -> str:
@@ -50,18 +78,66 @@ def atlas_base_url() -> str:
     ).rstrip("/")
 
 
+def hub_base_url() -> str:
+    return (os.environ.get("COURSE_HUB_URL") or DEFAULT_HUB_URL).rstrip("/")
+
+
+def _visitor_file() -> Path:
+    base = os.environ.get("XDG_CONFIG_HOME") or str(Path.home() / ".config")
+    return Path(base) / "gaia-atlas-sensors-course" / "sandbox-visitor"
+
+
+_session_visitor: str | None = None
+
+
+def sandbox_visitor_id() -> str:
+    """The id the hub counts this learner's free trial against.
+
+    Stable on purpose: the hub gives each visitor id 5 calls an hour, and a new id per
+    run would not be the learner's allowance, it would be a way around it. Chosen once
+    at random (nothing about the machine or user goes to the hub) and kept in
+    ~/.config/gaia-atlas-sensors-course/sandbox-visitor; ``COURSE_SANDBOX_VISITOR``
+    overrides it. If the file cannot be written, the id lasts for this process.
+    """
+    global _session_visitor
+    override = (os.environ.get("COURSE_SANDBOX_VISITOR") or "").strip()
+    if override:
+        if not _VISITOR_RE.fullmatch(override):
+            raise SensorsError(
+                "COURSE_SANDBOX_VISITOR must be 8-64 characters of letters, digits, '_' or '-'"
+            )
+        return override
+    path = _visitor_file()
+    try:
+        saved = path.read_text(encoding="utf-8").strip()
+        if _VISITOR_RE.fullmatch(saved):
+            return saved
+    except OSError:
+        pass
+    if _session_visitor is None:
+        _session_visitor = f"course-{secrets.token_hex(12)}"
+        try:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(_session_visitor + "\n", encoding="utf-8")
+        except OSError:
+            pass
+    return _session_visitor
+
+
 def _request_json(
     method: str,
     url: str,
     *,
     body: dict[str, Any] | None = None,
+    headers: dict[str, str] | None = None,
     timeout: float = DEFAULT_TIMEOUT,
 ) -> Any:
     data = None if body is None else json.dumps(body).encode("utf-8")
-    headers = {"Accept": "application/json", "User-Agent": "gaia-atlas-sensors-course/0.1"}
+    sent = {"Accept": "application/json", "User-Agent": "gaia-atlas-sensors-course/0.1"}
     if data is not None:
-        headers["Content-Type"] = "application/json"
-    req = urllib.request.Request(url, data=data, headers=headers, method=method)
+        sent["Content-Type"] = "application/json"
+    sent.update(headers or {})
+    req = urllib.request.Request(url, data=data, headers=sent, method=method)
     ctx = ssl.create_default_context()
     try:
         with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
@@ -70,8 +146,16 @@ def _request_json(
                 return {}
             return json.loads(raw)
     except urllib.error.HTTPError as exc:
-        detail = exc.read().decode("utf-8", errors="replace")[:400]
-        raise SensorsError(f"HTTP {exc.code} for {url}: {detail or exc.reason}") from exc
+        detail = exc.read().decode("utf-8", errors="replace")
+        try:
+            parsed = json.loads(detail)
+        except json.JSONDecodeError:
+            parsed = None
+        raise SensorsError(
+            f"HTTP {exc.code} for {url}: {detail[:400] or exc.reason}",
+            status=exc.code,
+            body=parsed if isinstance(parsed, dict) else None,
+        ) from exc
     except urllib.error.URLError as exc:
         raise SensorsError(f"offline or unreachable: {url} ({exc.reason})") from exc
     except TimeoutError as exc:
@@ -84,8 +168,14 @@ def get_json(url: str, *, timeout: float = DEFAULT_TIMEOUT) -> Any:
     return _request_json("GET", url, timeout=timeout)
 
 
-def post_json(url: str, body: dict[str, Any], *, timeout: float = DEFAULT_TIMEOUT) -> Any:
-    return _request_json("POST", url, body=body, timeout=timeout)
+def post_json(
+    url: str,
+    body: dict[str, Any],
+    *,
+    headers: dict[str, str] | None = None,
+    timeout: float = DEFAULT_TIMEOUT,
+) -> Any:
+    return _request_json("POST", url, body=body, headers=headers, timeout=timeout)
 
 
 def health(base_url: str | None = None, *, timeout: float = 8.0) -> dict[str, Any]:
@@ -129,8 +219,53 @@ def invoke(
     return payload
 
 
+def hub_trial_invoke(
+    capability_id: str,
+    input_payload: dict[str, Any] | None = None,
+    *,
+    product_id: str = GAIA_PRODUCT_ID,
+    source_hub: str | None = None,
+    hub_url: str | None = None,
+    timeout: float = DEFAULT_TIMEOUT,
+) -> dict[str, Any]:
+    """Buy one call through the hub on its free sandbox trial — fail loudly like invoke().
+
+    The hub routes it to ``source_hub`` (GAIA by default) and passes GAIA's answer back
+    with ``sandbox: {remaining, used, max_trials}`` added. A sixth call within the hour
+    is refused with 429 trial_quota_exhausted, and nothing is charged.
+    """
+    hub = (hub_url or hub_base_url()).rstrip("/")
+    body = {
+        "product_id": product_id,
+        "capability_id": capability_id,
+        "input": input_payload or {},
+        "source_hub": (source_hub or gaia_base_url()).rstrip("/"),
+    }
+    try:
+        payload = post_json(
+            f"{hub}/ai-market/v2/invoke",
+            body,
+            headers={SANDBOX_HEADER: sandbox_visitor_id()},
+            timeout=timeout,
+        )
+    except SensorsError as exc:
+        if (exc.body or {}).get("error") == "trial_quota_exhausted":
+            raise SensorsError(
+                f"{exc} — this visitor id's free trial is spent (modelmarket.dev gives "
+                "5 calls an hour); nothing was charged, and it renews next hour",
+                status=exc.status,
+                body=exc.body,
+            ) from exc
+        raise
+    if not isinstance(payload, dict):
+        raise SensorsError(f"unexpected invoke payload for {capability_id}")
+    if payload.get("ok") is False or payload.get("success") is False:
+        raise SensorsError(f"invoke failed for {capability_id}: {payload.get('error') or payload}")
+    return payload
+
+
 def gaia_fleet_status(*, timeout: float = DEFAULT_TIMEOUT) -> dict[str, Any]:
-    """Invoke gaia.fleet.status@v1 — returns full response including output.devices."""
+    """Invoke gaia.fleet.status@v1 on GAIA directly (free) — full response incl. output.devices."""
     return invoke(FLEET_CAP, {}, timeout=timeout)
 
 
@@ -148,8 +283,12 @@ def gaia_weather_read(
     *,
     timeout: float = DEFAULT_TIMEOUT,
 ) -> dict[str, Any]:
-    """Invoke gaia.weather.read@v1 for a device (LIVE om-wx-01 or SIM ws-01)."""
-    return invoke(WEATHER_CAP, {"device_id": device_id}, timeout=timeout)
+    """Read gaia.weather.read@v1 for a device (LIVE om-wx-01 or SIM ws-01).
+
+    Priced ($0.001), so it goes through the hub's sandbox trial: one call spends one of
+    the 5 an hour. GAIA with its price gate on answers a direct call with 402.
+    """
+    return hub_trial_invoke(WEATHER_CAP, {"device_id": device_id}, timeout=timeout)
 
 
 def atlas_nearest(

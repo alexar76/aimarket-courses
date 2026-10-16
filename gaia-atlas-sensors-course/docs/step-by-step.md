@@ -83,9 +83,10 @@ python labs/lab01_live_vs_sim.py
 ```bash
 export COURSE_GAIA_URL=https://iot.modelmarket.dev
 export COURSE_ATLAS_URL=https://atlas.modelmarket.dev
+export COURSE_HUB_URL=https://modelmarket.dev
 ```
 
-Defaults already point at the public sandbox.
+Defaults already point at the public sandbox. Priced GAIA reads (`gaia.weather.read@v1`, $0.001) go through the hub's free sandbox trial at `COURSE_HUB_URL`: 5 calls per visitor id per hour, no wallet or account. with its price gate on, GAIA answers a direct call to a priced capability with 402 and names the hub; `gaia.fleet.status@v1` is free and is read from GAIA directly.
 
 ---
 
@@ -227,8 +228,9 @@ Browser checkboxes do **not** issue certificates.
 |---------|-----|
 | `[offline] … unreachable` | Check network; or continue offline — unit paths still teach |
 | `SensorsError: HTTP 4xx/5xx` | Capability/input wrong — use `device_id` only on weather invoke |
+| `HTTP 429 … trial_quota_exhausted` | The hub's free trial (5 calls an hour) is spent; it renews next hour and nothing was charged |
 | `pytest` network tests skip | Expected offline; set no `COURSE_SKIP_NETWORK` and ensure GAIA up to exercise them |
 | Exercises all fail | Fill `# YOUR CODE HERE` — stubs raise `NotImplementedError` by design |
 | Wrong language | `export COURSE_LANG=fr` (must be in `en,ru,es,fr,zh`) |
 
-Env overrides: `COURSE_GAIA_URL`, `COURSE_ATLAS_URL`, `COURSE_LANG`, `COURSE_SKIP_NETWORK=1`.
+Env overrides: `COURSE_GAIA_URL`, `COURSE_ATLAS_URL`, `COURSE_HUB_URL`, `COURSE_SANDBOX_VISITOR`, `COURSE_LANG`, `COURSE_SKIP_NETWORK=1`.
