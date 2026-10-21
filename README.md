@@ -9,7 +9,7 @@
 
 <!-- aicom-readme-badges -->
 <p align="center">
-  <a href="https://github.com/alexar76/aimarket-courses/actions/workflows/ci.yml"><img src="https://raw.githubusercontent.com/alexar76/aimarket-courses/refs/heads/main/docs/badges/ci.svg" alt="CI" /></a>
+  <a href="https://github.com/alexar76/aimarket-courses/actions/workflows/ci.yml"><img src="https://github.com/alexar76/aimarket-courses/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
   <img src="https://raw.githubusercontent.com/alexar76/aimarket-courses/refs/heads/main/docs/badges/courses.svg" alt="13 courses" />
   <img src="https://raw.githubusercontent.com/alexar76/aimarket-courses/refs/heads/main/docs/badges/languages.svg" alt="EN RU ES" />
   <a href="https://alexar76.github.io/aimarket-courses/"><img src="https://raw.githubusercontent.com/alexar76/aimarket-courses/refs/heads/main/docs/badges/pages.svg" alt="Course portal" /></a>
