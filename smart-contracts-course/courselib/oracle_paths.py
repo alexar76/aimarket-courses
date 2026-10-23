@@ -9,7 +9,7 @@ _ORACLE_PACKAGES: tuple[tuple[str, str], ...] = (
     ("chronos", "oracles/oracles/chronos"),
     ("sortes", "oracles/oracles/sortes"),
     ("aestus", "oracles/oracles/aestus"),
-    ("platon", "oracles/oracles/platon/backend"),
+    ("oracle_platon", "oracles/oracles/platon/backend"),
     ("oracle_core", "oracles/core"),
 )
 
@@ -45,7 +45,7 @@ def ensure_oracle(import_name: str, rel_path: str | None = None) -> None:
 
 def ensure_oracles(*names: str) -> None:
     # oracle_core is a shared dependency for sortes/platon HTTP layers.
-    if "sortes" in names or "platon" in names:
+    if "sortes" in names or "oracle_platon" in names:
         ensure_oracle("oracle_core", "oracles/core")
     for name in names:
         rel = next((r for n, r in _ORACLE_PACKAGES if n == name), f"oracles/oracles/{name}")

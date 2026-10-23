@@ -16,11 +16,11 @@ from courselib.oracle_paths import ensure_oracle, ensure_oracles, monorepo_root
 
 
 def chaos_draw(client_seed: str = "", *, num_bytes: int = 32) -> dict[str, Any]:
-    """Platon chaos-VRF draw with Ed25519 signature (requires numpy + platon)."""
-    ensure_oracle("platon", "oracles/oracles/platon/backend")
+    """Platon chaos-VRF draw with Ed25519 signature (requires numpy + oracle_platon)."""
+    ensure_oracle("oracle_platon", "oracles/oracles/platon/backend")
     import numpy as np
-    from platon.randomness import draw_randomness, verify_randomness
-    from platon.signing import Signer
+    from oracle_platon.randomness import draw_randomness, verify_randomness
+    from oracle_platon.signing import Signer
 
     with tempfile.TemporaryDirectory() as td:
         signer = Signer(Path(td) / "platon-course.key")
@@ -153,4 +153,4 @@ def ensure_all_oracles() -> None:
     ensure_oracles("chronos", "sortes", "aestus")
     root = monorepo_root()
     if root and (root / "oracles/oracles/platon/backend").is_dir():
-        ensure_oracle("platon", "oracles/oracles/platon/backend")
+        ensure_oracle("oracle_platon", "oracles/oracles/platon/backend")

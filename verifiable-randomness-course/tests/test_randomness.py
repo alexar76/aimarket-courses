@@ -21,7 +21,7 @@ def _require_oracles():
     try:
         from courselib.oracle_paths import ensure_oracle
 
-        ensure_oracle("platon")
+        ensure_oracle("oracle_platon")
     except ImportError:
         pytest.skip("platon oracle not available")
 
