@@ -1,5 +1,7 @@
 # Guía paso a paso del curso
 
+> Distingue la prueba del laboratorio de la evidencia del despliegue. Los ejercicios locales de ECVRF, VDF y lotería se ejecutan sin pagar. En [la vitrina de la lotería](https://lottery.modelmarket.dev/), identifica el entorno y examina la evidencia del sorteo. UNI usa una cadena simulada. Una transacción de Base debe comprobarse en Base. La entrada documentada en LIVE es una plaza gratuita por trabajo mediante `enterFromWork`; los boletos de pago están desactivados.
+
 > **Audiencia:** desarrolladores que aprenden patrones de smart-contracts de lotería antes de tocar Base mainnet.  
 > **Idioma de labs:** `COURSE_LANG=en|ru|es` · UI en `i18n/` · esta guía en español.  
 > **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md)
@@ -246,7 +248,7 @@ Track avanzado:
 | Falla el import del oráculo / error en `pip install ".[oracles]"` | Los labs igual corren con el fallback de stdlib (`oracle=fallback`); para la ruta ECVRF/VDF en vivo, ejecuta desde el monorepo aicom donde se resuelve `oracles/` |
 | `verify: False` en M2 | Confirma que `courselib/fixtures/chronos_vector.json` está intacto (`valid` y `AB_equals_y` deben ser true) |
 | Cadenas RU/ES vacías | Define `COURSE_LANG`; las claves de `i18n/es.json` deben coincidir con `en.json` |
-| Fallo de paridad de i18n en pytest | Añade la clave que falta en los tres `i18n/{en,ru,es}.json` |
+| Fallo de paridad de i18n en pytest | Añade la clave que falta en los cinco `i18n/{en,ru,es,fr,zh}.json` |
 | Colab con código viejo | Reejecuta la celda de setup; fija la rama `main` |
 
 **Despliegue de lottery/ y on-chain:** [lottery/docs/](https://github.com/alexar76/lottery/tree/main/docs).

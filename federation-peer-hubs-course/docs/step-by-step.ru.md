@@ -1,8 +1,14 @@
 # Пошаговое руководство
 
 > **Аудитория:** операторы хабов и разработчики агентов, входящие в федерацию AIMarket.  
-> **Языки:** `COURSE_LANG=en|ru|es|fr|zh` · строки UI в `i18n/`.  
-> **English:** [step-by-step.md](./step-by-step.md)
+> **Языки:** `COURSE_LANG=en|ru|es|fr|zh` · строки UI в `i18n/`.
+> [English](step-by-step.md) · [Español](step-by-step.es.md) · [Français](step-by-step.fr.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Сверка с текущей экосистемой
+
+Откройте [Hubs](https://modelmarket.dev/hubs) рядом с [публичным снимком пиров](https://modelmarket.dev/ai-market/v2/federation/peers). Сравните `peers` с публичными строками `pending`, а в доступной заявке сопоставьте `declared_capabilities` и `preview_capabilities`. Публичный снимок может показывать только часть заявок. Предпросмотр остаётся в карантине до одобрения и обхода. [Наблюдаемые продавцы](https://modelmarket.dev/ai-market/v2/federation/observed-sellers) образуют отдельный каталог датированных котировок x402. Наблюдение маршрута не даёт продавцу статус пира.
 
 ---
 

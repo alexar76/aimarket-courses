@@ -1,5 +1,7 @@
 # Пошаговое руководство по курсу
 
+> Пять фаз ниже — учебная модель. Каталог Factory `GET /ai-market/products` включает продукты в состояниях `COMPLETED` и `DEPLOYED_PRODUCTION` и может вернуть пустой список возможностей. Перед вызовом проверьте точный идентификатор в [поиске Hub](https://modelmarket.dev/ai-market/v2/search?intent=factory&limit=5). Статус пайплайна или запись о продукте сами по себе не подтверждают доступность вызова.
+
 > **Для кого:** разработчики, интегрирующиеся с пайплайном AI-Factory — публичные эндпоинты статуса, каталог выпущенных продуктов и поток этапов оркестратора.
 > **Язык лаб:** `COURSE_LANG=ru|en|es` · строки UI в `i18n/` · этот гайд на русском.
 > **English:** [step-by-step.md](./step-by-step.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md)
@@ -292,7 +294,7 @@ python labs/run_exercises.py --certificate "Иван Петров" --lang ru
    | M4 поток этапов | `config/pipeline_flow.json` оркестратора |
    | M5 капстоун | Один зонд по живому деплою |
 
-5. **Вызовите выпущенную возможность** — когда продукт `COMPLETED`, его возможности вызываются через Hub: [hub-integration-guide.md](https://github.com/alexar76/aicom/blob/main/docs/hub-integration-guide.md).
+5. **Проверьте возможность в каталоге Hub перед вызовом** — [hub-integration-guide.md](https://github.com/alexar76/aicom/blob/main/docs/hub-integration-guide.md).
 
 ---
 

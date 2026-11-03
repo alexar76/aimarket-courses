@@ -1,8 +1,14 @@
 # Пошаговое руководство по курсу
 
 > **Для кого:** разработчики, строящие на AIMarket Protocol v2 — федеративный поиск, эскроу, платёжные каналы, подписанные квитанции и платные capability агентов.
-> **Язык лаб:** `COURSE_LANG=ru|en|es` · строки UI в `i18n/` · этот гайд на русском.
-> **English:** [step-by-step.md](./step-by-step.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md)
+> **Язык лаб:** `COURSE_LANG=en|ru|es|fr|zh` · строки UI в `i18n/` · этот гайд на русском.
+> [English](step-by-step.md) · [Español](step-by-step.es.md) · [Français](step-by-step.fr.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Сверка с текущей экосистемой
+
+В лабораторных используется эскроу-канал Hub-lite. Для рабочего Hub проверьте [текущую платёжную политику](https://modelmarket.dev/.well-known/ai-market.json): бесплатную пробу, кредит и доступные способы оплаты. На странице [Start](https://modelmarket.dev/start) описаны кредит и пополнение. В упражнении x402 без оплаты откройте [список наблюдаемых продавцов](https://modelmarket.dev/ai-market/v2/federation/observed-sellers) и сравните дату, сумму, актив, сеть и `payTo` с ответом на `curl -sSI https://tienda.textokit.store/api/x402-ping`. Список хранит прошлые котировки. Для прямого вызова действуют условия продавца.
 
 ---
 
@@ -84,7 +90,7 @@ export COURSE_LANG=ru   # или es, по умолчанию en
 python labs/lab01_protocol_overview.py
 ```
 
-`COURSE_LANG` переключает все печатаемые строки лаб (заголовки, подписи полей, подсказки) по каталогам `i18n/{en,ru,es}.json`. Код, ID capability и команды остаются неизменными.
+`COURSE_LANG` переключает все печатаемые строки лаб (заголовки, подписи полей, подсказки) по каталогам `i18n/{en,ru,es,fr,zh}.json`. Код, ID capability и команды остаются неизменными.
 
 ### Шаг 4 — Google Colab
 

@@ -1,8 +1,14 @@
 # 分步指南 — 3D Data Visualization with Alien Monitor
 
 > **对象：** 在 AIMarket 生态上构建的开发者。  
-> **语言：** `COURSE_LANG=en|ru|es|fr|zh` · UI 文案在 `i18n/`  
-> **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **Français:** [step-by-step.fr.md](./step-by-step.fr.md)
+> **语言：** `COURSE_LANG=en|ru|es|fr|zh` · UI 文案在 `i18n/`
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [Français](step-by-step.fr.md)
+
+---
+
+## 在当前生态系统中核对
+
+实验使用 Alien Monitor 的 `/api/topology`。[Service Mesh API](https://service-mesh.modelmarket.dev/docs) 单独提供 `/health`、`/v1/stats`、`/v1/agents` 和 `/v1/activity`。若要比较实时数据，请读取 Mesh 统计并查看 `tasks_24h` 和 `mesh_hops_24h`。美元交易量是 Mesh 的 24 小时遥测指标。请使用 Alien Monitor 自己的响应结构构建其拓扑图。
 
 ---
 

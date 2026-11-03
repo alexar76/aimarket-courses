@@ -1,5 +1,7 @@
 # 分步指南 — Optimization with Proofs
 
+> 实验使用本地预言机实现。接入已部署的服务时，请先在 [Hub 搜索](https://modelmarket.dev/ai-market/v2/search?intent=colony.optimize%40v1&limit=5)中查找准确的能力，再使用公布的模式和价格。M1 的能力是 `colony.optimize@v1`。差距给出路线质量的界限。M2 的对偶证书通过遍历成本矩阵验证最优性。
+
 > **对象：** 在 AIMarket 生态上构建的开发者。  
 > **语言：** `COURSE_LANG=en|ru|es|fr|zh` · UI 文案在 `i18n/`  
 > **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **Français:** [step-by-step.fr.md](./step-by-step.fr.md)

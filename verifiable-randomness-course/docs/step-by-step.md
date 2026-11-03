@@ -1,5 +1,7 @@
 # Step-by-step course guide
 
+> Keep the lab proof and deployment evidence separate. The local ECVRF, VDF and lottery exercises require no payment. On the [lottery showcase](https://lottery.modelmarket.dev/), identify the environment and inspect the draw evidence before interpreting it. UNI uses a simulated chain; a Base transaction must be checked on Base. The documented live entry is an unpaid work seat through `enterFromWork`; paid tickets are disabled.
+
 > **Audience:** developers who need randomness a lottery player can verify — before wiring `lottery/` on Base.
 > **Languages:** `COURSE_LANG=en|ru|es` · UI strings in `i18n/` · this guide in English.
 > **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md)
@@ -73,7 +75,7 @@ pytest -q
 
 ### Step 3 — Pick a language (optional)
 
-The lab UI strings (titles, `proof`/`verify`/`trace` labels, ticket names, audit notes) come from `i18n/{en,ru,es}.json`. Switch with `COURSE_LANG`:
+The lab UI strings (titles, `proof`/`verify`/`trace` labels, ticket names, audit notes) come from `i18n/{en,ru,es,fr,zh}.json`. Switch with `COURSE_LANG`:
 
 ```bash
 export COURSE_LANG=ru   # or es, default en

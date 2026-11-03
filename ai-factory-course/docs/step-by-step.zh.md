@@ -1,5 +1,7 @@
 # 分步指南 — AI Factory Pipeline & Orchestration
 
+> 下文的五个阶段是教学模型。Factory 目录 `GET /ai-market/products` 包含 `COMPLETED` 和 `DEPLOYED_PRODUCTION` 状态的产品，也可能返回空的能力列表。调用前，请在 [Hub 搜索](https://modelmarket.dev/ai-market/v2/search?intent=factory&limit=5)确认准确的能力标识。流水线状态或产品条目本身不能证明该能力可调用。
+
 > **对象：** 在 AIMarket 生态上构建的开发者。  
 > **语言：** `COURSE_LANG=en|ru|es|fr|zh` · UI 文案在 `i18n/`  
 > **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **Français:** [step-by-step.fr.md](./step-by-step.fr.md)

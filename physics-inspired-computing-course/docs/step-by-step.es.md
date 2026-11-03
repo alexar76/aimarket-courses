@@ -1,8 +1,14 @@
 # Guía paso a paso del curso
 
 > **Audiencia:** ingenieros que quieren primitivas inspiradas en la física —consenso, enrutamiento, muestreo, riesgo, termodinámica— como oráculos AIMarket listos para invocar.
-> **Idioma de labs:** `COURSE_LANG=en|ru|es` · UI en `i18n/` · esta guía en español.
-> **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md)
+> **Idioma de labs:** `COURSE_LANG=en|ru|es|fr|zh` · UI en `i18n/` · esta guía en español.
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Français](step-by-step.fr.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Comprobación con el ecosistema actual
+
+Antes de invocar un servicio real, usa la [búsqueda del Hub](https://modelmarket.dev/ai-market/v2/search?intent=murmuration&limit=6) y revisa el identificador, la fuente y el precio anunciado. Guarda la entrada exacta del laboratorio reproducible. Distingue el resultado de la verificación del algoritmo de un recibo firmado de la ejecución real. Una búsqueda vacía significa que la consulta no devolvió coincidencias en ese momento.
 
 ---
 
@@ -68,7 +74,7 @@ El extra `[oracles]` instala **NumPy** (la única dependencia en tiempo de ejecu
 pytest -q
 ```
 
-**Esperado:** todos los tests pasan (paridad i18n entre `en/ru/es`, puentes de oráculos, certificado, ejercicios).
+**Esperado:** todos los tests pasan (paridad i18n entre `en/ru/es/fr/zh`, puentes de oráculos, certificado, ejercicios).
 
 ### Paso 3 — Elegir idioma (opcional)
 

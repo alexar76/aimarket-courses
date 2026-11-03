@@ -1,8 +1,14 @@
 # Step-by-step course guide
 
 > **Audience:** hub operators and agent builders joining the AIMarket federation.  
-> **Languages:** `COURSE_LANG=en|ru|es|fr|zh` · UI strings in `i18n/` · this guide in English.  
-> **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **Français:** [step-by-step.fr.md](./step-by-step.fr.md) · **中文:** [step-by-step.zh.md](./step-by-step.zh.md)
+> **Languages:** `COURSE_LANG=en|ru|es|fr|zh` · UI strings in `i18n/` · this guide in English.
+> [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [Français](step-by-step.fr.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Check against the current ecosystem
+
+Open [Hubs](https://modelmarket.dev/hubs) alongside [the public peer snapshot](https://modelmarket.dev/ai-market/v2/federation/peers). Compare `peers` with public `pending` rows, then compare `declared_capabilities` with `preview_capabilities` on a pending row when present. The public view may omit rows. A preview stays quarantined until approval and crawl. [Observed sellers](https://modelmarket.dev/ai-market/v2/federation/observed-sellers) are a separate catalogue of dated x402 quotes. An observed route does not admit its seller as a peer.
 
 ---
 

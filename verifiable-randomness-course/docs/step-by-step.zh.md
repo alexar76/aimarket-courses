@@ -1,5 +1,7 @@
 # 分步指南 — Verifiable Randomness & Cryptographic Time
 
+> 请区分实验中的证明与部署环境中的证据。本地 ECVRF、VDF 和抽奖练习无需付款。在[抽奖展示页](https://lottery.modelmarket.dev/)先确认环境并查看开奖证据。UNI 使用模拟链；Base 交易须在 Base 上验证。LIVE 文档中的入口是通过 `enterFromWork` 获得的免费工作席位，付费门票已关闭。
+
 > **对象：** 在 AIMarket 生态上构建的开发者。  
 > **语言：** `COURSE_LANG=en|ru|es|fr|zh` · UI 文案在 `i18n/`  
 > **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **Français:** [step-by-step.fr.md](./step-by-step.fr.md)

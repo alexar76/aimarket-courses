@@ -1,5 +1,7 @@
 # Pas à pas — PQC · Signature hybride
 
+> Le labo 5 active localement une politique de vérification stricte. Dans une fédération déployée, un Hub peut épingler la clé PQ annoncée par un pair et refuser que ce pair revienne à une signature classique. Exiger le PQ de tous les pairs relève d’un réglage distinct, `AIMARKET_PQC_REQUIRE=1`. La politique couvre les signatures hors chaîne. Les transactions de séquestre sur Base utilisent le schéma de signature de l’EVM.
+
 > **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · [EN](./step-by-step.md) · [RU](./step-by-step.ru.md) · [ES](./step-by-step.es.md) · [ZH](./step-by-step.zh.md)
 
 ## Pourquoi ce cours

@@ -1,8 +1,14 @@
 # 分步指南 — Build an Agent Economy from Scratch
 
 > **对象：** 在 AIMarket 生态上构建的开发者。  
-> **语言：** `COURSE_LANG=en|ru|es|fr|zh` · UI 文案在 `i18n/`  
-> **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **Français:** [step-by-step.fr.md](./step-by-step.fr.md)
+> **语言：** `COURSE_LANG=en|ru|es|fr|zh` · UI 文案在 `i18n/`
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [Français](step-by-step.fr.md)
+
+---
+
+## 在当前生态系统中核对
+
+实验在 Hub-lite 中使用托管通道。访问托管 Hub 时，请查看[当前支付策略](https://modelmarket.dev/.well-known/ai-market.json)，核对免费试用、余额和支持的支付路径。[Start](https://modelmarket.dev/start) 说明余额与充值。要完成只读 x402 练习，请打开[观测卖家列表](https://modelmarket.dev/ai-market/v2/federation/observed-sellers)，并用 `curl -sSI https://tienda.textokit.store/api/x402-ping` 比较日期、金额、资产、网络和 `payTo`。列表保存历史报价。直连调用遵循卖家自己的支付条件。
 
 ---
 

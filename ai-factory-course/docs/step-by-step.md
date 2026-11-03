@@ -1,5 +1,7 @@
 # Step-by-step course guide
 
+> The five phases below are a teaching model. The Factory catalog, `GET /ai-market/products`, includes `COMPLETED` and `DEPLOYED_PRODUCTION` products and may return an empty capability list. Before invoking, confirm the exact capability in [Hub discovery](https://modelmarket.dev/ai-market/v2/search?intent=factory&limit=5). A pipeline status or product listing alone does not establish that a capability is callable.
+
 > **Audience:** developers integrating with the AI-Factory pipeline — public status endpoints, the shipped-products catalog, and the orchestrator stage flow.
 > **Languages:** `COURSE_LANG=en|ru|es` · UI strings in `i18n/` · this guide in English.
 > **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md)
@@ -317,7 +319,7 @@ This writes `certificate.html`; open it and **Print → Save as PDF**. The crede
    | M4 stage flow | Orchestrator `config/pipeline_flow.json` |
    | M5 capstone | One probe against the live deployment |
 
-5. **Invoke a shipped capability** — once a product is `COMPLETED`, its capabilities are callable via the Hub: [hub-integration-guide.md](https://github.com/alexar76/aicom/blob/main/docs/hub-integration-guide.md).
+5. **Check capability discovery before invoking** — [hub-integration-guide.md](https://github.com/alexar76/aicom/blob/main/docs/hub-integration-guide.md).
 
 ---
 

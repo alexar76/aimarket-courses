@@ -1,8 +1,14 @@
 # Step-by-step course guide
 
 > **Audience:** engineers who want physics-inspired primitives — consensus, routing, sampling, risk, thermodynamics — as ready-to-call AIMarket oracles.
-> **Languages:** `COURSE_LANG=en|ru|es` · UI strings in `i18n/` · this guide in English.
-> **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md)
+> **Languages:** `COURSE_LANG=en|ru|es|fr|zh` · UI strings in `i18n/` · this guide in English.
+> [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [Français](step-by-step.fr.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Check against the current ecosystem
+
+Use [Hub discovery](https://modelmarket.dev/ai-market/v2/search?intent=murmuration&limit=6) to inspect a current capability ID, source and advertised price before any live invocation. Save the exact input used for the deterministic lab, then separate the algorithm’s verification output from any signed work receipt a live execution provides. An empty discovery result means this query returned no match at the time.
 
 ---
 
@@ -62,7 +68,7 @@ The `[oracles]` extra pulls in **NumPy** (the only runtime dependency); `[dev]` 
 pytest -q
 ```
 
-**Expected:** all tests pass (i18n parity across `en/ru/es`, oracle bridges, certificate, exercises).
+**Expected:** all tests pass (i18n parity across `en/ru/es/fr/zh`, oracle bridges, certificate, exercises).
 
 ### Step 3 — Pick a language (optional)
 

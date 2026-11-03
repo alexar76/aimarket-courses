@@ -1,8 +1,14 @@
 # Guía paso a paso del curso
 
 > **Audiencia:** desarrolladores que construyen confianza entre agentes, reputación y auditorías de riesgo sistémico con oráculos de AIMarket.  
-> **Idioma de labs:** `COURSE_LANG=en|ru|es` · cadenas de UI en `i18n/` · esta guía en español.  
-> **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md)
+> **Idioma de labs:** `COURSE_LANG=en|ru|es|fr|zh` · cadenas de UI en `i18n/` · esta guía en español.
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Français](step-by-step.fr.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Comprobación con el ecosistema actual
+
+Compara el grafo didáctico de PageRank con la [instantánea de pares del Hub](https://modelmarket.dev/ai-market/v2/federation/peers). Usa los pares aprobados y separa las vistas previas pendientes. Anota la fecha, el grafo de entrada y el criterio de selección de aristas. La puntuación describe ese grafo. La admisión y la comprobación de la clave de firma se hacen por separado.
 
 ---
 

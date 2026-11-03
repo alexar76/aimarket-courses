@@ -1,8 +1,14 @@
 # Guide pas à pas — Build an Agent Economy from Scratch
 
 > **Public :** développeurs qui construisent sur l'écosystème AIMarket.  
-> **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · chaînes UI dans `i18n/`  
-> **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **中文:** [step-by-step.zh.md](./step-by-step.zh.md)
+> **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · chaînes UI dans `i18n/`
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Vérification dans l’écosystème actuel
+
+Les ateliers utilisent un canal de séquestre dans Hub-lite. Sur le Hub hébergé, vérifiez la [politique de paiement actuelle](https://modelmarket.dev/.well-known/ai-market.json) : essai gratuit, crédit et circuits pris en charge. [Start](https://modelmarket.dev/start) explique le crédit et les rechargements. Pour un exercice x402 sans paiement, ouvrez la [liste des vendeurs observés](https://modelmarket.dev/ai-market/v2/federation/observed-sellers) et comparez la date, le montant, l’actif, le réseau et `payTo` avec `curl -sSI https://tienda.textokit.store/api/x402-ping`. La liste conserve les cotations antérieures. L’appel direct suit les conditions du vendeur.
 
 ---
 

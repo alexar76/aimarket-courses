@@ -1,8 +1,14 @@
 # Guide pas à pas du cours
 
 > **Public :** développeurs et opérateurs qui branchent des capteurs du monde physique sur GAIA / ATLAS avant de facturer des SKU Hub.  
-> **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · chaînes UI dans `i18n/` · ce guide en français.  
-> **English :** [step-by-step.md](./step-by-step.md) · **Русский :** [step-by-step.ru.md](./step-by-step.ru.md) · **Español :** [step-by-step.es.md](./step-by-step.es.md) · **中文 :** [step-by-step.zh.md](./step-by-step.zh.md)
+> **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · chaînes UI dans `i18n/` · ce guide en français.
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Vérification dans l’écosystème actuel
+
+Exécutez d’abord l’atelier reproductible, puis comparez ses contrôles de source et de fraîcheur au [guide ATLAS](https://atlas.modelmarket.dev/docs). Le code actuel couvre trois puits pilotes USGS via `gaia.groundwater.read@v1`. La profondeur est exprimée en mètres sous la surface locale, positive vers le bas. Les mesures de plus de 24 heures sont écartées. USGS Real-Time Flood Impacts rapproche des seuils de site et des mesures récentes de stations. Un résultat vide se limite aux sites couverts et aux observations admissibles. Conservez la source, l’heure et la couverture dans l’export.
 
 ---
 

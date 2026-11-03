@@ -1,8 +1,14 @@
 # Step-by-step course guide
 
 > **Audience:** developers securing MCP-connected agents before (or alongside) ARGUS / AI-Factory.  
-> **Languages:** `COURSE_LANG=en|ru|es` · UI strings in `i18n/` · this guide in English.  
-> **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md)
+> **Languages:** `COURSE_LANG=en|ru|es|fr|zh` · UI strings in `i18n/` · this guide in English.
+> [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [Français](step-by-step.fr.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Check against the current ecosystem
+
+After the fixture scan, compare the archived tool definitions in [HISTOR](https://histor.modelmarket.dev/s/236eb5f0481cc99c) and the [LEGION record](https://tlog.legion-api.com/tlog/v0/servers/com.aiapplyd/aiapplyd). Record the observation times and classify changes to names, descriptions or schemas. A historical match establishes what both logs observed. Before loading tools, review current definitions and enforce a reviewed WARDEN lock in CI.
 
 ---
 

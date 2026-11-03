@@ -1,5 +1,7 @@
 # Пошаговое руководство по курсу
 
+> Различайте доказательство из лабораторной и данные развёртывания. Локальные упражнения ECVRF, VDF и лотерея выполняются без оплаты. В [витрине лотереи](https://lottery.modelmarket.dev/) сначала проверьте окружение и доказательства розыгрыша. UNI использует имитацию блокчейна. Транзакцию Base проверяйте в Base. Документированный вход в LIVE — бесплатное место за работу через `enterFromWork`, платные билеты выключены.
+
 > **Для кого:** разработчики, изучающие паттерны лотерейных смарт-контрактов до выхода на Base mainnet.  
 > **Язык лаб:** `COURSE_LANG=en|ru|es` · строки UI в `i18n/` · этот гайд на русском.  
 > **English:** [step-by-step.md](./step-by-step.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md)
@@ -248,7 +250,7 @@ Trace — это «лог on-chain событий» раунда: по нему 
 | Импорт оракула падает / ошибка `pip install ".[oracles]"` | Лабы работают на fallback из stdlib (`oracle=fallback`); для живого ECVRF/VDF запускайте из монорепо aicom, где резолвится `oracles/` |
 | `verify: False` в M2 | Проверьте целостность `courselib/fixtures/chronos_vector.json` (`valid` и `AB_equals_y` должны быть true) |
 | Пустые RU/ES строки | `export COURSE_LANG=ru`; ключи `i18n/ru.json` должны совпадать с `en.json` |
-| Падение паритета i18n в pytest | Добавьте недостающий ключ во все три `i18n/{en,ru,es}.json` |
+| Падение паритета i18n в pytest | Добавьте недостающий ключ во все пять `i18n/{en,ru,es,fr,zh}.json` |
 | В Colab старый код | Перезапустите setup-ячейку; зафиксируйте ветку `main` |
 
 **Деплой lottery/ и on-chain:** [lottery/docs/](https://github.com/alexar76/lottery/tree/main/docs).

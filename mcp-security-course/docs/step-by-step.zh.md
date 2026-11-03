@@ -1,8 +1,14 @@
 # 分步指南 — MCP Security & Agent Safety
 
 > **对象：** 在 AIMarket 生态上构建的开发者。  
-> **语言：** `COURSE_LANG=en|ru|es|fr|zh` · UI 文案在 `i18n/`  
-> **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **Français:** [step-by-step.fr.md](./step-by-step.fr.md)
+> **语言：** `COURSE_LANG=en|ru|es|fr|zh` · UI 文案在 `i18n/`
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [Français](step-by-step.fr.md)
+
+---
+
+## 在当前生态系统中核对
+
+扫描教学样例后，请比较 [HISTOR](https://histor.modelmarket.dev/s/236eb5f0481cc99c) 和 [LEGION 记录](https://tlog.legion-api.com/tlog/v0/servers/com.aiapplyd/aiapplyd) 中归档的工具定义。记录观测时间，并区分名称、说明或结构的变化。历史匹配说明两个日志当时观察到了什么。加载工具前，请审查当前定义，并在 CI 中执行已审核的 WARDEN 锁文件。
 
 ---
 

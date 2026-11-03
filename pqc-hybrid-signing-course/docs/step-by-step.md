@@ -1,5 +1,7 @@
 # Step-by-step — PQC · Hybrid Signing
 
+> Lab 5 enables a strict verifier policy locally. In a deployed federation, a hub can pin a peer’s advertised PQ key and reject a later downgrade for that peer. Requiring PQ from every peer is a separate opt-in setting, `AIMARKET_PQC_REQUIRE=1`. This policy covers off-chain signatures. Base escrow transactions still use the EVM signature scheme.
+
 > **Audience:** engineers migrating signing to post-quantum without breaking today's federation.
 > **Languages:** `COURSE_LANG=en|ru|es|fr|zh` · catalogs in `i18n/` · this guide in English.
 > **Other languages:** [RU](./step-by-step.ru.md) · [ES](./step-by-step.es.md) · [FR](./step-by-step.fr.md) · [ZH](./step-by-step.zh.md)

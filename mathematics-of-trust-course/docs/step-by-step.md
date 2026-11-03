@@ -1,8 +1,14 @@
 # Step-by-step course guide
 
 > **Audience:** developers building agent trust, reputation, and systemic-risk audits with AIMarket oracles.  
-> **Languages:** `COURSE_LANG=en|ru|es` · UI strings in `i18n/` · this guide in English.  
-> **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md)
+> **Languages:** `COURSE_LANG=en|ru|es|fr|zh` · UI strings in `i18n/` · this guide in English.
+> [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [Français](step-by-step.fr.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Check against the current ecosystem
+
+Compare the teaching PageRank graph with [the Hub peer snapshot](https://modelmarket.dev/ai-market/v2/federation/peers). Use approved peer rows for the comparison and keep pending previews separate. Write down the observation date, the input graph and how you selected edges. A ranking describes that graph. Admission and signing-key checks are separate controls.
 
 ---
 

@@ -1,5 +1,7 @@
 # Guide pas à pas — Optimization with Proofs
 
+> Les labos utilisent des implémentations locales des oracles. Pour intégrer un service déployé, cherchez la capacité exacte dans [le Hub](https://modelmarket.dev/ai-market/v2/search?intent=colony.optimize%40v1&limit=5), puis utilisez le schéma et le prix annoncés. En M1, la capacité est `colony.optimize@v1`. L’écart borne la qualité de la tournée. En M2, le certificat dual vérifie l’optimalité en parcourant la matrice des coûts.
+
 > **Public :** développeurs qui construisent sur l'écosystème AIMarket.  
 > **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · chaînes UI dans `i18n/`  
 > **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **中文:** [step-by-step.zh.md](./step-by-step.zh.md)

@@ -1,5 +1,7 @@
 # 分步指南 — PQC · 混合签名
 
+> 实验 5 在本地启用严格的验证策略。联邦中的 Hub 可以固定对等节点公布的 PQ 密钥，并拒绝该节点之后的签名降级。要求所有对等节点使用 PQ 是单独启用的设置 `AIMARKET_PQC_REQUIRE=1`。该策略适用于链下签名。Base 上的托管交易仍使用 EVM 签名机制。
+
 > **语言：** `COURSE_LANG=en|ru|es|fr|zh` · [EN](./step-by-step.md) · [RU](./step-by-step.ru.md) · [ES](./step-by-step.es.md) · [FR](./step-by-step.fr.md)
 
 ## 为何学这门课

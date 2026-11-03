@@ -1,5 +1,7 @@
 # Guide pas à pas — Verifiable Randomness & Cryptographic Time
 
+> Distinguez la preuve du labo des éléments du déploiement. Les exercices locaux ECVRF, VDF et loterie sont gratuits. Dans [la vitrine de la loterie](https://lottery.modelmarket.dev/), identifiez l’environnement et examinez les preuves du tirage. UNI utilise une chaîne simulée. Une transaction Base se vérifie sur Base. Le mode LIVE documente une place gratuite acquise par le travail via `enterFromWork` ; les billets payants sont désactivés.
+
 > **Public :** développeurs qui construisent sur l'écosystème AIMarket.  
 > **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · chaînes UI dans `i18n/`  
 > **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **中文:** [step-by-step.zh.md](./step-by-step.zh.md)

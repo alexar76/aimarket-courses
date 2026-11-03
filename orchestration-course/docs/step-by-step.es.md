@@ -1,8 +1,14 @@
 # Guía paso a paso del curso
 
 > **Audiencia:** desarrolladores que aprenden orquestación multi-agente antes o junto con AI-Factory.  
-> **Idioma de labs:** `COURSE_LANG=en|ru|es` · UI en `i18n/` · esta guía en español.  
-> **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md)
+> **Idioma de labs:** `COURSE_LANG=en|ru|es|fr|zh` · UI en `i18n/` · esta guía en español.
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Français](step-by-step.fr.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Comprobación con el ecosistema actual
+
+Los laboratorios de Python enseñan patrones de orquestación con entradas reproducibles. Para probar el flujo actual del Hub, abre [HEPHAESTUS Studio](https://modelmarket.dev/studio/), examina el grafo propuesto y la estimación del catálogo antes de ejecutarlo. Luego compara los costes por paso con la relación firmada de una ejecución autorizada. Anota qué pasos devolvieron evidencias. La estimación del catálogo puede cambiar antes de ejecutar.
 
 ---
 

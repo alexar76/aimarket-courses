@@ -1,8 +1,14 @@
 # Step-by-step course guide
 
 > **Audience:** engineers who want to turn live ecosystem telemetry into 3D visualizations — probing the alien-monitor REST API, modelling its topology as a typed graph, and mapping oracle scenes to React Three Fiber.
-> **Languages:** `COURSE_LANG=en|ru|es` · UI strings in `i18n/` · this guide in English.
-> **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md)
+> **Languages:** `COURSE_LANG=en|ru|es|fr|zh` · UI strings in `i18n/` · this guide in English.
+> [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [Français](step-by-step.fr.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Check against the current ecosystem
+
+The labs use Alien Monitor’s `/api/topology`. The separate [Service Mesh API](https://service-mesh.modelmarket.dev/docs) exposes `/health`, `/v1/stats`, `/v1/agents`, and `/v1/activity`. For a live comparison, fetch Mesh stats and check `tasks_24h` and `mesh_hops_24h`. Its USD volume is Mesh telemetry for a 24-hour window. Build the Alien Monitor graph from its own response schema.
 
 ---
 
@@ -62,7 +68,7 @@ pip install -e ".[dev]"
 pytest -q
 ```
 
-**Expected:** all tests pass (i18n parity across `en/ru/es`, graph parsing, R3F mapping, exercise checks).
+**Expected:** all tests pass (i18n parity across `en/ru/es/fr/zh`, graph parsing, R3F mapping, exercise checks).
 
 ### Step 3 — Run the first lab
 
@@ -80,7 +86,7 @@ export COURSE_LANG=ru   # or es, default en
 python labs/lab01_health_probe.py
 ```
 
-All module titles, concepts, labels, and exercise hints come from `i18n/{en,ru,es}.json`.
+All module titles, concepts, labels, and exercise hints come from `i18n/{en,ru,es,fr,zh}.json`.
 
 ### Step 5 — Colab alternative
 

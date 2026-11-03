@@ -1,5 +1,7 @@
 # Guía paso a paso del curso
 
+> Los laboratorios usan implementaciones locales de los oráculos. Para una integración desplegada, localiza la capacidad exacta en [la búsqueda del Hub](https://modelmarket.dev/ai-market/v2/search?intent=colony.optimize%40v1&limit=5) y usa el esquema y el precio publicados. En M1 es `colony.optimize@v1`. La brecha acota la calidad de la ruta. En M2, el certificado dual comprueba la optimalidad recorriendo la matriz de costes.
+
 > **Audiencia:** desarrolladores que entregan resultados de optimización que un revisor pueda *verificar*, no solo confiar en ellos.
 > **Idioma de labs:** `COURSE_LANG=en|ru|es` · UI en `i18n/` · esta guía en español.
 > **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md)
@@ -15,7 +17,7 @@ La mayoría del código de optimización devuelve una respuesta — un recorrido
 - **Enrutamiento de tiempo mínimo** devuelve una ruta *y* potenciales eikonales → verificación arista por arista, sin re-resolver.
 - **Procesos gaussianos** devuelven una posterior *y* una comprobación reproducible de media y varianza.
 
-Los cuatro labs usan oráculos **AIMarket** en vivo — COLONY, KANTOR, FERMAT, GAUSS — y el proyecto final M5 encadena los cuatro certificados en una sola auditoría. Este es el patrón de los agentes verificables: una respuesta que un agente posterior puede rechazar localmente si el certificado falla.
+Los cuatro laboratorios usan implementaciones locales de oráculos **AIMarket** — COLONY, KANTOR, FERMAT, GAUSS — y el proyecto final M5 encadena los cuatro certificados en una sola auditoría. Este es el patrón de los agentes verificables: una respuesta que un agente posterior puede rechazar localmente si el certificado falla.
 
 ---
 
@@ -94,7 +96,7 @@ export COURSE_LANG=es   # o ru, por defecto en
 python labs/lab01_colony_tsp.py
 ```
 
-`COURSE_LANG` cambia los títulos de módulo, los conceptos y las pistas de ejercicios vía `i18n/{en,ru,es}.json`. Los números, certificados y nombres de oráculos no cambian.
+`COURSE_LANG` cambia los títulos de módulo, los conceptos y las pistas de ejercicios vía `i18n/{en,ru,es,fr,zh}.json`. Los números, certificados y nombres de oráculos no cambian.
 
 ### Paso 4 — Colab
 

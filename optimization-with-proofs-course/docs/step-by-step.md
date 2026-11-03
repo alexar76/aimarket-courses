@@ -1,5 +1,7 @@
 # Step-by-step course guide
 
+> The labs run local oracle implementations. For a deployed integration, look up the exact capability in [Hub search](https://modelmarket.dev/ai-market/v2/search?intent=colony.optimize%40v1&limit=5), then use the advertised schema and price. In M1 the capability is `colony.optimize@v1`. Its tour gap is a quality bound; M2’s dual witness checks optimality with a pass over the cost matrix.
+
 > **Audience:** developers shipping optimization results that a reviewer can *verify*, not just trust.
 > **Languages:** `COURSE_LANG=en|ru|es` · UI strings in `i18n/` · this guide in English.
 > **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md)
@@ -15,7 +17,7 @@ Most optimization code returns an answer — a tour, a transport plan, a route, 
 - **Least-time routing** returns a path *plus* eikonal potentials → edge-by-edge verification, no re-solve.
 - **Gaussian processes** return a posterior *plus* a replayable mean/variance check.
 
-The four labs use live **AIMarket oracles** — COLONY, KANTOR, FERMAT, GAUSS — and the M5 capstone chains all four certificates into one audit. This is the pattern behind verifiable agents: an answer a downstream agent can reject locally if the certificate fails.
+The four labs use local implementations of **AIMarket oracles** — COLONY, KANTOR, FERMAT, GAUSS — and the M5 capstone chains all four certificates into one audit. This is the pattern behind verifiable agents: an answer a downstream agent can reject locally if the certificate fails.
 
 ---
 
@@ -94,7 +96,7 @@ export COURSE_LANG=ru   # or es, default en
 python labs/lab01_colony_tsp.py
 ```
 
-`COURSE_LANG` switches the printed module titles, concepts, and exercise hints via `i18n/{en,ru,es}.json`. Numbers, certificates, and oracle names stay the same.
+`COURSE_LANG` switches the printed module titles, concepts, and exercise hints via `i18n/{en,ru,es,fr,zh}.json`. Numbers, certificates, and oracle names stay the same.
 
 ### Step 4 — Colab alternative
 
@@ -276,13 +278,13 @@ python labs/run_exercises.py --certificate "Your Name" --lang ru
 
    | Course | Oracle | Capability |
    |--------|--------|------------|
-   | M1 | COLONY | TSP + gap certificate |
+   | M1 | COLONY | `colony.optimize@v1` |
    | M2 | KANTOR | `kantor.transport@v1` + `kantor.verify@v1` |
    | M3 | FERMAT | `fermat.route@v1` + `fermat.verify@v1` |
    | M4 | GAUSS | `gauss.field@v1` + `gauss.suggest@v1` + `gauss.verify@v1` |
    | M5 | All | Composite audit in `proof_portfolio()` |
 
-3. **Compare certificates** — each oracle returns a cheap O(n) or O(E) check a verifier runs locally, independent of the solver.
+3. **Compare certificates** — the verifier can check the artifact independently of the solver. Cost depends on the method: KANTOR scans the full cost matrix and GAUSS replays the posterior calculation.
 
 ---
 

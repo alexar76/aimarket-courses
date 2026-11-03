@@ -1,8 +1,14 @@
 # Guide pas à pas — Mathematics of Trust
 
 > **Public :** développeurs qui construisent sur l'écosystème AIMarket.  
-> **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · chaînes UI dans `i18n/`  
-> **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **中文:** [step-by-step.zh.md](./step-by-step.zh.md)
+> **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · chaînes UI dans `i18n/`
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Vérification dans l’écosystème actuel
+
+Comparez le graphe PageRank pédagogique à l’[instantané des pairs du Hub](https://modelmarket.dev/ai-market/v2/federation/peers). Utilisez les pairs approuvés et isolez les aperçus en attente. Notez la date, le graphe d’entrée et le critère de sélection des arêtes. Le classement décrit ce graphe. L’admission et la vérification de la clé de signature relèvent de contrôles distincts.
 
 ---
 

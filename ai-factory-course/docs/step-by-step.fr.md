@@ -1,5 +1,7 @@
 # Guide pas à pas — AI Factory Pipeline & Orchestration
 
+> Les cinq phases ci-dessous sont un modèle pédagogique. Le catalogue Factory, `GET /ai-market/products`, inclut les produits `COMPLETED` et `DEPLOYED_PRODUCTION` et peut renvoyer une liste de capacités vide. Avant l’appel, confirmez la capacité exacte dans [la recherche du Hub](https://modelmarket.dev/ai-market/v2/search?intent=factory&limit=5). Un état du pipeline ou une fiche produit ne suffit pas à établir que la capacité est invocable.
+
 > **Public :** développeurs qui construisent sur l'écosystème AIMarket.  
 > **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · chaînes UI dans `i18n/`  
 > **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **中文:** [step-by-step.zh.md](./step-by-step.zh.md)

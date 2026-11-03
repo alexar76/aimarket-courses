@@ -1,8 +1,14 @@
 # Guide pas à pas — Physics-Inspired Computing for Engineers
 
 > **Public :** développeurs qui construisent sur l'écosystème AIMarket.  
-> **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · chaînes UI dans `i18n/`  
-> **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **中文:** [step-by-step.zh.md](./step-by-step.zh.md)
+> **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · chaînes UI dans `i18n/`
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Vérification dans l’écosystème actuel
+
+Avant un appel réel, utilisez la [recherche du Hub](https://modelmarket.dev/ai-market/v2/search?intent=murmuration&limit=6) et vérifiez l’identifiant, la source et le prix annoncé. Conservez l’entrée exacte de l’atelier reproductible. Distinguez le résultat de la vérification algorithmique du reçu signé éventuellement renvoyé par l’exécution. Une recherche vide indique que la requête n’a renvoyé aucune correspondance à cet instant.
 
 ---
 

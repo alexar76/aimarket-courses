@@ -1,5 +1,7 @@
 # Guía paso a paso del curso
 
+> Las cinco fases siguientes son un modelo didáctico. El catálogo de Factory, `GET /ai-market/products`, incluye productos en `COMPLETED` y `DEPLOYED_PRODUCTION` y puede devolver una lista de capacidades vacía. Antes de invocar, confirma la capacidad exacta en [la búsqueda del Hub](https://modelmarket.dev/ai-market/v2/search?intent=factory&limit=5). Un estado del flujo o una ficha de producto por sí solos no garantizan que la capacidad se pueda invocar.
+
 > **Audiencia:** desarrolladores que se integran con el pipeline de AI-Factory — endpoints públicos de estado, el catálogo de productos publicados y el flujo de etapas del orquestador.
 > **Idioma de labs:** `COURSE_LANG=en|ru|es` · cadenas de UI en `i18n/` · esta guía en español.
 > **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md)
@@ -292,7 +294,7 @@ Esto escribe `certificate.html`; ábrelo y **Print → Save as PDF**. El ID de c
    | M4 flujo de etapas | `config/pipeline_flow.json` del orquestador |
    | M5 capstone | Un sondeo contra el despliegue en vivo |
 
-5. **Invoca una capacidad publicada** — cuando un producto está `COMPLETED`, sus capacidades se llaman vía el Hub: [hub-integration-guide.md](https://github.com/alexar76/aicom/blob/main/docs/hub-integration-guide.md).
+5. **Comprueba la capacidad en el catálogo del Hub antes de invocar** — [hub-integration-guide.md](https://github.com/alexar76/aicom/blob/main/docs/hub-integration-guide.md).
 
 ---
 

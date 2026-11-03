@@ -1,5 +1,7 @@
 # Paso a paso — PQC · Firma híbrida
 
+> El laboratorio 5 activa localmente una política de verificación estricta. En una federación desplegada, un Hub puede fijar la clave PQ anunciada por un par y rechazar que ese par vuelva a una firma clásica. Exigir PQ a todos los pares es una opción separada, `AIMARKET_PQC_REQUIRE=1`. La política cubre firmas fuera de la cadena. Las transacciones de depósito en garantía en Base usan el esquema de firmas de EVM.
+
 > **Idiomas:** `COURSE_LANG=en|ru|es|fr|zh` · [EN](./step-by-step.md) · [RU](./step-by-step.ru.md) · [FR](./step-by-step.fr.md) · [ZH](./step-by-step.zh.md)
 
 ## Por qué este curso

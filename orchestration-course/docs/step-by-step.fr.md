@@ -1,8 +1,14 @@
 # Guide pas à pas — AI Agent Orchestration
 
 > **Public :** développeurs qui construisent sur l'écosystème AIMarket.  
-> **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · chaînes UI dans `i18n/`  
-> **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **中文:** [step-by-step.zh.md](./step-by-step.zh.md)
+> **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · chaînes UI dans `i18n/`
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Vérification dans l’écosystème actuel
+
+Les ateliers Python enseignent les schémas d’orchestration sur des entrées reproductibles. Pour le parcours Hub actuel, ouvrez [HEPHAESTUS Studio](https://modelmarket.dev/studio/), examinez le graphe proposé et l’estimation du catalogue avant lancement. Comparez ensuite les coûts par étape et le relevé signé d’une exécution autorisée. Notez les étapes qui ont renvoyé des preuves. L’estimation peut changer avant l’exécution.
 
 ---
 

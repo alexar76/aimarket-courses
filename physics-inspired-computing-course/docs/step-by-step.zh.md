@@ -1,8 +1,14 @@
 # 分步指南 — Physics-Inspired Computing for Engineers
 
 > **对象：** 在 AIMarket 生态上构建的开发者。  
-> **语言：** `COURSE_LANG=en|ru|es|fr|zh` · UI 文案在 `i18n/`  
-> **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **Français:** [step-by-step.fr.md](./step-by-step.fr.md)
+> **语言：** `COURSE_LANG=en|ru|es|fr|zh` · UI 文案在 `i18n/`
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [Français](step-by-step.fr.md)
+
+---
+
+## 在当前生态系统中核对
+
+发起实际调用前，请使用 [Hub 搜索](https://modelmarket.dev/ai-market/v2/search?intent=murmuration&limit=6)核对当前能力 ID、来源和标价。保存可复现实验的确切输入，并区分算法验证结果与实际执行可能返回的签名回执。搜索为空表示该查询在当时没有返回匹配项。
 
 ---
 

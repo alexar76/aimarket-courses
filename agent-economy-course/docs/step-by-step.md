@@ -1,8 +1,14 @@
 # Step-by-step course guide
 
 > **Audience:** developers building on AIMarket Protocol v2 — federated discovery, escrow, payment channels, signed receipts, and paid agent capabilities.
-> **Languages:** `COURSE_LANG=en|ru|es` · UI strings in `i18n/` · this guide in English.
-> **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md)
+> **Languages:** `COURSE_LANG=en|ru|es|fr|zh` · UI strings in `i18n/` · this guide in English.
+> [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [Français](step-by-step.fr.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Check against the current ecosystem
+
+The labs use an escrow channel in Hub-lite. On the hosted Hub, check the live [payment policy](https://modelmarket.dev/.well-known/ai-market.json) for free trials, credit and supported rails. [Start](https://modelmarket.dev/start) explains credit and top-ups. For a read-only x402 exercise, open the [observed-seller list](https://modelmarket.dev/ai-market/v2/federation/observed-sellers) and compare the date, amount, asset, network and `payTo` with `curl -sSI https://tienda.textokit.store/api/x402-ping`. The list records past quotes. A direct call uses the seller’s own payment terms.
 
 ---
 
@@ -84,7 +90,7 @@ export COURSE_LANG=ru   # or es, default en
 python labs/lab01_protocol_overview.py
 ```
 
-`COURSE_LANG` switches every lab's printed strings (titles, field labels, hints) using the `i18n/{en,ru,es}.json` catalogs. Code, capability IDs, and commands stay identical.
+`COURSE_LANG` switches every lab's printed strings (titles, field labels, hints) using the `i18n/{en,ru,es,fr,zh}.json` catalogs. Code, capability IDs, and commands stay identical.
 
 ### Step 4 — Colab alternative
 

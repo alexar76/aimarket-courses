@@ -1,8 +1,14 @@
 # Guide pas à pas
 
 > **Public :** opérateurs de hub et builders rejoignant la fédération AIMarket.  
-> **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · chaînes UI dans `i18n/`.  
-> **English :** [step-by-step.md](./step-by-step.md)
+> **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · chaînes UI dans `i18n/`.
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Vérification dans l’écosystème actuel
+
+Ouvrez [Hubs](https://modelmarket.dev/hubs) et l’[instantané public des pairs](https://modelmarket.dev/ai-market/v2/federation/peers). Comparez `peers` aux lignes publiques `pending`, puis `declared_capabilities` à `preview_capabilities` dans une demande visible. La vue publique peut omettre des lignes. L’aperçu reste en quarantaine jusqu’à l’approbation et l’exploration du catalogue. Les [vendeurs observés](https://modelmarket.dev/ai-market/v2/federation/observed-sellers) ont un catalogue distinct de cotations x402 datées. L’observation d’une route ne donne pas au vendeur le statut de pair.
 
 ---
 

@@ -207,7 +207,7 @@ def _portal_index(by_folder: dict[str, dict], taglines: dict[str, str]) -> str:
     <span class="eyebrow"><span class="pip"></span> Open source · MIT · {course_count} academies</span>
     <h1>Learn agents on a<br/><span class="grad">live economy.</span></h1>
     <p class="lede">Not slides about LangChain — runnable labs that call real oracles, open payment channels, scan MCP servers with WARDEN, read GAIA/ATLAS pins, federate hubs, and verify hybrid receipts.</p>
-    <p class="sub">Each academy is a self-contained folder: pytest CI, graded exercises, HTML certificates, step-by-step docs, and Colab notebooks in <strong>English, Russian, Spanish, French, and Chinese</strong>.</p>
+    <p class="sub">Each academy has graded exercises, HTML certificates and Colab notebooks. Step-by-step guides are available in <strong>English, Russian, Spanish, French, and Chinese</strong>.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="#catalog">Browse {course_count} courses</a>
       <a class="btn btn-ghost" href="https://github.com/alexar76/aimarket-courses" target="_blank" rel="noopener">Clone monorepo ↗</a>
@@ -217,7 +217,7 @@ def _portal_index(by_folder: dict[str, dict], taglines: dict[str, str]) -> str:
       <span><b>{course_count}</b> courses</span>
       <span><b>5</b> languages</span>
       <span><b>70+</b> Colab notebooks</span>
-      <span><b>Live</b> sandboxes</span>
+      <span><b>Local</b> and live labs</span>
     </div>
   </header>
 
@@ -231,8 +231,8 @@ def _portal_index(by_folder: dict[str, dict], taglines: dict[str, str]) -> str:
       <div class="pillars">
         <article class="pillar">
           <div class="ic">🧪</div>
-          <h3>Live sandbox, not mocks</h3>
-          <p>Labs hit real AIMarket oracles, Hub/SDK endpoints, WARDEN, alien-monitor APIs, lottery contracts, and the AI-Factory pipeline — or embedded mocks with the same interfaces.</p>
+          <h3>Local labs and live checks</h3>
+          <p>Labs use local implementations, fixtures or sandbox services. Where a lesson offers a live check, it identifies the service and explains what the result demonstrates.</p>
         </article>
         <article class="pillar">
           <div class="ic">🔏</div>
@@ -242,12 +242,12 @@ def _portal_index(by_folder: dict[str, dict], taglines: dict[str, str]) -> str:
         <article class="pillar">
           <div class="ic">💸</div>
           <h3>Real agent economics</h3>
-          <p>Discover capabilities, open USDC channels, invoke metered APIs, and publish paid services other agents can buy — the same patterns as production AIMarket Protocol v2.</p>
+          <p>Discover capabilities, inspect x402 offers, compare prepaid credit and escrow, and publish a test service. Each lab identifies any step that requires a live account or funds.</p>
         </article>
         <article class="pillar">
           <div class="ic">🌍</div>
           <h3>Built for builders everywhere</h3>
-          <p>Full EN / RU / ES / FR / ZH localization — lab docstrings, step-by-step guides, notebooks, and certificates. Run locally or one-click in Colab.</p>
+          <p>Read the guides in EN / RU / ES / FR / ZH. Run labs locally or in Colab. Notebook and certificate language options depend on the course.</p>
         </article>
       </div>
     </div>

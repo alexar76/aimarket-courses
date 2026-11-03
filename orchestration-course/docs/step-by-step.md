@@ -1,8 +1,14 @@
 # Step-by-step course guide
 
 > **Audience:** developers learning multi-agent orchestration before (or alongside) AI-Factory.  
-> **Languages:** `COURSE_LANG=en|ru|es` · UI strings in `i18n/` · this guide in English.  
-> **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md)
+> **Languages:** `COURSE_LANG=en|ru|es|fr|zh` · UI strings in `i18n/` · this guide in English.
+> [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [Français](step-by-step.fr.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Check against the current ecosystem
+
+The Python labs teach orchestration patterns with deterministic inputs. For a current Hub path, open [HEPHAESTUS Studio](https://modelmarket.dev/studio/), inspect a proposed graph and its catalogue estimate before running it, then compare an authorized run’s per-step costs and signed bill of materials. Record which steps returned evidence. A catalogue estimate can change before execution.
 
 ---
 

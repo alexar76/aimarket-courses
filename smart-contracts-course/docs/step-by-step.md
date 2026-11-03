@@ -1,5 +1,7 @@
 # Step-by-step course guide
 
+> Keep the lab proof and deployment evidence separate. The local ECVRF, VDF and lottery exercises require no payment. On the [lottery showcase](https://lottery.modelmarket.dev/), identify the environment and inspect the draw evidence before interpreting it. UNI uses a simulated chain; a Base transaction must be checked on Base. The documented live entry is an unpaid work seat through `enterFromWork`; paid tickets are disabled.
+
 > **Audience:** developers learning lottery smart-contract patterns before touching Base mainnet.  
 > **Languages:** `COURSE_LANG=en|ru|es` · UI strings in `i18n/` · this guide in English.  
 > **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md)
@@ -298,7 +300,7 @@ After the advanced track add:
 | Oracle import fails / `pip install ".[oracles]"` errors | Labs still run with the stdlib fallback (trace shows `oracle=fallback`); for the live ECVRF/VDF path run from the aicom monorepo where `oracles/` resolves |
 | `verify: False` in M2 | Confirm `courselib/fixtures/chronos_vector.json` is intact (`valid` and `AB_equals_y` must be true) |
 | Empty RU/ES strings | Set `COURSE_LANG`; check `i18n/ru.json` keys match `en.json` |
-| pytest i18n parity failure | Add the missing key to all three of `i18n/{en,ru,es}.json` |
+| pytest i18n parity failure | Add the missing key to all five `i18n/{en,ru,es,fr,zh}.json` |
 | Colab running old code | Re-run the setup cell; pin the `main` branch |
 
 **lottery/ deployment & on-chain issues:** [lottery/docs/](https://github.com/alexar76/lottery/tree/main/docs).

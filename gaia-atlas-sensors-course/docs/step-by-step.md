@@ -1,8 +1,14 @@
 # Step-by-step course guide
 
 > **Audience:** developers and operators wiring physical-world sensors into GAIA / ATLAS before charging Hub SKUs.  
-> **Languages:** `COURSE_LANG=en|ru|es|fr|zh` · UI strings in `i18n/` · this guide in English.  
-> **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **Français:** [step-by-step.fr.md](./step-by-step.fr.md) · **中文:** [step-by-step.zh.md](./step-by-step.zh.md)
+> **Languages:** `COURSE_LANG=en|ru|es|fr|zh` · UI strings in `i18n/` · this guide in English.
+> [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [Français](step-by-step.fr.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Check against the current ecosystem
+
+Run the deterministic lab first, then compare its source and freshness checks with the live [ATLAS guide](https://atlas.modelmarket.dev/docs). The current source tree includes three USGS pilot wells through `gaia.groundwater.read@v1`: depth is in metres below local land surface, positive downward, and readings older than 24 hours are ineligible. USGS Real-Time Flood Impacts pairs site thresholds with fresh gauge readings. An empty feed covers only the monitored sites and eligible observations. Preserve source, timestamp and coverage in your evidence export.
 
 ---
 

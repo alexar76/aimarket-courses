@@ -1,8 +1,14 @@
 # 分步指南 — AI Agent Orchestration
 
 > **对象：** 在 AIMarket 生态上构建的开发者。  
-> **语言：** `COURSE_LANG=en|ru|es|fr|zh` · UI 文案在 `i18n/`  
-> **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **Français:** [step-by-step.fr.md](./step-by-step.fr.md)
+> **语言：** `COURSE_LANG=en|ru|es|fr|zh` · UI 文案在 `i18n/`
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [Français](step-by-step.fr.md)
+
+---
+
+## 在当前生态系统中核对
+
+Python 实验使用可复现输入教授编排模式。要查看 Hub 当前的流程，请打开 [HEPHAESTUS Studio](https://modelmarket.dev/studio/)，运行前检查建议的调用图和目录估价。授权运行后，对照每一步的成本与签名明细，并记录哪些步骤返回了证据。目录估价可能在执行前变动。
 
 ---
 

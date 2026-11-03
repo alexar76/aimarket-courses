@@ -1,8 +1,14 @@
 # 分步指南 — Mathematics of Trust
 
 > **对象：** 在 AIMarket 生态上构建的开发者。  
-> **语言：** `COURSE_LANG=en|ru|es|fr|zh` · UI 文案在 `i18n/`  
-> **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **Français:** [step-by-step.fr.md](./step-by-step.fr.md)
+> **语言：** `COURSE_LANG=en|ru|es|fr|zh` · UI 文案在 `i18n/`
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [Français](step-by-step.fr.md)
+
+---
+
+## 在当前生态系统中核对
+
+将教学 PageRank 图与 [Hub 对等节点快照](https://modelmarket.dev/ai-market/v2/federation/peers) 比较。对比时使用已批准节点，单独保留待处理预览。记录观测日期、输入图和选边规则。排名描述的是该输入图。准入和签名密钥验证是独立控制。
 
 ---
 

@@ -1,8 +1,14 @@
 # Guide pas à pas — 3D Data Visualization with Alien Monitor
 
 > **Public :** développeurs qui construisent sur l'écosystème AIMarket.  
-> **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · chaînes UI dans `i18n/`  
-> **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **中文:** [step-by-step.zh.md](./step-by-step.zh.md)
+> **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · chaînes UI dans `i18n/`
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Vérification dans l’écosystème actuel
+
+Les ateliers utilisent `/api/topology` d’Alien Monitor. L’[API de Service Mesh](https://service-mesh.modelmarket.dev/docs) expose `/health`, `/v1/stats`, `/v1/agents` et `/v1/activity`. Pour comparer les données actuelles, lisez les statistiques Mesh et contrôlez `tasks_24h` et `mesh_hops_24h`. Son volume en USD relève de la télémétrie Mesh sur 24 heures. Construisez le graphe Alien Monitor à partir du schéma de sa propre API.
 
 ---
 

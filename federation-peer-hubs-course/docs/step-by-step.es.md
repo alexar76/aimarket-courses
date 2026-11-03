@@ -1,8 +1,14 @@
 # Guía paso a paso
 
 > **Audiencia:** operadores de hub y builders que se unen a la federación AIMarket.  
-> **Idiomas:** `COURSE_LANG=en|ru|es|fr|zh` · cadenas UI en `i18n/`.  
-> **English:** [step-by-step.md](./step-by-step.md)
+> **Idiomas:** `COURSE_LANG=en|ru|es|fr|zh` · cadenas UI en `i18n/`.
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Français](step-by-step.fr.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Comprobación con el ecosistema actual
+
+Abre [Hubs](https://modelmarket.dev/hubs) junto con la [instantánea pública de pares](https://modelmarket.dev/ai-market/v2/federation/peers). Compara `peers` con las filas públicas `pending` y, si hay una solicitud, coteja `declared_capabilities` con `preview_capabilities`. La vista pública puede omitir filas. La vista previa queda en cuarentena hasta la aprobación y el rastreo. Los [vendedores observados](https://modelmarket.dev/ai-market/v2/federation/observed-sellers) tienen un catálogo aparte de cotizaciones x402 fechadas. Observar una ruta no admite al vendedor como par.
 
 ---
 

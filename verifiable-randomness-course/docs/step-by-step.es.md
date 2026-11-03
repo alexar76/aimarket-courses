@@ -1,5 +1,7 @@
 # Guía paso a paso del curso
 
+> Distingue la prueba del laboratorio de la evidencia del despliegue. Los ejercicios locales de ECVRF, VDF y lotería se ejecutan sin pagar. En [la vitrina de la lotería](https://lottery.modelmarket.dev/), identifica el entorno y examina la evidencia del sorteo. UNI usa una cadena simulada. Una transacción de Base debe comprobarse en Base. La entrada documentada en LIVE es una plaza gratuita por trabajo mediante `enterFromWork`; los boletos de pago están desactivados.
+
 > **Audiencia:** desarrolladores que necesitan aleatoriedad que el propio jugador de lotería pueda verificar — antes de cablear `lottery/` en Base.
 > **Idiomas:** `COURSE_LANG=en|ru|es` · cadenas de UI en `i18n/` · esta guía en español.
 > **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md)
@@ -73,7 +75,7 @@ pytest -q
 
 ### Paso 3 — Elige idioma (opcional)
 
-Las cadenas de UI (títulos, etiquetas `prueba`/`verificación`/`traza`, nombres de billetes) salen de `i18n/{en,ru,es}.json`. Cambia con `COURSE_LANG`:
+Las cadenas de UI (títulos, etiquetas `prueba`/`verificación`/`traza`, nombres de billetes) salen de `i18n/{en,ru,es,fr,zh}.json`. Cambia con `COURSE_LANG`:
 
 ```bash
 export COURSE_LANG=es   # o ru, por defecto en

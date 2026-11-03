@@ -1,8 +1,14 @@
 # 课程分步指南
 
 > **受众：** 在向 Hub SKU 收费之前，将物理世界传感器接入 GAIA / ATLAS 的开发者与运营者。  
-> **语言：** `COURSE_LANG=en|ru|es|fr|zh` · UI 文案在 `i18n/` · 本指南为中文。  
-> **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **Français:** [step-by-step.fr.md](./step-by-step.fr.md)
+> **语言：** `COURSE_LANG=en|ru|es|fr|zh` · UI 文案在 `i18n/` · 本指南为中文。
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [Français](step-by-step.fr.md)
+
+---
+
+## 在当前生态系统中核对
+
+先完成可复现的实验，再与 [ATLAS 指南](https://atlas.modelmarket.dev/docs) 比较来源和时效检查。当前代码通过 `gaia.groundwater.read@v1` 覆盖 USGS 三口试点井。深度以当地地面以下的米数表示，向下为正，超过 24 小时的读数不参与结果。USGS Real-Time Flood Impacts 将地点阈值与测站的最新读数配对。空结果仅适用于覆盖地点和满足条件的观测。导出证据时请保留来源、时间和覆盖范围。
 
 ---
 

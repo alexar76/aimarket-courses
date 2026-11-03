@@ -1,8 +1,14 @@
 # Guía paso a paso del curso
 
 > **Audiencia:** ingenieros que quieren convertir la telemetría en vivo del ecosistema en visualizaciones 3D — sondear la API REST de alien-monitor, modelar su topología como un grafo tipado y mapear las escenas de los oráculos a React Three Fiber.
-> **Idioma de labs:** `COURSE_LANG=en|ru|es` · UI en `i18n/` · esta guía en español.
-> **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md)
+> **Idioma de labs:** `COURSE_LANG=en|ru|es|fr|zh` · UI en `i18n/` · esta guía en español.
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Français](step-by-step.fr.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Comprobación con el ecosistema actual
+
+Los laboratorios usan `/api/topology` de Alien Monitor. La [API de Service Mesh](https://service-mesh.modelmarket.dev/docs) ofrece `/health`, `/v1/stats`, `/v1/agents` y `/v1/activity`. Para comparar datos actuales, consulta las estadísticas de Mesh y revisa `tasks_24h` y `mesh_hops_24h`. El volumen en USD es telemetría de Mesh para 24 horas. Construye el grafo de Alien Monitor con el esquema de su propia API.
 
 ---
 
@@ -60,7 +66,7 @@ pip install -e ".[dev]"
 pytest -q
 ```
 
-**Esperado:** todos los tests pasan (paridad i18n en `en/ru/es`, parseo del grafo, mapeo R3F, comprobaciones de ejercicios).
+**Esperado:** todos los tests pasan (paridad i18n en `en/ru/es/fr/zh`, parseo del grafo, mapeo R3F, comprobaciones de ejercicios).
 
 ### Paso 3 — Primer lab
 
@@ -76,7 +82,7 @@ export COURSE_LANG=es   # o ru, por defecto en
 python labs/lab01_health_probe.py
 ```
 
-Todos los títulos de módulo, conceptos, etiquetas y pistas de ejercicios vienen de `i18n/{en,ru,es}.json`.
+Todos los títulos de módulo, conceptos, etiquetas y pistas de ejercicios vienen de `i18n/{en,ru,es,fr,zh}.json`.
 
 ### Paso 5 — Alternativa Colab
 

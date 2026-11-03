@@ -1,8 +1,14 @@
 # Guide pas à pas — MCP Security & Agent Safety
 
 > **Public :** développeurs qui construisent sur l'écosystème AIMarket.  
-> **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · chaînes UI dans `i18n/`  
-> **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md) · **中文:** [step-by-step.zh.md](./step-by-step.zh.md)
+> **Langues :** `COURSE_LANG=en|ru|es|fr|zh` · chaînes UI dans `i18n/`
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Vérification dans l’écosystème actuel
+
+Après l’analyse des données pédagogiques, comparez les définitions archivées dans [HISTOR](https://histor.modelmarket.dev/s/236eb5f0481cc99c) et l’[enregistrement LEGION](https://tlog.legion-api.com/tlog/v0/servers/com.aiapplyd/aiapplyd). Notez les heures et classez les changements de noms, de descriptions ou de schémas. La concordance historique établit ce que les deux journaux ont observé. Avant de charger les outils, examinez les définitions actuelles et contrôlez en CI un fichier de verrouillage WARDEN déjà approuvé.
 
 ---
 

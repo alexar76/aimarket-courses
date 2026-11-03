@@ -1,8 +1,14 @@
 # Пошаговое руководство по курсу
 
 > **Для кого:** разработчики, защищающие MCP-агентов до (или параллельно с) ARGUS / AI-Factory.  
-> **Язык лаб:** `COURSE_LANG=en|ru|es` · строки UI в `i18n/` · этот гайд на русском.  
-> **English:** [step-by-step.md](./step-by-step.md) · **Español:** [step-by-step.es.md](./step-by-step.es.md)
+> **Язык лаб:** `COURSE_LANG=en|ru|es|fr|zh` · строки UI в `i18n/` · этот гайд на русском.
+> [English](step-by-step.md) · [Español](step-by-step.es.md) · [Français](step-by-step.fr.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Сверка с текущей экосистемой
+
+После проверки учебных данных сравните архивные определения инструментов в [HISTOR](https://histor.modelmarket.dev/s/236eb5f0481cc99c) и [записи LEGION](https://tlog.legion-api.com/tlog/v0/servers/com.aiapplyd/aiapplyd). Запишите время наблюдений и классифицируйте изменения имён, описаний или схем. Совпадение относится к тому, что увидели оба журнала. Перед загрузкой инструментов изучите текущие определения и проверяйте утверждённый файл блокировки WARDEN в CI.
 
 ---
 

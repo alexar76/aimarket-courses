@@ -1,8 +1,14 @@
 # 分步指南
 
 > **读者：** 加入 AIMarket 联邦的 Hub 运营者与智能体开发者。  
-> **语言：** `COURSE_LANG=en|ru|es|fr|zh` · UI 文案在 `i18n/`。  
-> **English：** [step-by-step.md](./step-by-step.md)
+> **语言：** `COURSE_LANG=en|ru|es|fr|zh` · UI 文案在 `i18n/`。
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Español](step-by-step.es.md) · [Français](step-by-step.fr.md)
+
+---
+
+## 在当前生态系统中核对
+
+同时打开 [Hubs](https://modelmarket.dev/hubs) 和[公开对等节点快照](https://modelmarket.dev/ai-market/v2/federation/peers)。比较 `peers` 和公开的 `pending` 条目。如果有待处理条目，请比较 `declared_capabilities` 与 `preview_capabilities`。公开视图可能省略部分条目。预览在批准和抓取之前保持隔离。[观测卖家](https://modelmarket.dev/ai-market/v2/federation/observed-sellers) 使用独立的带时间戳 x402 报价目录。观察到一条路由不会授予卖家对等节点身份。
 
 ---
 

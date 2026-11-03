@@ -1,8 +1,14 @@
 # Guía paso a paso del curso
 
 > **Audiencia:** desarrolladores que protegen agentes conectados por MCP antes o junto con ARGUS / AI-Factory.  
-> **Idioma de labs:** `COURSE_LANG=en|ru|es` · cadenas de UI en `i18n/` · esta guía en español.  
-> **English:** [step-by-step.md](./step-by-step.md) · **Русский:** [step-by-step.ru.md](./step-by-step.ru.md)
+> **Idioma de labs:** `COURSE_LANG=en|ru|es|fr|zh` · cadenas de UI en `i18n/` · esta guía en español.
+> [English](step-by-step.md) · [Русский](step-by-step.ru.md) · [Français](step-by-step.fr.md) · [中文](step-by-step.zh.md)
+
+---
+
+## Comprobación con el ecosistema actual
+
+Tras analizar los datos didácticos, compara las definiciones archivadas en [HISTOR](https://histor.modelmarket.dev/s/236eb5f0481cc99c) y el [registro de LEGION](https://tlog.legion-api.com/tlog/v0/servers/com.aiapplyd/aiapplyd). Anota las fechas y clasifica los cambios en nombres, descripciones o esquemas. La coincidencia histórica indica lo que ambos registros observaron. Antes de cargar herramientas, revisa las definiciones vigentes y aplica en CI un archivo de bloqueo de WARDEN revisado.
 
 ---
 
