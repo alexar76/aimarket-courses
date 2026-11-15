@@ -261,7 +261,7 @@ Hub-lite exposes `/ai-market/v2/channel/open` and `/close` for teaching the patt
    ```
 
    The lab boots a local AIMarket Hub + stub Factory in background threads, then calls `econ.hire("translate text to multiple languages")` with a `$3.00` budget. **Zero real money.**
-4. Read the printed bill of materials: task, success, channel ID, total spent, protocol version, per-step capabilities, and live ACEX listings.
+4. Read the printed bill of materials: task, success, channel ID, total spent, protocol version, per-step capabilities, and live Agent Capital Exchange listings.
 
 > If the `aimarket-agent` SDK is **not** installed, the lab detects this via `sdk_available()` and skips cleanly with a hint — it does not crash. Labs 1–5 and all exercises run without it.
 

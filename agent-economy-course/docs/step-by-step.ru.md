@@ -249,7 +249,7 @@ Hub-lite отдаёт `/ai-market/v2/channel/open` и `/close` для демон
    ```
 
    Лаба поднимает локальный AIMarket Hub и заглушку Factory в фоновых потоках, затем вызывает `econ.hire("translate text to multiple languages")` с бюджетом `$3.00`. **Реальных денег нет.**
-4. Читайте bill of materials: задача, успех, ID канала, потрачено, версия протокола, capability по шагам и живые листинги ACEX.
+4. Читайте bill of materials: задача, успех, ID канала, потрачено, версия протокола, capability по шагам и живые листинги Agent Capital Exchange.
 
 > Если SDK `aimarket-agent` **не** установлен, лаба определит это через `sdk_available()` и чисто пропустится с подсказкой — без падения. Лабы 1–5 и все упражнения работают без него.
 
